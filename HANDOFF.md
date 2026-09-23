@@ -10,9 +10,14 @@ nothing was stopped or archived.
 - `CLAIMS.md`: 19 claims and 11 withdrawn draft claims, each computed from `results/` by `src/claims.py`.
 - `figures/`: 8 figures rebuilt from `results/`.
 - `paper/SKELETON.md`: section headings with claims and numbers. No publication prose; that is Bentley's.
-- `python reproduce.py check` passes on a clean clone (file hashes, every CLAIMS.md number, figures).
-- `python reproduce.py synthetic` re-ran the numpy toy on 11 seeds; seed 42 reproduces the March
-  result file exactly.
+- Verified on a fresh clone of this repository:
+  - `python reproduce.py check` passes: 167 result files match their hashes, every CLAIMS.md
+    number rebuilds, all 8 figures rebuild.
+  - `python reproduce.py synthetic` re-ran the numpy toy on 11 seeds: all identical to the committed
+    results, and seed 42 is identical to the March result file.
+  - `python scripts/get_data.py` rebuilt WikiText-2 byte for byte (SHA-256 1022cd9a...).
+  - A 30-step training smoke run (all heads cosine, seed 0) matched the lab's original run's first
+    training loss to every digit (5.543328762054443).
 
 **Not done, and why**
 
