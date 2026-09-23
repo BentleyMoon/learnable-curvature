@@ -1,0 +1,8 @@
+# reproduce.py check: matplotlib only (the claims need nothing beyond the standard library)
+matplotlib>=3.7
+# reproduce.py synthetic: numpy
+numpy>=1.24
+# reproduce.py rerun and the March training scripts: torch
+torch>=2.0
+# scripts/get_data.py: datasets
+datasets>=2.14

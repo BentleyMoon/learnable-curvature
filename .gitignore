@@ -1,0 +1,13 @@
+# corpora: fetched by scripts/get_data.py
+data/
+*.txt.gz
+# checkpoints are not committed
+checkpoints/
+*.pt
+# local environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+# outputs of `python reproduce.py rerun`
+reruns/

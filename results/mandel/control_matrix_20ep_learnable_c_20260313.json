@@ -1,0 +1,846 @@
+{
+  "generated_at": "2026-03-13T10:34:37",
+  "tasks": [
+    "hierarchy",
+    "periodic",
+    "mixed"
+  ],
+  "variants": [
+    "standard_dot",
+    "exact_euclidean",
+    "exact_mixed"
+  ],
+  "runs": [
+    {
+      "task": "hierarchy",
+      "variant": "standard_dot",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "standard_dot",
+        "model_variant": "standard",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": null,
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "hierarchy"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "hierarchy",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "hierarchy",
+          "component_counts": {
+            "hierarchy": 1024,
+            "periodic": 0,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "hierarchy",
+          "component_counts": {
+            "hierarchy": 256,
+            "periodic": 0,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "standard_dot",
+        "best_epoch": 20,
+        "best_val_ppl": 6.535936800947266,
+        "final_epoch": 20,
+        "final_val_loss": 1.8773156881332398,
+        "final_val_ppl": 6.535936800947266
+      }
+    },
+    {
+      "task": "hierarchy",
+      "variant": "exact_euclidean",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "exact_euclidean",
+        "model_variant": "exact_euclidean",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": [
+          "E",
+          "E",
+          "E",
+          "E"
+        ],
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "hierarchy"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "hierarchy",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "hierarchy",
+          "component_counts": {
+            "hierarchy": 1024,
+            "periodic": 0,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "hierarchy",
+          "component_counts": {
+            "hierarchy": 256,
+            "periodic": 0,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "exact_euclidean",
+        "best_epoch": 20,
+        "best_val_ppl": 6.53539521415542,
+        "final_epoch": 20,
+        "final_val_loss": 1.8772328217824301,
+        "final_val_ppl": 6.53539521415542,
+        "final_geometry": {
+          "layer_0/head_0": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.920574963092804
+          },
+          "layer_0/head_1": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9282543063163757
+          },
+          "layer_0/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.933594822883606
+          },
+          "layer_0/head_3": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9503627419471741
+          },
+          "layer_1/head_0": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.974540650844574
+          },
+          "layer_1/head_1": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9479345679283142
+          },
+          "layer_1/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9568557143211365
+          },
+          "layer_1/head_3": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9578711986541748
+          }
+        }
+      }
+    },
+    {
+      "task": "hierarchy",
+      "variant": "exact_mixed",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "exact_HHES",
+        "model_variant": "exact",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": [
+          "H",
+          "H",
+          "E",
+          "S"
+        ],
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "hierarchy"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "hierarchy",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "hierarchy",
+          "component_counts": {
+            "hierarchy": 1024,
+            "periodic": 0,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "hierarchy",
+          "component_counts": {
+            "hierarchy": 256,
+            "periodic": 0,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "exact_HHES",
+        "best_epoch": 20,
+        "best_val_ppl": 6.534840065455262,
+        "final_epoch": 20,
+        "final_val_loss": 1.877147873242696,
+        "final_val_ppl": 6.534840065455262,
+        "final_geometry": {
+          "layer_0/head_0": {
+            "type": "H",
+            "curvature": 1.0735658407211304,
+            "temperature": 0.9016494154930115
+          },
+          "layer_0/head_1": {
+            "type": "H",
+            "curvature": 1.0683742761611938,
+            "temperature": 0.9094442129135132
+          },
+          "layer_0/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9320611953735352
+          },
+          "layer_0/head_3": {
+            "type": "S",
+            "curvature": 0.9716545343399048,
+            "temperature": 0.9507140517234802
+          },
+          "layer_1/head_0": {
+            "type": "H",
+            "curvature": 1.0404995679855347,
+            "temperature": 0.9275462031364441
+          },
+          "layer_1/head_1": {
+            "type": "H",
+            "curvature": 1.04068922996521,
+            "temperature": 0.9216450452804565
+          },
+          "layer_1/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9512852430343628
+          },
+          "layer_1/head_3": {
+            "type": "S",
+            "curvature": 0.9959345459938049,
+            "temperature": 0.955788791179657
+          }
+        }
+      }
+    },
+    {
+      "task": "periodic",
+      "variant": "standard_dot",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "standard_dot",
+        "model_variant": "standard",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": null,
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "periodic"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "periodic",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "periodic",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 1024,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "periodic",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 256,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "standard_dot",
+        "best_epoch": 20,
+        "best_val_ppl": 8.496082614402612,
+        "final_epoch": 20,
+        "final_val_loss": 2.139605188369751,
+        "final_val_ppl": 8.496082614402612
+      }
+    },
+    {
+      "task": "periodic",
+      "variant": "exact_euclidean",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "exact_euclidean",
+        "model_variant": "exact_euclidean",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": [
+          "E",
+          "E",
+          "E",
+          "E"
+        ],
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "periodic"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "periodic",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "periodic",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 1024,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "periodic",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 256,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "exact_euclidean",
+        "best_epoch": 20,
+        "best_val_ppl": 6.0915241159018345,
+        "final_epoch": 20,
+        "final_val_loss": 1.8068983157475789,
+        "final_val_ppl": 6.0915241159018345,
+        "final_geometry": {
+          "layer_0/head_0": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8834011554718018
+          },
+          "layer_0/head_1": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8848809599876404
+          },
+          "layer_0/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8852153420448303
+          },
+          "layer_0/head_3": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8843663334846497
+          },
+          "layer_1/head_0": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9105426073074341
+          },
+          "layer_1/head_1": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9079957008361816
+          },
+          "layer_1/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9140527248382568
+          },
+          "layer_1/head_3": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.905063271522522
+          }
+        }
+      }
+    },
+    {
+      "task": "periodic",
+      "variant": "exact_mixed",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "exact_HHES",
+        "model_variant": "exact",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": [
+          "H",
+          "H",
+          "E",
+          "S"
+        ],
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "periodic"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "periodic",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "periodic",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 1024,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "periodic",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 256,
+            "mixed": 0
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "exact_HHES",
+        "best_epoch": 20,
+        "best_val_ppl": 6.177614916582266,
+        "final_epoch": 20,
+        "final_val_loss": 1.8209322611490886,
+        "final_val_ppl": 6.177614916582266,
+        "final_geometry": {
+          "layer_0/head_0": {
+            "type": "H",
+            "curvature": 0.9020333886146545,
+            "temperature": 0.8116906881332397
+          },
+          "layer_0/head_1": {
+            "type": "H",
+            "curvature": 0.8940849304199219,
+            "temperature": 0.82700514793396
+          },
+          "layer_0/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8756400346755981
+          },
+          "layer_0/head_3": {
+            "type": "S",
+            "curvature": 0.8183166980743408,
+            "temperature": 0.7985674738883972
+          },
+          "layer_1/head_0": {
+            "type": "H",
+            "curvature": 1.0569285154342651,
+            "temperature": 0.8847470879554749
+          },
+          "layer_1/head_1": {
+            "type": "H",
+            "curvature": 1.068035364151001,
+            "temperature": 0.867972731590271
+          },
+          "layer_1/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8972545266151428
+          },
+          "layer_1/head_3": {
+            "type": "S",
+            "curvature": 0.9075722098350525,
+            "temperature": 0.8830105662345886
+          }
+        }
+      }
+    },
+    {
+      "task": "mixed",
+      "variant": "standard_dot",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "standard_dot",
+        "model_variant": "standard",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": null,
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "mixed"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "mixed",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "mixed",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 0,
+            "mixed": 1024
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "mixed",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 0,
+            "mixed": 256
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "standard_dot",
+        "best_epoch": 20,
+        "best_val_ppl": 9.673493364668419,
+        "final_epoch": 20,
+        "final_val_loss": 2.269389502207438,
+        "final_val_ppl": 9.673493364668419
+      }
+    },
+    {
+      "task": "mixed",
+      "variant": "exact_euclidean",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "exact_euclidean",
+        "model_variant": "exact_euclidean",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": [
+          "E",
+          "E",
+          "E",
+          "E"
+        ],
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "mixed"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "mixed",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "mixed",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 0,
+            "mixed": 1024
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "mixed",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 0,
+            "mixed": 256
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "exact_euclidean",
+        "best_epoch": 20,
+        "best_val_ppl": 8.407358148687159,
+        "final_epoch": 20,
+        "final_val_loss": 2.129107292493184,
+        "final_val_ppl": 8.407358148687159,
+        "final_geometry": {
+          "layer_0/head_0": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8933929204940796
+          },
+          "layer_0/head_1": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8773882389068604
+          },
+          "layer_0/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8607710599899292
+          },
+          "layer_0/head_3": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8969793319702148
+          },
+          "layer_1/head_0": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9258948564529419
+          },
+          "layer_1/head_1": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9350039958953857
+          },
+          "layer_1/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9219767451286316
+          },
+          "layer_1/head_3": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.9154938459396362
+          }
+        }
+      }
+    },
+    {
+      "task": "mixed",
+      "variant": "exact_mixed",
+      "config": {
+        "mode": "synthetic",
+        "comparison_label": "exact_HHES",
+        "model_variant": "exact",
+        "vocab_size": 256,
+        "seq_len": 64,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "head_types": [
+          "H",
+          "H",
+          "E",
+          "S"
+        ],
+        "init_c": 1.0,
+        "init_tau": 1.0,
+        "learnable_c": true,
+        "freeze_tau": false,
+        "tangent_clip": 1.5,
+        "seed": 1234,
+        "synthetic_task": "mixed"
+      },
+      "data_meta": {
+        "mode": "synthetic",
+        "synthetic_task": "mixed",
+        "train": {
+          "mode": "synthetic",
+          "synthetic_task": "mixed",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 0,
+            "mixed": 1024
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 1024
+        },
+        "val": {
+          "mode": "synthetic",
+          "synthetic_task": "mixed",
+          "component_counts": {
+            "hierarchy": 0,
+            "periodic": 0,
+            "mixed": 256
+          },
+          "seq_len": 64,
+          "vocab_size": 256,
+          "n_samples": 256
+        }
+      },
+      "summary": {
+        "comparison_label": "exact_HHES",
+        "best_epoch": 20,
+        "best_val_ppl": 8.456489537791684,
+        "final_epoch": 20,
+        "final_val_loss": 2.134934139251709,
+        "final_val_ppl": 8.456489537791684,
+        "final_geometry": {
+          "layer_0/head_0": {
+            "type": "H",
+            "curvature": 1.022111177444458,
+            "temperature": 0.8055229187011719
+          },
+          "layer_0/head_1": {
+            "type": "H",
+            "curvature": 1.0593230724334717,
+            "temperature": 0.8024002313613892
+          },
+          "layer_0/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.8597133755683899
+          },
+          "layer_0/head_3": {
+            "type": "S",
+            "curvature": 0.8098910450935364,
+            "temperature": 0.7962090969085693
+          },
+          "layer_1/head_0": {
+            "type": "H",
+            "curvature": 1.093238353729248,
+            "temperature": 0.8586510419845581
+          },
+          "layer_1/head_1": {
+            "type": "H",
+            "curvature": 1.054023027420044,
+            "temperature": 0.8842248916625977
+          },
+          "layer_1/head_2": {
+            "type": "E",
+            "curvature": null,
+            "temperature": 0.928199291229248
+          },
+          "layer_1/head_3": {
+            "type": "S",
+            "curvature": 0.8793455958366394,
+            "temperature": 0.8340771198272705
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2728 @@
+{
+  "config": {
+    "mode": "language",
+    "comparison_label": "exact_euclidean",
+    "model_variant": "exact_euclidean",
+    "vocab_size": 256,
+    "seq_len": 64,
+    "d_model": 128,
+    "n_heads": 4,
+    "n_layers": 2,
+    "d_ff": 512,
+    "dropout": 0.1,
+    "lr": 0.0003,
+    "head_types": [
+      "E",
+      "E",
+      "E",
+      "E"
+    ],
+    "init_c": 1.0,
+    "init_tau": 1.0,
+    "learnable_c": false,
+    "freeze_tau": false,
+    "tangent_clip": 1.5,
+    "seed": 1234,
+    "synthetic_task": null
+  },
+  "data_meta": {
+    "mode": "language",
+    "data_path": null,
+    "seq_len": 64,
+    "vocab_size": 256,
+    "train_sequences": 170574,
+    "val_sequences": 17884
+  },
+  "metrics": [
+    {
+      "epoch": 1,
+      "train_loss": 1.9933353960178584,
+      "val_loss": 1.6564614379705067,
+      "val_ppl": 5.240733335010914,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.676941454410553
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0911521911621094
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.128961443901062
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9166610240936279
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.069671392440796
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0462868213653564
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1049953699111938
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.07228422164917
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.7131902272437347,
+      "val_loss": 1.561532698438159,
+      "val_ppl": 4.766120675511558,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5424514412879944
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2160028219223022
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.313979983329773
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.009486436843872
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1563916206359863
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1401902437210083
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2132635116577148
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1748617887496948
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.6520335974657514,
+      "val_loss": 1.5257716007984667,
+      "val_ppl": 4.598690554005968,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.48220932483673096
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2650240659713745
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4445821046829224
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0706504583358765
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.245437502861023
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2248953580856323
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3135453462600708
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.273460865020752
+        }
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.620765240152155,
+      "val_loss": 1.5036522916995496,
+      "val_ppl": 4.498087433704363,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.47535109519958496
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2585783004760742
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5295519828796387
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1176817417144775
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3210651874542236
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3002495765686035
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4043292999267578
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3521687984466553
+        }
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.6010493127758463,
+      "val_loss": 1.4873374504000483,
+      "val_ppl": 4.425297245818365,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.4550124406814575
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2245378494262695
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5765352249145508
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1453109979629517
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3825783729553223
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3651899099349976
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4775595664978027
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4164379835128784
+        }
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.5869883041891775,
+      "val_loss": 1.4791430463500348,
+      "val_ppl": 4.389182742645521,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.4378521144390106
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.178246259689331
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6071211099624634
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1622707843780518
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4260473251342773
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4162309169769287
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.537476658821106
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4642047882080078
+        }
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.576714380843107,
+      "val_loss": 1.4717348423055423,
+      "val_ppl": 4.356786926866919,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.4218509793281555
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1220544576644897
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6287992000579834
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1630531549453735
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4669115543365479
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4519506692886353
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.593461275100708
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.509376049041748
+        }
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.5682587105829764,
+      "val_loss": 1.4642465815321946,
+      "val_ppl": 4.3242840172368995,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.405467689037323
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0607651472091675
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6338491439819336
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.15293550491333
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4927843809127808
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4907139539718628
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6324779987335205
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5351572036743164
+        }
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.5610468275104186,
+      "val_loss": 1.4617052561066057,
+      "val_ppl": 4.313308556332288,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.3865913152694702
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9963201880455017
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6279102563858032
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1489349603652954
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5182636976242065
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5168598890304565
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.668594241142273
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5669115781784058
+        }
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.5551396514192979,
+      "val_loss": 1.4570293221422421,
+      "val_ppl": 4.293186890806841,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.3620625138282776
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9350531101226807
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.611964225769043
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1379151344299316
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.530419111251831
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5336512327194214
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6936386823654175
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5876398086547852
+        }
+      }
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.5501798742036659,
+      "val_loss": 1.4524522684381,
+      "val_ppl": 4.273581645203238,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.336723655462265
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8804766535758972
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5935683250427246
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.121285319328308
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5290342569351196
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5450389385223389
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7136729955673218
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.59967839717865
+        }
+      }
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.545463683010266,
+      "val_loss": 1.4505772849137637,
+      "val_ppl": 4.265576257359019,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.32301393151283264
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8210937976837158
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5701667070388794
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1036248207092285
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5305880308151245
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5574928522109985
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7308993339538574
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5958987474441528
+        }
+      }
+    },
+    {
+      "epoch": 13,
+      "train_loss": 1.540961702880895,
+      "val_loss": 1.4458605499677761,
+      "val_ppl": 4.245504039639728,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.3053646981716156
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.774608850479126
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5418670177459717
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0826921463012695
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5294861793518066
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.569833517074585
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.74137282371521
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6019867658615112
+        }
+      }
+    },
+    {
+      "epoch": 14,
+      "train_loss": 1.5371156436193727,
+      "val_loss": 1.4421313697719231,
+      "val_ppl": 4.229701274047734,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.291170209646225
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7249729037284851
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5151424407958984
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0562900304794312
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5340721607208252
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5777157545089722
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7492256164550781
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6086273193359375
+        }
+      }
+    },
+    {
+      "epoch": 15,
+      "train_loss": 1.5341030209194204,
+      "val_loss": 1.4410250941057787,
+      "val_ppl": 4.225024645750193,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.2750178277492523
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.682136058807373
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4842501878738403
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0335657596588135
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5251339673995972
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5717706680297852
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.757691502571106
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6012846231460571
+        }
+      }
+    },
+    {
+      "epoch": 16,
+      "train_loss": 1.5311623710181432,
+      "val_loss": 1.4393533047382123,
+      "val_ppl": 4.217967195398679,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.2599990665912628
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.634038507938385
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4472535848617554
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0073336362838745
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5254294872283936
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5736016035079956
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7667765617370605
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6045531034469604
+        }
+      }
+    },
+    {
+      "epoch": 17,
+      "train_loss": 1.5283762380956039,
+      "val_loss": 1.436688377652117,
+      "val_ppl": 4.2067415847318985,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.2492595911026001
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5995759963989258
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.414212942123413
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.983019232749939
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.529494047164917
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5681391954421997
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7659597396850586
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5975100994110107
+        }
+      }
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.5261939158582778,
+      "val_loss": 1.4358693256600357,
+      "val_ppl": 4.203297455309825,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.228110209107399
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5579392313957214
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3811686038970947
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9602181315422058
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5159519910812378
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5636099576950073
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7688021659851074
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5886926651000977
+        }
+      }
+    },
+    {
+      "epoch": 19,
+      "train_loss": 1.5239540669081582,
+      "val_loss": 1.4337128086756634,
+      "val_ppl": 4.194242739790113,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.22577951848506927
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5260984897613525
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3483270406723022
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9363301396369934
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.505316138267517
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5559288263320923
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7699679136276245
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.579279899597168
+        }
+      }
+    },
+    {
+      "epoch": 20,
+      "train_loss": 1.5220903747748256,
+      "val_loss": 1.4341044214464003,
+      "val_ppl": 4.195885580468284,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.21822302043437958
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.501541793346405
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3165786266326904
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9111620187759399
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.488086223602295
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5456639528274536
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7665632963180542
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.569993257522583
+        }
+      }
+    },
+    {
+      "epoch": 21,
+      "train_loss": 1.5200925769770124,
+      "val_loss": 1.4313364293840196,
+      "val_ppl": 4.1842874616425,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.2067164033651352
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.46945205330848694
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2857557535171509
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8892359733581543
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4790971279144287
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5357810258865356
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7655298709869385
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5580244064331055
+        }
+      }
+    },
+    {
+      "epoch": 22,
+      "train_loss": 1.5184148126650483,
+      "val_loss": 1.4302801393693494,
+      "val_ppl": 4.179869974063001,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.19746717810630798
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.4475419819355011
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2558225393295288
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8710014820098877
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4750399589538574
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.528480887413025
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.750205159187317
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.554260015487671
+        }
+      }
+    },
+    {
+      "epoch": 23,
+      "train_loss": 1.5168180736323458,
+      "val_loss": 1.4306194615620438,
+      "val_ppl": 4.181288537369172,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.18687745928764343
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.4195130169391632
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2280808687210083
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8488439321517944
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4624834060668945
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5156339406967163
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7427810430526733
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5407193899154663
+        }
+      }
+    },
+    {
+      "epoch": 24,
+      "train_loss": 1.5155080597127804,
+      "val_loss": 1.4283356358928065,
+      "val_ppl": 4.171750099487609,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.18044443428516388
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.3992644250392914
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1975796222686768
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8319445252418518
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4415998458862305
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.505544900894165
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7410814762115479
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5318622589111328
+        }
+      }
+    },
+    {
+      "epoch": 25,
+      "train_loss": 1.5138564150060543,
+      "val_loss": 1.4263978621865687,
+      "val_ppl": 4.163674019170988,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.17479495704174042
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.3791866898536682
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1695715188980103
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8173599243164062
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4404911994934082
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4926574230194092
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.730663537979126
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5175306797027588
+        }
+      }
+    },
+    {
+      "epoch": 26,
+      "train_loss": 1.5124784596865442,
+      "val_loss": 1.4268118181536276,
+      "val_ppl": 4.16539795366798,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.16412504017353058
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.3640536665916443
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.140545129776001
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7983853816986084
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4293594360351562
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4835686683654785
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7225054502487183
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4998828172683716
+        }
+      }
+    },
+    {
+      "epoch": 27,
+      "train_loss": 1.5112872823317995,
+      "val_loss": 1.4240895069628206,
+      "val_ppl": 4.154073865044684,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.15989020466804504
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.3514855206012726
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.116428017616272
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7854876518249512
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.417488932609558
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4670908451080322
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7168526649475098
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4894517660140991
+        }
+      }
+    },
+    {
+      "epoch": 28,
+      "train_loss": 1.5096494461984618,
+      "val_loss": 1.4238988304223639,
+      "val_ppl": 4.153281856122456,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.15829779207706451
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.3315073549747467
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0929996967315674
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.766879677772522
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3989583253860474
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4522277116775513
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.7075369358062744
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4763867855072021
+        }
+      }
+    },
+    {
+      "epoch": 29,
+      "train_loss": 1.508632411607882,
+      "val_loss": 1.423824748685283,
+      "val_ppl": 4.152974185184508,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.15188337862491608
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.32120686769485474
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0728896856307983
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7510848045349121
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3842970132827759
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4479825496673584
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6978768110275269
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.45572829246521
+        }
+      }
+    },
+    {
+      "epoch": 30,
+      "train_loss": 1.5077636496211082,
+      "val_loss": 1.4236399119045573,
+      "val_ppl": 4.152206633743735,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.144903302192688
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.305441677570343
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0528969764709473
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7400360107421875
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.366620421409607
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4356279373168945
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.690737009048462
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4455641508102417
+        }
+      }
+    },
+    {
+      "epoch": 31,
+      "train_loss": 1.506498656263942,
+      "val_loss": 1.4235621062658166,
+      "val_ppl": 4.151883581222231,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.14372174441814423
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.29298725724220276
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0299268960952759
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7258849740028381
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.350924015045166
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4243968725204468
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6782563924789429
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.430279016494751
+        }
+      }
+    },
+    {
+      "epoch": 32,
+      "train_loss": 1.5057342890726917,
+      "val_loss": 1.419926330180151,
+      "val_ppl": 4.136815670560168,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.13825678825378418
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.28021493554115295
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.0071130990982056
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7143100500106812
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3447556495666504
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4136205911636353
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6684972047805786
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4145184755325317
+        }
+      }
+    },
+    {
+      "epoch": 33,
+      "train_loss": 1.504712496175104,
+      "val_loss": 1.420506927702162,
+      "val_ppl": 4.139218192869271,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.13510443270206451
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.27297282218933105
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9864317774772644
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7000046372413635
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3341186046600342
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3946492671966553
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.661294937133789
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.39840567111969
+        }
+      }
+    },
+    {
+      "epoch": 34,
+      "train_loss": 1.5039253150768173,
+      "val_loss": 1.4177333699759616,
+      "val_ppl": 4.127753738282617,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.1293688416481018
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.26207539439201355
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.968839168548584
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6877632737159729
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3178002834320068
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3892561197280884
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6472488641738892
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3862837553024292
+        }
+      }
+    },
+    {
+      "epoch": 35,
+      "train_loss": 1.5029926899450134,
+      "val_loss": 1.4183256482992548,
+      "val_ppl": 4.1301992414834725,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.1317005604505539
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.25176599621772766
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9477038979530334
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6786562204360962
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3093180656433105
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3686683177947998
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6399904489517212
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3755556344985962
+        }
+      }
+    },
+    {
+      "epoch": 36,
+      "train_loss": 1.5019579818503719,
+      "val_loss": 1.419172870429186,
+      "val_ppl": 4.1336999203988105,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.12995152175426483
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.24676737189292908
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9286084771156311
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6655308604240417
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2987089157104492
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3603971004486084
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6257119178771973
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3656575679779053
+        }
+      }
+    },
+    {
+      "epoch": 37,
+      "train_loss": 1.5013580568959521,
+      "val_loss": 1.418350649777279,
+      "val_ppl": 4.130302503859895,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.12642203271389008
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.2415323257446289
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.9151971936225891
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6577296257019043
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.279642939567566
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.354377031326294
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.618706464767456
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.349249243736267
+        }
+      }
+    },
+    {
+      "epoch": 38,
+      "train_loss": 1.5003950400379318,
+      "val_loss": 1.4179964529143438,
+      "val_ppl": 4.128839822723881,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.12017408758401871
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.23261810839176178
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8990660309791565
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6480394005775452
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2610327005386353
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.342458963394165
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.6097558736801147
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3305554389953613
+        }
+      }
+    },
+    {
+      "epoch": 39,
+      "train_loss": 1.4994983999858877,
+      "val_loss": 1.417241237496817,
+      "val_ppl": 4.125722836379481,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.11896847188472748
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.2269645631313324
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.884981632232666
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6393802165985107
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2566907405853271
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3261059522628784
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5925828218460083
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3187079429626465
+        }
+      }
+    },
+    {
+      "epoch": 40,
+      "train_loss": 1.4986421779664776,
+      "val_loss": 1.4160448987851433,
+      "val_ppl": 4.120790025681212,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.11737467348575592
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.21899433434009552
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8696349263191223
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6307506561279297
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2396185398101807
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.311017632484436
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5876470804214478
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3111510276794434
+        }
+      }
+    },
+    {
+      "epoch": 41,
+      "train_loss": 1.4980485648420023,
+      "val_loss": 1.4148789259695238,
+      "val_ppl": 4.115988096535831,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.11440442502498627
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.21294169127941132
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.857062041759491
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6208208799362183
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2249414920806885
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.3043187856674194
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5730555057525635
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2953251600265503
+        }
+      }
+    },
+    {
+      "epoch": 42,
+      "train_loss": 1.497683406077451,
+      "val_loss": 1.415638630749077,
+      "val_ppl": 4.119116220440243,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.11245781183242798
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.20894445478916168
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8403611183166504
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6125698089599609
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2134591341018677
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.296044111251831
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5648144483566284
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2858270406723022
+        }
+      }
+    },
+    {
+      "epoch": 43,
+      "train_loss": 1.496685281927098,
+      "val_loss": 1.4143343661848362,
+      "val_ppl": 4.113747305122024,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.11108174920082092
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.20222467184066772
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8266122341156006
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.6109969019889832
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.209022879600525
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2843811511993408
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5543724298477173
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2667672634124756
+        }
+      }
+    },
+    {
+      "epoch": 44,
+      "train_loss": 1.4960151829146981,
+      "val_loss": 1.4153145761045505,
+      "val_ppl": 4.117781617951412,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.10472571849822998
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.1967841237783432
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8168114423751831
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5995098948478699
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.200377345085144
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2697041034698486
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.537147879600525
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.265334129333496
+        }
+      }
+    },
+    {
+      "epoch": 45,
+      "train_loss": 1.4952283109553983,
+      "val_loss": 1.4159053059888997,
+      "val_ppl": 4.120214833226091,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.10389047861099243
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.19672176241874695
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.8047373294830322
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5920835733413696
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1876505613327026
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2574578523635864
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5279771089553833
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2459135055541992
+        }
+      }
+    },
+    {
+      "epoch": 46,
+      "train_loss": 1.494793434259368,
+      "val_loss": 1.4140285317615797,
+      "val_ppl": 4.112489371956976,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.10144732147455215
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.18980690836906433
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7912459373474121
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5889857411384583
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1835328340530396
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2485378980636597
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5205131769180298
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2350605726242065
+        }
+      }
+    },
+    {
+      "epoch": 47,
+      "train_loss": 1.4942126619882923,
+      "val_loss": 1.4125852388293085,
+      "val_ppl": 4.106558126404395,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.10260006040334702
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.18794173002243042
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7842689156532288
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5773611068725586
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1687219142913818
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2413029670715332
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.5096766948699951
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2258695363998413
+        }
+      }
+    },
+    {
+      "epoch": 48,
+      "train_loss": 1.4939148917207128,
+      "val_loss": 1.4127082546979295,
+      "val_ppl": 4.107063329292706,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.1021045595407486
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.18404893577098846
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7719846963882446
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5715602040290833
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.160923719406128
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.227797031402588
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.498568058013916
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2099549770355225
+        }
+      }
+    },
+    {
+      "epoch": 49,
+      "train_loss": 1.4930831379335772,
+      "val_loss": 1.4132101807115753,
+      "val_ppl": 4.1091252886496,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.09872205555438995
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.17848482728004456
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7640529274940491
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5668569207191467
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.147423505783081
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2203819751739502
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4835472106933594
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1972227096557617
+        }
+      }
+    },
+    {
+      "epoch": 50,
+      "train_loss": 1.492634799131533,
+      "val_loss": 1.411989349831817,
+      "val_ppl": 4.104111802540436,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.09682317078113556
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.17732343077659607
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7514711022377014
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5597129464149475
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1358776092529297
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.2052139043807983
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4801368713378906
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1931588649749756
+        }
+      }
+    },
+    {
+      "epoch": 51,
+      "train_loss": 1.4920305417805184,
+      "val_loss": 1.4113870722418618,
+      "val_ppl": 4.10164073218494,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.09712076187133789
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.17113585770130157
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7446888089179993
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5573840141296387
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.130211591720581
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1979671716690063
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.469414472579956
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1811970472335815
+        }
+      }
+    },
+    {
+      "epoch": 52,
+      "train_loss": 1.4917261701811098,
+      "val_loss": 1.4130020224919884,
+      "val_ppl": 4.108270029463158,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.09473613649606705
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.1716509610414505
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7332531809806824
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5501912832260132
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1199508905410767
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.195003867149353
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4612114429473877
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1701158285140991
+        }
+      }
+    },
+    {
+      "epoch": 53,
+      "train_loss": 1.4909472718247776,
+      "val_loss": 1.4122168808427762,
+      "val_ppl": 4.10504572149169,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.09346845000982285
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.16663336753845215
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7269646525382996
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5484437942504883
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1147270202636719
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.178415298461914
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4502884149551392
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1574152708053589
+        }
+      }
+    },
+    {
+      "epoch": 54,
+      "train_loss": 1.4907007869144318,
+      "val_loss": 1.4099719274428584,
+      "val_ppl": 4.095840421742977,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.0933380201458931
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.16410896182060242
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7180081605911255
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.5430670976638794
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1061748266220093
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.169475793838501
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4432357549667358
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1452580690383911
+        }
+      }
+    },
+    {
+      "epoch": 55,
+      "train_loss": 1.4899220069398575,
+      "val_loss": 1.4113498413434593,
+      "val_ppl": 4.101488027258245,
+      "geometry": {
+        "layer_0/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.09239989519119263
+        },
+        "layer_0/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.16206075251102448
+        },
+        "layer_0/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.7133668661117554
+        },
+        "layer_0/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 0.538902223110199
+        },
+        "layer_1/head_0": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.095151662826538
+        },
+        "layer_1/head_1": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1619832515716553
+        },
+        "layer_1/head_2": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.4303227663040161
+        },
+        "layer_1/head_3": {
+          "type": "E",
+          "curvature": null,
+          "temperature": 1.1451234817504883
+        }
+      }
+    }
+  ],
+  "summary": {
+    "comparison_label": "exact_euclidean",
+    "best_epoch": 54,
+    "best_val_ppl": 4.095840421742977,
+    "final_epoch": 55,
+    "final_val_loss": 1.4113498413434593,
+    "final_val_ppl": 4.101488027258245,
+    "final_geometry": {
+      "layer_0/head_0": {
+        "type": "E",
+        "curvature": null,
+        "temperature": 0.09239989519119263
+      },
+      "layer_0/head_1": {
+        "type": "E",
+        "curvature": null,
+        "temperature": 0.16206075251102448
+      },
+      "layer_0/head_2": {
+        "type": "E",
+        "curvature": null,
+        "temperature": 0.7133668661117554
+      },
+      "layer_0/head_3": {
+        "type": "E",
+        "curvature": null,
+        "temperature": 0.538902223110199
+      },
+      "layer_1/head_0": {
+        "type": "E",
+        "curvature": null,
+        "temperature": 1.095151662826538
+      },
+      "layer_1/head_1": {
+        "type": "E",
+        "curvature": null,
+        "temperature": 1.1619832515716553
+      },
+      "layer_1/head_2": {
+        "type": "E",
+        "curvature": null,
+        "temperature": 1.4303227663040161
+      },
+      "layer_1/head_3": {
+        "type": "E",
+        "curvature": null,
+        "temperature": 1.1451234817504883
+      }
+    }
+  }
+}

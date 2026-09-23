@@ -1,0 +1,23 @@
+{
+  "tree": {
+    "kappa": -0.6126576454987055,
+    "regime": "\u210d",
+    "expected": "hyperbolic"
+  },
+  "phase": {
+    "kappa": 0.16418140954148047,
+    "regime": "S",
+    "expected": "spherical"
+  },
+  "flat": {
+    "kappa": -0.02890614437783481,
+    "regime": "\u211d",
+    "expected": "euclidean"
+  },
+  "mixed": {
+    "k1": 0.04504341527377541,
+    "k2": 0.3188485008646447,
+    "r1": "\u211d",
+    "r2": "S"
+  }
+}

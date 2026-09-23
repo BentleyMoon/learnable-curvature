@@ -1,0 +1,6 @@
+# Result files are checked against SHA-256 hashes: store and check them out byte for byte.
+results/** -text
+# Everything else: LF in the repository and in every checkout.
+* text=auto eol=lf
+results/** -text
+*.png binary

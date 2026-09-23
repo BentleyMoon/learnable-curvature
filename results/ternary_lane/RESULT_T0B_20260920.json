@@ -1,0 +1,35 @@
+{
+ "generated_at": "2026-09-20T19:06:04",
+ "prereg": "PREREG_T0_20260920.md",
+ "checkpoint": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_8h4l\\run.pt",
+ "val_sequences": 2500,
+ "results": {
+  "blended_learned": {
+   "ppl": 3.745593699152492,
+   "loss": 1.320580135553311,
+   "seconds": 1.3784277439117432
+  },
+  "hard_learned": {
+   "ppl": 3.745593710601455,
+   "loss": 1.3205801386099596,
+   "seconds": 2.1274664402008057
+  },
+  "hard_sign1": {
+   "ppl": 3.745593710601455,
+   "loss": 1.3205801386099596,
+   "seconds": 2.164260149002075
+  },
+  "hard_shuffled": {
+   "mean_ppl": 4.395342213721014,
+   "sd": 0.6527134733235419,
+   "n": 10,
+   "min": 3.8324080560071807,
+   "max": 5.999534425312262
+  }
+ },
+ "relative_to_blended_pct": {
+  "hard_learned": 3.0566484329264977e-07,
+  "hard_sign1": 3.0566484329264977e-07,
+  "hard_shuffled_mean": 17.34701002715642
+ }
+}

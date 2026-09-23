@@ -1,0 +1,21 @@
+{
+  "title": "Learnable curvature: code, results and reproduction",
+  "upload_type": "software",
+  "description": "<p>Code, saved results and figures for the learnable-curvature preprint. Every number in CLAIMS.md is recomputed from the saved runs in results/ by reproduce.py, and each claim names the control it was tested against.</p>",
+  "creators": [
+    {
+      "name": "Moon, Bentley",
+      "orcid": "0009-0003-0053-1661"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "attention",
+    "transformers",
+    "curvature",
+    "cosine attention",
+    "negative results",
+    "reproducibility"
+  ],
+  "access_right": "open"
+}

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite them as below."
+title: "Learnable curvature: code, results and reproduction"
+authors:
+  - family-names: Moon
+    given-names: Bentley
+    orcid: "https://orcid.org/0009-0003-0053-1661"
+    website: "https://bentleymoon.com"
+type: software
+license: MIT
+version: 1.0.0
+repository-code: "https://github.com/BentleyMoon/learnable-curvature"
+url: "https://bentleymoon.com"
+keywords:
+  - attention
+  - transformers
+  - curvature
+  - cosine attention
+  - negative results
+  - reproducibility

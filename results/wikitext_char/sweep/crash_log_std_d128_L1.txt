@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Worker 1: task failed for std d=128 L=1
+At C:\gptcodex\fractaltest\files\runs\run_compression_worker_20260307.ps1:93 char:5
++     throw ("Worker {0}: task failed for {1} d={2} L={3}" -f ($WorkerI ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Worker 1: task failed for std d=128 L=1:String) [], RuntimeException
+    + FullyQualifiedErrorId : Worker 1: task failed for std d=128 L=1
+ 

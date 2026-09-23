@@ -1,0 +1,995 @@
+{
+  "meta": {
+    "generated_at": "2026-03-16T01:09:37",
+    "checkpoint": "runs\\language_20260305_cpu_pilot\\resume_long55.pt",
+    "epochs": 20,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "seed": 1234,
+    "analysis_batches": 64,
+    "analysis_batch_size": 16,
+    "config": {
+      "vocab_size": 256,
+      "d_model": 128,
+      "n_heads": 4,
+      "n_layers": 2,
+      "d_ff": 512,
+      "max_seq_len": 64,
+      "tokenizer": "char"
+    }
+  },
+  "hyperbolic_forced": [
+    {
+      "epoch": 1,
+      "loss": 1.6916686730145554,
+      "ppl": 5.4285315957250475,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 2,
+      "loss": 1.5814431625882357,
+      "ppl": 4.8619673600172675,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 3,
+      "loss": 1.5355588347253835,
+      "ppl": 4.643919988701209,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 4,
+      "loss": 1.5106694713288311,
+      "ppl": 4.529762325442744,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 5,
+      "loss": 1.4947706328497992,
+      "ppl": 4.458313844823208,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 6,
+      "loss": 1.483438185466233,
+      "ppl": 4.408075437463154,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 7,
+      "loss": 1.477196497729175,
+      "ppl": 4.3806472950580915,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 8,
+      "loss": 1.4678437767490264,
+      "ppl": 4.339867322311413,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 9,
+      "loss": 1.4643626208800995,
+      "ppl": 4.324785833449066,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 10,
+      "loss": 1.456711347598756,
+      "ppl": 4.2918219836794975,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 11,
+      "loss": 1.453860570239337,
+      "ppl": 4.279604377849113,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 12,
+      "loss": 1.452380884932788,
+      "ppl": 4.273276592853148,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 13,
+      "loss": 1.449989722193783,
+      "ppl": 4.263070699929112,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 14,
+      "loss": 1.4448126306670541,
+      "ppl": 4.241057424269247,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 15,
+      "loss": 1.4433062982388294,
+      "ppl": 4.234673791085003,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 16,
+      "loss": 1.4405603081949296,
+      "ppl": 4.22306137010863,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 17,
+      "loss": 1.4396504189378472,
+      "ppl": 4.21922059953889,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 18,
+      "loss": 1.43637035952674,
+      "ppl": 4.2054039773621446,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 19,
+      "loss": 1.435985334244253,
+      "ppl": 4.203785102181724,
+      "kappa_value": -2.5
+    },
+    {
+      "epoch": 20,
+      "loss": 1.4327497683118322,
+      "ppl": 4.19020545908016,
+      "kappa_value": -2.5
+    }
+  ],
+  "euclidean_forced": [
+    {
+      "epoch": 1,
+      "loss": 1.7239601421954385,
+      "ppl": 5.606687839267081,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 2,
+      "loss": 1.6035233821492896,
+      "ppl": 4.970514630585029,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 3,
+      "loss": 1.546797820316848,
+      "ppl": 4.6964073383323415,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 4,
+      "loss": 1.519927734756128,
+      "ppl": 4.571894794111794,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 5,
+      "loss": 1.5011166878925857,
+      "ppl": 4.486696513616533,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 6,
+      "loss": 1.4906032461419327,
+      "ppl": 4.439772987261893,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 7,
+      "loss": 1.4818521065096701,
+      "ppl": 4.40108942342231,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 8,
+      "loss": 1.4722366219780352,
+      "ppl": 4.358973622558046,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 9,
+      "loss": 1.4680203579659958,
+      "ppl": 4.3406337290291965,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 10,
+      "loss": 1.4618491477009217,
+      "ppl": 4.313929249832453,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 11,
+      "loss": 1.4571703879636675,
+      "ppl": 4.293792555460412,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 12,
+      "loss": 1.4541145819489674,
+      "ppl": 4.28069158554957,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 13,
+      "loss": 1.4508722574052846,
+      "ppl": 4.266834670604945,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 14,
+      "loss": 1.4477098661084329,
+      "ppl": 4.253362583011342,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 15,
+      "loss": 1.4439466911832064,
+      "ppl": 4.237386514814412,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 16,
+      "loss": 1.4432157878380096,
+      "ppl": 4.234290526407812,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 17,
+      "loss": 1.4414873520533245,
+      "ppl": 4.226978148447556,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 18,
+      "loss": 1.4386054162056214,
+      "ppl": 4.214813805441474,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 19,
+      "loss": 1.4384399244434944,
+      "ppl": 4.214116346191246,
+      "kappa_value": 0.0
+    },
+    {
+      "epoch": 20,
+      "loss": 1.4350078590881867,
+      "ppl": 4.199678014298097,
+      "kappa_value": 0.0
+    }
+  ],
+  "spherical_forced": [
+    {
+      "epoch": 1,
+      "loss": 1.6561591691441007,
+      "ppl": 5.2391494640856955,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 2,
+      "loss": 1.5561927800537438,
+      "ppl": 4.74073781162025,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 3,
+      "loss": 1.5186830887230494,
+      "ppl": 4.566207943185018,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 4,
+      "loss": 1.4983144592640647,
+      "ppl": 4.474141363614736,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 5,
+      "loss": 1.484066669658948,
+      "ppl": 4.41084671395641,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 6,
+      "loss": 1.4742199490147252,
+      "ppl": 4.367627471665616,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 7,
+      "loss": 1.468571029683595,
+      "ppl": 4.343024651506505,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 8,
+      "loss": 1.4607595386898218,
+      "ppl": 4.309231313570232,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 9,
+      "loss": 1.45733509461085,
+      "ppl": 4.29449982988072,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 10,
+      "loss": 1.4522827141601125,
+      "ppl": 4.2728571025793505,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 11,
+      "loss": 1.4470202869411866,
+      "ppl": 4.2504305638292115,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 12,
+      "loss": 1.445377422062727,
+      "ppl": 4.243453413564406,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 13,
+      "loss": 1.4447945832778903,
+      "ppl": 4.240980884946115,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 14,
+      "loss": 1.4384748794699227,
+      "ppl": 4.214263653314046,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 15,
+      "loss": 1.435734804385879,
+      "ppl": 4.202732060410151,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 16,
+      "loss": 1.434272481976444,
+      "ppl": 4.196590802481273,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 17,
+      "loss": 1.43352539928156,
+      "ppl": 4.1934567729506105,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 18,
+      "loss": 1.433052646857436,
+      "ppl": 4.191474774629908,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 19,
+      "loss": 1.4320138314718842,
+      "ppl": 4.1871228669515554,
+      "kappa_value": 3.0
+    },
+    {
+      "epoch": 20,
+      "loss": 1.427892357645069,
+      "ppl": 4.169901263218234,
+      "kappa_value": 3.0
+    }
+  ],
+  "attention_analysis": {
+    "hyperbolic_forced": {
+      "kappa_value": -2.5,
+      "summary": {
+        "mean_mean_abs_lag": 2.8653921228316093,
+        "mean_local4_mass": 0.8640315045440008,
+        "mean_long16_mass": 0.020701592595441215,
+        "mean_punct_mass": 0.03760435177560245,
+        "mean_word_start_mass": 0.17167050738833728,
+        "mean_positional_score": 0.5391217224886079,
+        "mean_syntactic_score": 0.053676341432901814,
+        "head_count": 8
+      },
+      "raw": {
+        "meta": {
+          "batches_analyzed": 64,
+          "batch_size": 16,
+          "sequence_length": 63,
+          "tokenization": "character-level ord(c)%256",
+          "notes": "syntactic/positional assignments are proxy metrics"
+        },
+        "correlations": {
+          "kappa_vs_positional_score": null,
+          "kappa_vs_syntactic_score": null,
+          "kappa_vs_local4_mass": null,
+          "kappa_vs_long16_mass": null,
+          "kappa_vs_punct_mass": null,
+          "kappa_vs_mean_abs_lag": null,
+          "kappa_vs_cross_word_mass": null,
+          "kappa_vs_sentence_crossing_mass": null
+        },
+        "heads": {
+          "layer_0/head_0": {
+            "kappa": -2.5,
+            "regime": "\u00e2\u201e\u008d",
+            "mean_abs_lag": 1.182424371204679,
+            "local4_mass": 0.9857081562753708,
+            "self_mass": 0.04872483576810549,
+            "long16_mass": 0.0022995343509440622,
+            "punct_mass": 0.044251626150475606,
+            "bracket_mass": 0.0049467762906311285,
+            "newline_mass": 0.006483674064160339,
+            "word_start_mass": 0.15089223001684463,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.8905615009162491,
+            "lag_entropy": 0.12521949213762032,
+            "periodicity_strength": 0.0399846122559752,
+            "positional_score": 0.6743211188130286,
+            "syntactic_score": 0.04723075400189763,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_1": {
+            "kappa": -2.5,
+            "regime": "\u00e2\u201e\u008d",
+            "mean_abs_lag": 2.0355137378450423,
+            "local4_mass": 0.9873973405550397,
+            "self_mass": 0.03349441754084731,
+            "long16_mass": 0.0015857632531570123,
+            "punct_mass": 0.03173787625772612,
+            "bracket_mass": 0.004885628699354591,
+            "newline_mass": 0.004536942272915482,
+            "word_start_mass": 0.1488193959470779,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.9096466332110231,
+            "lag_entropy": 0.10948656943079768,
+            "periodicity_strength": 0.038533571894612026,
+            "positional_score": 0.6789090823183299,
+            "syntactic_score": 0.0422457024327799,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_2": {
+            "kappa": -2.5,
+            "regime": "\u00e2\u201e\u008d",
+            "mean_abs_lag": 2.560526832701668,
+            "local4_mass": 0.9332478311326768,
+            "self_mass": 0.07978554755922347,
+            "long16_mass": 0.00718411776636328,
+            "punct_mass": 0.04167614785570001,
+            "bracket_mass": 0.003967015150313576,
+            "newline_mass": 0.004054961151846256,
+            "word_start_mass": 0.17055270809029777,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.3364993111200494,
+            "lag_entropy": 0.42439833712517916,
+            "periodicity_strength": 0.14166374942886134,
+            "positional_score": 0.5105602304307802,
+            "syntactic_score": 0.05128662583920809,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_3": {
+            "kappa": -2.5,
+            "regime": "\u00e2\u201e\u008d",
+            "mean_abs_lag": 0.9828309511381482,
+            "local4_mass": 0.9999042191202678,
+            "self_mass": 0.01882122862078841,
+            "long16_mass": 2.4996675111259898e-05,
+            "punct_mass": 0.0268207314823355,
+            "bracket_mass": 0.002803748390371246,
+            "newline_mass": 0.00432791361041988,
+            "word_start_mass": 0.1439917635113474,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.980823047947891,
+            "lag_entropy": 0.023442572593441912,
+            "periodicity_strength": 0.03352985555797026,
+            "positional_score": 0.7027966960061475,
+            "syntactic_score": 0.038752607567938975,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_0": {
+            "kappa": -2.5,
+            "regime": "\u00e2\u201e\u008d",
+            "mean_abs_lag": 4.872010140191941,
+            "local4_mass": 0.6404873634141589,
+            "self_mass": 0.07442260734618657,
+            "long16_mass": 0.04068710844195078,
+            "punct_mass": 0.05351665822996034,
+            "bracket_mass": 0.01415922065516786,
+            "newline_mass": 0.004938893851229093,
+            "word_start_mass": 0.15976094655574313,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.1819965903965692,
+            "lag_entropy": 0.6264672719801058,
+            "periodicity_strength": 0.29105984156833015,
+            "positional_score": 0.37644815153291905,
+            "syntactic_score": 0.06368664093315601,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_1": {
+            "kappa": -2.5,
+            "regime": "\u00e2\u201e\u008d",
+            "mean_abs_lag": 2.457066770583864,
+            "local4_mass": 0.889348136054145,
+            "self_mass": 0.0763563486555266,
+            "long16_mass": 0.009595479335754163,
+            "punct_mass": 0.01932934254762672,
+            "bracket_mass": 0.0016068614569366983,
+            "newline_mass": 0.007103839573184294,
+            "word_start_mass": 0.15377112206012483,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.39158142561859144,
+            "lag_entropy": 0.4363058853832834,
+            "periodicity_strength": 0.13073959055922754,
+            "positional_score": 0.5069972350846336,
+            "syntactic_score": 0.0402397364290202,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_2": {
+            "kappa": -2.5,
+            "regime": "\u00e2\u201e\u008d",
+            "mean_abs_lag": 4.042985166822161,
+            "local4_mass": 0.7278972296487718,
+            "self_mass": 0.08212175977135462,
+            "long16_mass": 0.027196061457433397,
+            "punct_mass": 0.03052307360820354,
+            "bracket_mass": 0.001998275029657793,
+            "newline_mass": 0.008093076434710788,
+            "word_start_mass": 0.23072630923891824,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.21858798109513689,
+            "lag_entropy": 0.5762638459300695,
+            "periodicity_strength": 0.2366781442963167,
+            "positional_score": 0.4122830910244486,
+            "syntactic_score": 0.0640270079809448,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_3": {
+            "kappa": -2.5,
+            "regime": "\u00e2\u201e\u008d",
+            "mean_abs_lag": 4.789779012165372,
+            "local4_mass": 0.7482617601515755,
+            "self_mass": 0.0824591178033087,
+            "long16_mass": 0.07703967948281576,
+            "punct_mass": 0.052979358072791784,
+            "bracket_mass": 0.005845221724095089,
+            "newline_mass": 0.008064545729356477,
+            "word_start_mass": 0.21484958368634421,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.39317930349596647,
+            "lag_entropy": 0.5690119877750576,
+            "periodicity_strength": 0.12576883904412223,
+            "positional_score": 0.45065817469857544,
+            "syntactic_score": 0.08194165627826892,
+            "function_proxy": "positional-proxy"
+          }
+        }
+      }
+    },
+    "euclidean_forced": {
+      "kappa_value": 0.0,
+      "summary": {
+        "mean_mean_abs_lag": 2.8922382657017027,
+        "mean_local4_mass": 0.853054942592742,
+        "mean_long16_mass": 0.021034294132223897,
+        "mean_punct_mass": 0.03944154330787973,
+        "mean_word_start_mass": 0.172378435317013,
+        "mean_positional_score": 0.5162952197391728,
+        "mean_syntactic_score": 0.05461338875795668,
+        "head_count": 8
+      },
+      "raw": {
+        "meta": {
+          "batches_analyzed": 64,
+          "batch_size": 16,
+          "sequence_length": 63,
+          "tokenization": "character-level ord(c)%256",
+          "notes": "syntactic/positional assignments are proxy metrics"
+        },
+        "correlations": {
+          "kappa_vs_positional_score": null,
+          "kappa_vs_syntactic_score": null,
+          "kappa_vs_local4_mass": null,
+          "kappa_vs_long16_mass": null,
+          "kappa_vs_punct_mass": null,
+          "kappa_vs_mean_abs_lag": null,
+          "kappa_vs_cross_word_mass": null,
+          "kappa_vs_sentence_crossing_mass": null
+        },
+        "heads": {
+          "layer_0/head_0": {
+            "kappa": 0.0,
+            "regime": "\u00e2\u201e\u009d",
+            "mean_abs_lag": 1.9002612658909388,
+            "local4_mass": 0.9491967776465038,
+            "self_mass": 0.07733660912702954,
+            "long16_mass": 0.01004341346699567,
+            "punct_mass": 0.03772284123041327,
+            "bracket_mass": 0.003418946093583982,
+            "newline_mass": 0.00553422845763317,
+            "word_start_mass": 0.13530259591246407,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.47766052760713656,
+            "lag_entropy": 0.31518298595143185,
+            "periodicity_strength": 0.08545548872983967,
+            "positional_score": 0.5478016279994135,
+            "syntactic_score": 0.04345815619860317,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_1": {
+            "kappa": 0.0,
+            "regime": "\u00e2\u201e\u009d",
+            "mean_abs_lag": 2.6235758955516513,
+            "local4_mass": 0.9471304492344932,
+            "self_mass": 0.04504470130990422,
+            "long16_mass": 0.008661477456963251,
+            "punct_mass": 0.033469351718113535,
+            "bracket_mass": 0.0034463232409002054,
+            "newline_mass": 0.0042210416942821,
+            "word_start_mass": 0.14513815631942142,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.5277292440284376,
+            "lag_entropy": 0.32765222735005023,
+            "periodicity_strength": 0.08600133464937941,
+            "positional_score": 0.5588756899631948,
+            "syntactic_score": 0.04359653837764488,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_2": {
+            "kappa": 0.0,
+            "regime": "\u00e2\u201e\u009d",
+            "mean_abs_lag": 2.460148890813192,
+            "local4_mass": 0.8893013445157854,
+            "self_mass": 0.10827025203477769,
+            "long16_mass": 0.016152506561151574,
+            "punct_mass": 0.0519898140004703,
+            "bracket_mass": 0.006299804831441078,
+            "newline_mass": 0.005264152243312094,
+            "word_start_mass": 0.21338036443505967,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.44078038125957625,
+            "lag_entropy": 0.43354989647183945,
+            "periodicity_strength": 0.1191150788052628,
+            "positional_score": 0.5226046931487174,
+            "syntactic_score": 0.06617059539375265,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_3": {
+            "kappa": 0.0,
+            "regime": "\u00e2\u201e\u009d",
+            "mean_abs_lag": 0.994246726944333,
+            "local4_mass": 0.998094189734686,
+            "self_mass": 0.020408306004745618,
+            "long16_mass": 4.232432672012461e-05,
+            "punct_mass": 0.034537870939525345,
+            "bracket_mass": 0.004008415247505856,
+            "newline_mass": 0.005470988287087825,
+            "word_start_mass": 0.14393300326570632,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.9727751159318127,
+            "lag_entropy": 0.03527530696248031,
+            "periodicity_strength": 0.03407592046265216,
+            "positional_score": 0.6999262253664232,
+            "syntactic_score": 0.04168711961315634,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_0": {
+            "kappa": 0.0,
+            "regime": "\u00e2\u201e\u009d",
+            "mean_abs_lag": 4.878657469673763,
+            "local4_mass": 0.637567074525924,
+            "self_mass": 0.08311197090716589,
+            "long16_mass": 0.04268967868789794,
+            "punct_mass": 0.040844795574981066,
+            "bracket_mass": 0.009099359213862391,
+            "newline_mass": 0.006485947014187418,
+            "word_start_mass": 0.16553995036889638,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.1795253961319624,
+            "lag_entropy": 0.6291413957439118,
+            "periodicity_strength": 0.29452850486783466,
+            "positional_score": 0.3761013467142419,
+            "syntactic_score": 0.05989596003976961,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_1": {
+            "kappa": 0.0,
+            "regime": "\u00e2\u201e\u009d",
+            "mean_abs_lag": 1.6953687554314023,
+            "local4_mass": 0.9502701097064548,
+            "self_mass": 0.0526656773946588,
+            "long16_mass": 0.0054315808487849105,
+            "punct_mass": 0.02692790659114955,
+            "bracket_mass": 0.0048321274678326314,
+            "newline_mass": 0.007256335482770015,
+            "word_start_mass": 0.13568233651301218,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.6591615409886947,
+            "lag_entropy": 0.2961010687629333,
+            "periodicity_strength": 0.0676047108622599,
+            "positional_score": 0.5966440160911082,
+            "syntactic_score": 0.038885555315267537,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_2": {
+            "kappa": 0.0,
+            "regime": "\u00e2\u201e\u009d",
+            "mean_abs_lag": 5.442762692769368,
+            "local4_mass": 0.6320388061659676,
+            "self_mass": 0.09108186347617044,
+            "long16_mass": 0.0679757869432843,
+            "punct_mass": 0.045932471722600954,
+            "bracket_mass": 0.0077177073551519286,
+            "newline_mass": 0.0075962835551416944,
+            "word_start_mass": 0.16259202503022693,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.17462317768994376,
+            "lag_entropy": 0.652987368223865,
+            "periodicity_strength": 0.28383866562148624,
+            "positional_score": 0.37107839524528446,
+            "syntactic_score": 0.06713225831580719,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_3": {
+            "kappa": 0.0,
+            "regime": "\u00e2\u201e\u009d",
+            "mean_abs_lag": 3.142884428538973,
+            "local4_mass": 0.8208407892121209,
+            "self_mass": 0.08635309575096009,
+            "long16_mass": 0.017277584765993413,
+            "punct_mass": 0.04410729468578384,
+            "bracket_mass": 0.004160836699330026,
+            "newline_mass": 0.005947791392885385,
+            "word_start_mass": 0.277459050691317,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.28232068793936654,
+            "lag_entropy": 0.5108049919251304,
+            "periodicity_strength": 0.17830965871622378,
+            "positional_score": 0.45732976338499914,
+            "syntactic_score": 0.0760809268096521,
+            "function_proxy": "positional-proxy"
+          }
+        }
+      }
+    },
+    "spherical_forced": {
+      "kappa_value": 3.0,
+      "summary": {
+        "mean_mean_abs_lag": 5.330006476905611,
+        "mean_local4_mass": 0.7329542979834571,
+        "mean_long16_mass": 0.08441810377149118,
+        "mean_punct_mass": 0.03112158921477015,
+        "mean_word_start_mass": 0.14662582316391526,
+        "mean_positional_score": 0.45619067347196346,
+        "mean_syntactic_score": 0.06224058091674889,
+        "head_count": 8
+      },
+      "raw": {
+        "meta": {
+          "batches_analyzed": 64,
+          "batch_size": 16,
+          "sequence_length": 63,
+          "tokenization": "character-level ord(c)%256",
+          "notes": "syntactic/positional assignments are proxy metrics"
+        },
+        "correlations": {
+          "kappa_vs_positional_score": null,
+          "kappa_vs_syntactic_score": null,
+          "kappa_vs_local4_mass": null,
+          "kappa_vs_long16_mass": null,
+          "kappa_vs_punct_mass": null,
+          "kappa_vs_mean_abs_lag": null,
+          "kappa_vs_cross_word_mass": null,
+          "kappa_vs_sentence_crossing_mass": null
+        },
+        "heads": {
+          "layer_0/head_0": {
+            "kappa": 3.0,
+            "regime": "S",
+            "mean_abs_lag": 3.4843912995050825,
+            "local4_mass": 0.8826045356099568,
+            "self_mass": 0.10969344053476576,
+            "long16_mass": 0.0619720866282781,
+            "punct_mass": 0.038042561964146675,
+            "bracket_mass": 0.004632298502006701,
+            "newline_mass": 0.005750925372546864,
+            "word_start_mass": 0.15324443555067455,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.4772186573138,
+            "lag_entropy": 0.4340825842237834,
+            "periodicity_strength": 0.0891761711177805,
+            "positional_score": 0.5250119897151555,
+            "syntactic_score": 0.06038326515505711,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_1": {
+            "kappa": 3.0,
+            "regime": "S",
+            "mean_abs_lag": 4.349324733491928,
+            "local4_mass": 0.8594433636892409,
+            "self_mass": 0.030541039145891628,
+            "long16_mass": 0.0717295210749384,
+            "punct_mass": 0.02700210636156419,
+            "bracket_mass": 0.003195842539536811,
+            "newline_mass": 0.0038019827534010384,
+            "word_start_mass": 0.14655822870277224,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.7768267499688218,
+            "lag_entropy": 0.3039522319206453,
+            "periodicity_strength": 0.041795408172288384,
+            "positional_score": 0.5882385560153897,
+            "syntactic_score": 0.05733393174374388,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_2": {
+            "kappa": 3.0,
+            "regime": "S",
+            "mean_abs_lag": 4.698908041393946,
+            "local4_mass": 0.8518681147741893,
+            "self_mass": 0.051076645948111066,
+            "long16_mass": 0.0630196493178133,
+            "punct_mass": 0.033129596284457614,
+            "bracket_mass": 0.00369014930430918,
+            "newline_mass": 0.004132779375400527,
+            "word_start_mass": 0.1340950975815455,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 3,
+            "lag_peak_mass": 0.4006001484974698,
+            "lag_entropy": 0.4961913351826726,
+            "periodicity_strength": 0.11846541721197025,
+            "positional_score": 0.48972803849612184,
+            "syntactic_score": 0.05490732040618443,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_0/head_3": {
+            "kappa": 3.0,
+            "regime": "S",
+            "mean_abs_lag": 3.4466815827384827,
+            "local4_mass": 0.8730914006157527,
+            "self_mass": 0.03675066697455588,
+            "long16_mass": 0.06834968682082873,
+            "punct_mass": 0.028493387462009512,
+            "bracket_mass": 0.00344972479127584,
+            "newline_mass": 0.004313316643385897,
+            "word_start_mass": 0.14917839661477103,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.805943038166933,
+            "lag_entropy": 0.27262958504459794,
+            "periodicity_strength": 0.03875348402561505,
+            "positional_score": 0.6024452351989595,
+            "syntactic_score": 0.05758573159811989,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_0": {
+            "kappa": 3.0,
+            "regime": "S",
+            "mean_abs_lag": 7.0808017745850576,
+            "local4_mass": 0.6036808292071024,
+            "self_mass": 0.08764369206296073,
+            "long16_mass": 0.12677564803096983,
+            "punct_mass": 0.04149989124446634,
+            "bracket_mass": 0.008517660189508683,
+            "newline_mass": 0.008001975004657335,
+            "word_start_mass": 0.1471251178355444,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.2603588997299653,
+            "lag_entropy": 0.6917781848456892,
+            "periodicity_strength": 0.20435959482972516,
+            "positional_score": 0.3692162897740717,
+            "syntactic_score": 0.0773474295483163,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_1": {
+            "kappa": 3.0,
+            "regime": "S",
+            "mean_abs_lag": 5.645141624269032,
+            "local4_mass": 0.6610201682363238,
+            "self_mass": 0.08504512456674425,
+            "long16_mass": 0.06895683144056608,
+            "punct_mass": 0.030046608358148544,
+            "bracket_mass": 0.0053226343274766965,
+            "newline_mass": 0.003893216312419446,
+            "word_start_mass": 0.1659574501571201,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 2,
+            "lag_peak_mass": 0.19343439556640454,
+            "lag_entropy": 0.6462488781251621,
+            "periodicity_strength": 0.2603771532552436,
+            "positional_score": 0.3830183290721741,
+            "syntactic_score": 0.06201153768241287,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_2": {
+            "kappa": 3.0,
+            "regime": "S",
+            "mean_abs_lag": 7.765803586869013,
+            "local4_mass": 0.5578263118153527,
+            "self_mass": 0.08992019827876772,
+            "long16_mass": 0.13793402141521846,
+            "punct_mass": 0.03041724715795782,
+            "bracket_mass": 0.006289385720655056,
+            "newline_mass": 0.007882237878798078,
+            "word_start_mass": 0.12033510314566749,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.15663851261218567,
+            "lag_entropy": 0.7297774726125028,
+            "periodicity_strength": 0.29088777844279495,
+            "positional_score": 0.33729165402623257,
+            "syntactic_score": 0.07045443963235437,
+            "function_proxy": "positional-proxy"
+          },
+          "layer_1/head_3": {
+            "kappa": 3.0,
+            "regime": "S",
+            "mean_abs_lag": 6.168999172392345,
+            "local4_mass": 0.5740996599197388,
+            "self_mass": 0.09161316851774852,
+            "long16_mass": 0.07660738544331656,
+            "punct_mass": 0.020341314885410525,
+            "bracket_mass": 0.0016356692621706142,
+            "newline_mass": 0.0029673259441984727,
+            "word_start_mass": 0.15651275572322665,
+            "cross_word_mass": 0.0,
+            "sentence_crossing_mass": 0.0,
+            "lag_peak": 1,
+            "lag_peak_mass": 0.16667677082861854,
+            "lag_entropy": 0.6837819950678613,
+            "periodicity_strength": 0.3288554170467351,
+            "positional_score": 0.3545752954776029,
+            "syntactic_score": 0.057900991567802276,
+            "function_proxy": "positional-proxy"
+          }
+        }
+      }
+    }
+  }
+}
