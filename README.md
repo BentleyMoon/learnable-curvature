@@ -51,6 +51,7 @@ WikiText-2 through Hugging Face themselves.
 |---|---|
 | `CLAIMS.md` | Every claim, its number, the file it comes from, the control it faced, and its verdict. Generated; do not edit |
 | `figures/` | Nine figures rebuilt from `results/`, with captions in `figures/CAPTIONS.md` |
+| `paper/draft.md` | Working draft of the paper |
 | `paper/SKELETON.md` | Section headings with the claims and numbers that belong under each |
 | `results/` | The saved outputs of every run cited, copied unchanged, with provenance in `MANIFEST.json` |
 | `src/learnable_curvature_transformer.py` | The model. `CurvatureDistance` is the scoring rule κ controls |

@@ -18,9 +18,6 @@
 
 ## 2026-09-23: repository created
 
-**Old sessions retired:** none. The session brief listed no old sessions under "Old sessions", so
-nothing was stopped or archived.
-
 **What exists now**
 
 - `CLAIMS.md`: 19 claims (24 after 29 Sept) and 11 withdrawn draft claims, each computed from `results/` by `src/claims.py`.
