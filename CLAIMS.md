@@ -27,6 +27,9 @@ Each row is a hypothesis, the number that tests it, the file the number comes fr
 | C16 | On the synthetic sequence task the transformer with kappa trains faster. | Reaches the baseline's final perplexity (5.1459, epoch 20) at epoch 13; final 5.0179 vs 5.1459 (-2.49%). One seed. | synthetic_lm/curvature_transformer_results.json | None (no random-code or cosine-only arm, one seed) | INCONCLUSIVE |
 | C17 | With ternary (BitNet b1.58) block weights, the geometry keeps its gain. | Learned vs zero with ternary weights: -1.13% mean, sd 1.37, better on 3 of 4 seeds (float weights: -2.41%). | ternary_lane/RESULT_T3_20260921.json | Paired seeds, same zero arm design as C1 | INCONCLUSIVE (about half, unreliably) |
 | R1 | Retraining a d_model 96 run on CPU reproduces it exactly. | The lab retrained the continuous arm in a separate run for T2: 4 of 4 seeds match T1b's perplexity to every stored digit (e.g. 4.464654718440349). | ternary_lane/RESULT_T2_20260921.json | Independent retrain, same seed and code | POSITIVE |
+| C18 | At 3 layers the gain lives in the first layer: fixed cosine scoring there keeps it, and the same scoring in a later layer does not. | Share of the learned gain kept, one value per seed. Whole layer cosine: layer 1 112%, 109%, layer 2 6%, 3%, layer 3 14%, 35%. One cosine head: in layer 1 95%, 90% (head 0) and 81%, 88% (head 3); in layer 2 9%, 19%; in layer 3 3%, 22%. | ternary_lane/RESULT_T2D_20260923.json, RESULT_T2E_20260924.json | The same code moved to layers 2 and 3, same seeds | POSITIVE (3 layers, 2 seeds, 2 different heads) |
+| C19 | At 6 layers, learned curvature improves on no curvature. | Improvement over the same seed's zero-curvature model: +0.64%, -0.38%, -0.52%, +0.35% (4 seeds, mean +0.02%). With a 3x larger curvature step: +0.78%, -0.47%. At 40,000 steps: +1.09% (one seed). | ternary_lane/RESULT_T2F_20260924.json, RESULT_T2G_20260925.json | Paired zero-curvature model per seed | INCONCLUSIVE (no gain seen at 20,000 steps) |
+| C20 | At 6 layers, one fixed cosine head in the first layer improves on no curvature, where learned curvature does not. | One fixed layer-1 head: +1.25%, +1.08%, +1.10%, +1.16% (better than zero on 4 of 4 seeds, mean +1.15%), better than learned curvature on 4 of 4 seeds. Whole layer 1 cosine: +1.35%, +1.45%, +1.54%, +1.85%. The same head in layer 4: -0.35%, -0.43% (worse than zero on 2 of 2). At 40,000 steps: +1.65% against learned +1.09% (one seed). | ternary_lane/RESULT_T2F_20260924.json, RESULT_T2G_20260925.json | Zero-curvature and learned-curvature models on the same seeds; the head moved to layer 4 | POSITIVE (6 layers, 4 seeds, preregistered) |
 
 ## What the drafts claimed and the controls took away
 
@@ -42,7 +45,7 @@ Each row is a hypothesis, the number that tests it, the file the number comes fr
 | W8 | Geometry beats none at d_model 128, 2 layers, 20 epochs. | Run A: learned 4.1943 vs zero 4.1930 (+0.03%); run B: 4.1834 vs 4.2165 (-0.78%). The two runs disagree. |
 | W9 | Bounded kappa in [-2, 2] is slightly better. | 4.1773 vs 4.1859 at 20 epochs (-0.21%), one run each; smaller than the gap between the two zero arms in W8 (+0.56%). |
 | W10 | WikiText-2 pilot: curvature beats baseline by 1.15%. | 4.4687 vs 4.5205 (-1.15%) after 5 epochs, one seed; inside the run-to-run spread of C9. |
-| W11 | Only the sign of kappa matters at inference (the lab's working line). | True of a trained model (C4). Trained from scratch, which heads get which sign does not matter either (C3); what matters is that some heads use cosine scoring (C2). |
+| W11 | Only the sign of kappa matters at inference (the lab's working line). | True of a trained model (C4). Trained from scratch, which heads get which sign does not matter either (C3); what matters is cosine scoring in the first layer (C2, C18, C20). |
 
 ## Compression sweep, matched at 55 epochs
 
@@ -74,7 +77,7 @@ Relative perplexity change of the curvature model against the baseline trained i
 ## Limitations
 
 1. Every language result is character-level WikiText-2 (256 byte values, 64-character windows). Nothing here is tested on subword tokens, another corpus, or any task beyond next-character prediction.
-2. The largest trained model (8 heads x 4 layers, d_model 128) has under 0.9M parameters. The only scale with a clear gain (C1, C2) is d_model 96 / 3 layers; at d_model 48 no gain was seen (C10) and the sweep's gains are inside run-to-run spread (C9). There is no evidence about how this scales.
+2. The largest trained model (8 heads x 4 layers, d_model 128) has under 0.9M parameters. Clear gains appear only at d_model 96 (C1, C2 at 3 layers; C18, C20 at 3 and 6 layers). At d_model 48 no gain was seen (C10) and the sweep's gains are inside run-to-run spread (C9). Nothing here says how this behaves in larger models.
 3. Seeds are few: 4 for C1, 2 per uniform arm for C2, 1 for most March runs. The March runs (C6-C9, C16, W7-W10) mostly have a single seed and no confidence interval.
 4. 'Spherical' and 'hyperbolic' name scoring rules, not geometries (M1). The spherical rule is cosine-similarity attention at a fixed scale, close to query-key normalisation, which is published prior work; the related-work section has to say so.
 5. The attention-range analysis (C6, C7) is a proxy: attention mass by distance on character sequences. It is not a syntactic probe and says nothing about linguistic function.
@@ -82,5 +85,5 @@ Relative perplexity change of the curvature model against the baseline trained i
 7. The d_model 128 L1 standard run crashed and d_model 128 L3 stopped at 5 epochs, so the sweep has 18 of 20 configurations (results/wikitext_char/sweep/crash_log_std_d128_L1.txt).
 8. The exact-distance runs (C11, C12) use a separate implementation with one seed each; they point the same way as C2 but were not run under the d96 protocol.
 9. The March language runs loaded WikiText-2 through Hugging Face with the model file's own split; the d96 runs use a 90/10 split of the concatenated file with 2,500 validation sequences. Perplexities from the two families are not comparable with each other.
-10. The d96 experiments (C1-C5, C10, C17) were preregistered by the lab before they ran; the March experiments were not.
-11. Queued, not finished, when this was written: T2d (how many cosine heads are needed, and whether their layer matters). Nothing here depends on it.
+10. The d96 experiments (C1-C5, C10, C17-C20) were preregistered by the lab before they ran; the March experiments were not. One reading in C19's source (learned runs do better when they happen to end with one cosine head in layer 1) was noticed after the runs and is not claimed.
+11. Running on the lab's lane when this was written, and not included: T2h (curvature started at the recipe and then learned; the recipe at 12 layers) and T2i (cosine on every head at 6 layers, which tests whether the first-layer recipe is more than cosine attention everywhere). Nothing above depends on them.

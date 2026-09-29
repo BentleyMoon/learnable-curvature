@@ -14,8 +14,11 @@ Computation") no longer fit what the data support.
 - What κ is: a per-head switch between three scoring rules (M1).
 - The gain at d_model 96 / 3 layers: −2.41% perplexity vs dot product, 4 of 4 paired seeds (C1).
 - The reversal: a random fixed code keeps 111.6%, all-cosine keeps 100.7%, all-length-scaled keeps 2.1% (C2, C3).
+- Where: one fixed cosine head in the first layer keeps 81 to 95%; in later layers, 3 to 22% (C18).
+- Depth: at 6 layers learned curvature buys about nothing (mean +0.02%), while one fixed first-layer cosine
+  head improves on every seed (+1.08 to +1.25%) (C19, C20).
 - Compression: in a trained model the sign carries it; shuffling signs costs +12.79% (C4).
-- Scope: character-level WikiText-2, under 0.9M parameters, one scale with a clear effect.
+- Scope: character-level WikiText-2, under 0.9M parameters, width 96 only for the clear effects.
 
 ## 1. Introduction
 
@@ -24,6 +27,7 @@ Computation") no longer fit what the data support.
 - Contributions, as the data now support them:
   - a control ladder that separates "learning the geometry" from "having the rule" (Figure 2)
   - the finding that cosine scoring on some heads is what helps at this scale (C2)
+  - where it helps: one fixed cosine head in the first layer, which at 6 layers beats learned curvature (C18, C20)
   - sign-only compression of a trained model, with a permutation control (C4, C5)
   - an account of what the drafts claimed and which control removed each claim (W1 to W11)
 
@@ -60,6 +64,19 @@ Computation") no longer fit what the data support.
 - All length-scaled, fixed: 3.4, 0.8% kept, the same as no rule.
 - Frozen mixed codes: 18 of 20 runs keep ≥ 90%; the two failures share one code, which kept 98% on a third seed.
 - March echo at d_model 128 / 2 layers: random 4.1812, learned 4.1834, fixed 4.1857 (one seed; Figure 3).
+
+### 3.3a Where the cosine head has to be (C18; Figure 9, left)
+- Whole layer cosine: layer 1 keeps 112%, 109%; layer 2 6%, 3%; layer 3 14%, 35%.
+- One cosine head: in layer 1 95%, 90% (head 0) and 81%, 88% (head 3); in layer 2 9%, 19%; in layer 3 3%, 22%.
+- So the recipe needs no learned curvature at all: one fixed cosine head in the first layer.
+
+### 3.3b Deeper: 6 layers (C19, C20; Figure 9, right)
+- Learned curvature vs none: +0.64, −0.38, −0.52, +0.35% (mean +0.02%); a 3x larger curvature step does not rescue it.
+- One fixed cosine head in layer 1: +1.25, +1.08, +1.10, +1.16%, better than learned on every seed.
+- Whole layer 1 cosine: +1.35 to +1.85%. The same head in layer 4 hurts: −0.35, −0.43%.
+- 40,000 steps, one seed: fixed +1.65% vs learned +1.09%.
+- Pending on the lab's lane: T2i (cosine on all 24 heads at 6 layers) decides whether "first layer" is a finding
+  or a cheaper subset of cosine attention everywhere. T2h tests starting learned curvature at the recipe, and 12 layers.
 
 ### 3.4 Compressing a trained model to one bit per head (C4, C5)
 - 8×4: 3.7456 → 3.7455; d96: |change| ≤ 0.0041% on 4 seeds.
@@ -133,5 +150,6 @@ Verify each before citing; these are pointers, not checked references.
 6. Exact distance on synthetic tasks
 7. The numpy toy over 11 seeds
 8. κ trajectories of the 8×4 model
+9. Where the cosine head sits: 3 layers and 6 layers
 
 Captions: `figures/CAPTIONS.md`.

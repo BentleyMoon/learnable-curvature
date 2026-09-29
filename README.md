@@ -13,7 +13,9 @@ similarity (called "spherical"). At d_model 96 with 3 layers the switch beats pl
 attention by 2.41% perplexity on every one of 4 paired seeds. A random fixed assignment keeps all of
 that gain, and so does putting every head on the cosine rule from the first step with nothing
 learned. Putting every head on the length-scaled rule keeps none of it. So the gain comes from
-cosine scoring being present. Learning the curvature is not what produces it. In a trained model
+cosine scoring being present. Learning the curvature is not what produces it. Where the cosine
+head sits matters: one fixed cosine head in the first layer keeps 81 to 95% of the gain, and at
+6 layers it improves on no curvature on all 4 seeds while learned curvature does not. In a trained model
 the sign of κ alone carries the whole effect. The full list, with what each claim was tested
 against, is in [CLAIMS.md](CLAIMS.md).
 
@@ -48,7 +50,7 @@ WikiText-2 through Hugging Face themselves.
 | Path | Contents |
 |---|---|
 | `CLAIMS.md` | Every claim, its number, the file it comes from, the control it faced, and its verdict. Generated; do not edit |
-| `figures/` | Eight figures rebuilt from `results/`, with captions in `figures/CAPTIONS.md` |
+| `figures/` | Nine figures rebuilt from `results/`, with captions in `figures/CAPTIONS.md` |
 | `paper/SKELETON.md` | Section headings with the claims and numbers that belong under each |
 | `results/` | The saved outputs of every run cited, copied unchanged, with provenance in `MANIFEST.json` |
 | `src/learnable_curvature_transformer.py` | The model. `CurvatureDistance` is the scoring rule κ controls |

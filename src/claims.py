@@ -113,6 +113,40 @@ def t2():
     return {"posthoc": d["posthoc_sign1_vs_cont_t2"]["diffs"], "late_kept": late}
 
 
+def first_layer():
+    """T2d and T2e (3 layers): the same fixed cosine code placed in each layer, and one cosine head per layer."""
+    d = load("ternary_lane/RESULT_T2D_20260923.json")["rows"]
+    e = load("ternary_lane/RESULT_T2E_20260924.json")["rows"]
+    rows = d + e
+    pick = lambda arm: [r["kept"] for r in sorted((r for r in rows if r["arm"] == arm), key=lambda r: r["seed"])]
+    return {
+        "layer1": pick("layer1"), "layer2": pick("layer2"), "layer3": pick("layer3"),
+        "one_l1": pick("one_l1"), "one_l1_head3": pick("k1"), "one_l2": pick("one_l2"), "one_l3": pick("one_l3"),
+    }
+
+
+def six_layers():
+    """T2f and T2g (6 layers): improvement over the same seed's zero-curvature model, in percent."""
+    f = load("ternary_lane/RESULT_T2F_20260924.json")
+    g = load("ternary_lane/RESULT_T2G_20260925.json")["rows"]
+    ref = f["references"]
+    learned = {s: 100.0 * (ref["zero_seed%d" % s] - ref["continuous_seed%d" % s]) / ref["zero_seed%d" % s] for s in (0, 1)}
+    out = {"learned": dict(learned), "one_l1": {}, "layer1": {}, "one_l4": {}, "lrk3": {}}
+    for r in f["rows"]:
+        out[r["arm"]][r["seed"]] = r["improvement_vs_zero_pct"]
+    for r in g:
+        key = {"continuous": "learned", "one_l1": "one_l1", "layer1": "layer1", "continuous_lrk3": "lrk3"}.get(r["arm"])
+        if key:
+            out[key][r["seed"]] = r["improvement_vs_zero_pct"]
+        elif r["arm"] == "one_l1_40k":
+            out["one_l1_40k"] = r["improvement_vs_zero_pct"]
+        elif r["arm"] == "continuous_40k":
+            out["learned_40k"] = r["improvement_vs_zero_pct"]
+    for k in ("learned", "one_l1", "layer1", "one_l4", "lrk3"):
+        out[k] = [out[k][seed] for seed in sorted(out[k])]
+    return out
+
+
 def claims_t2_rows():
     rows = load("ternary_lane/RESULT_T2_20260921.json")["rows"]
     return [rows[k] for k in sorted(rows)]
@@ -444,6 +478,41 @@ def build():
          "Independent retrain, same seed and code",
          "POSITIVE"))
 
+    fl, sx = first_layer(), six_layers()
+    kept_rows.extend([
+        ("C18", "At 3 layers the gain lives in the first layer: fixed cosine scoring there keeps it, and the same "
+                "scoring in a later layer does not.",
+         "Share of the learned gain kept, one value per seed. Whole layer cosine: layer 1 %s, layer 2 %s, layer 3 %s. "
+         "One cosine head: in layer 1 %s (head 0) and %s (head 3); in layer 2 %s; in layer 3 %s."
+         % (", ".join("%.0f%%" % x for x in fl["layer1"]), ", ".join("%.0f%%" % x for x in fl["layer2"]),
+            ", ".join("%.0f%%" % x for x in fl["layer3"]), ", ".join("%.0f%%" % x for x in fl["one_l1"]),
+            ", ".join("%.0f%%" % x for x in fl["one_l1_head3"]), ", ".join("%.0f%%" % x for x in fl["one_l2"]),
+            ", ".join("%.0f%%" % x for x in fl["one_l3"])),
+         "ternary_lane/RESULT_T2D_20260923.json, RESULT_T2E_20260924.json",
+         "The same code moved to layers 2 and 3, same seeds",
+         "POSITIVE (3 layers, 2 seeds, 2 different heads)"),
+        ("C19", "At 6 layers, learned curvature improves on no curvature.",
+         "Improvement over the same seed's zero-curvature model: %s (4 seeds, mean %s). With a 3x larger curvature "
+         "step: %s. At 40,000 steps: %s (one seed)."
+         % (", ".join("%+.2f%%" % x for x in sx["learned"]), f2(st.mean(sx["learned"])),
+            ", ".join("%+.2f%%" % x for x in sx["lrk3"]), f2(sx["learned_40k"])),
+         "ternary_lane/RESULT_T2F_20260924.json, RESULT_T2G_20260925.json",
+         "Paired zero-curvature model per seed",
+         "INCONCLUSIVE (no gain seen at 20,000 steps)"),
+        ("C20", "At 6 layers, one fixed cosine head in the first layer improves on no curvature, where learned "
+                "curvature does not.",
+         "One fixed layer-1 head: %s (better than zero on %d of %d seeds, mean %s), better than learned curvature "
+         "on %d of %d seeds. Whole layer 1 cosine: %s. The same head in layer 4: %s (worse than zero on %d of %d). "
+         "At 40,000 steps: %s against learned %s (one seed)."
+         % (", ".join("%+.2f%%" % x for x in sx["one_l1"]), sum(x > 0 for x in sx["one_l1"]), len(sx["one_l1"]),
+            f2(st.mean(sx["one_l1"])), sum(a > b for a, b in zip(sx["one_l1"], sx["learned"])), len(sx["one_l1"]),
+            ", ".join("%+.2f%%" % x for x in sx["layer1"]), ", ".join("%+.2f%%" % x for x in sx["one_l4"]),
+            sum(x < 0 for x in sx["one_l4"]), len(sx["one_l4"]), f2(sx["one_l1_40k"]), f2(sx["learned_40k"])),
+         "ternary_lane/RESULT_T2F_20260924.json, RESULT_T2G_20260925.json",
+         "Zero-curvature and learned-curvature models on the same seeds; the head moved to layer 4",
+         "POSITIVE (6 layers, 4 seeds, preregistered)"),
+    ])
+
     withdrawn = [
         ("W1", "'Learnable curvature': the model finds its own geometry, and that is the source of the gain.",
          "C3 and C2: a random frozen code keeps %.0f%%, all-cosine keeps %.0f%%." % (b2b["randsign_mean"], st.mean(c2c["allsph"]))),
@@ -474,7 +543,7 @@ def build():
          "%.4f vs %.4f (%s) after 5 epochs, one seed; inside the run-to-run spread of C9." % (pi["curv"], pi["base"], f2(pi["rel"]))),
         ("W11", "Only the sign of kappa matters at inference (the lab's working line).",
          "True of a trained model (C4). Trained from scratch, which heads get which sign does not matter either (C3); "
-         "what matters is that some heads use cosine scoring (C2)."),
+         "what matters is cosine scoring in the first layer (C2, C18, C20)."),
     ]
 
     extra = {
@@ -486,9 +555,9 @@ def build():
 LIMITATIONS = [
     "Every language result is character-level WikiText-2 (256 byte values, 64-character windows). Nothing here is "
     "tested on subword tokens, another corpus, or any task beyond next-character prediction.",
-    "The largest trained model (8 heads x 4 layers, d_model 128) has under 0.9M parameters. The only scale with a clear gain (C1, C2) is d_model 96 / 3 layers; at "
-    "d_model 48 no gain was seen (C10) and the sweep's gains are inside run-to-run spread (C9). There is no evidence "
-    "about how this scales.",
+    "The largest trained model (8 heads x 4 layers, d_model 128) has under 0.9M parameters. Clear gains appear only at d_model 96 (C1, C2 at 3 "
+    "layers; C18, C20 at 3 and 6 layers). At d_model 48 no gain was seen (C10) and the sweep's gains are inside "
+    "run-to-run spread (C9). Nothing here says how this behaves in larger models.",
     "Seeds are few: 4 for C1, 2 per uniform arm for C2, 1 for most March runs. The March runs (C6-C9, C16, W7-W10) "
     "mostly have a single seed and no confidence interval.",
     "'Spherical' and 'hyperbolic' name scoring rules, not geometries (M1). The spherical rule is cosine-similarity "
@@ -504,9 +573,12 @@ LIMITATIONS = [
     "The March language runs loaded WikiText-2 through Hugging Face with the model file's own split; the d96 runs use "
     "a 90/10 split of the concatenated file with 2,500 validation sequences. Perplexities from the two families are "
     "not comparable with each other.",
-    "The d96 experiments (C1-C5, C10, C17) were preregistered by the lab before they ran; the March experiments were not.",
-    "Queued, not finished, when this was written: T2d (how many cosine heads are needed, and whether their layer matters). "
-    "Nothing here depends on it.",
+    "The d96 experiments (C1-C5, C10, C17-C20) were preregistered by the lab before they ran; the March experiments "
+    "were not. One reading in C19's source (learned runs do better when they happen to end with one cosine head in "
+    "layer 1) was noticed after the runs and is not claimed.",
+    "Running on the lab's lane when this was written, and not included: T2h (curvature started at the recipe and "
+    "then learned; the recipe at 12 layers) and T2i (cosine on every head at 6 layers, which tests whether the "
+    "first-layer recipe is more than cosine attention everywhere). Nothing above depends on them.",
 ]
 
 

@@ -61,6 +61,11 @@ CAPTIONS = {
     "fig7_toy_seeds.png":
         "The numpy toy with true Poincare and sphere distances, 11 seeds. The flat-cluster control drifts negative "
         "too; the dotted lines are the script's own +/-0.15 thresholds.",
+    "fig9_first_layer.png":
+        "Left, 3 layers: fixed cosine scoring in layer 1 keeps the learned gain, as a whole layer (filled) or as one "
+        "head (open, two different heads); in layers 2 and 3 it keeps little. Right, 6 layers: improvement over no "
+        "curvature on each seed. Learned curvature buys about nothing; one fixed cosine head in layer 1 helps on every "
+        "seed; the same head in layer 4 hurts.",
     "fig8_kappa_trajectories.png":
         "Kappa for each of the 8x4 model's 32 heads over 55 epochs. Heads leave zero in the first epochs and keep "
         "the side they choose.",
@@ -244,9 +249,44 @@ def fig8(out_dir):
     return _save(fig, out_dir, "fig8_kappa_trajectories.png")
 
 
+def fig9(out_dir):
+    fl, sx = claims.first_layer(), claims.six_layers()
+    fig, axes = plt.subplots(1, 2, figsize=(7.6, 3.2), gridspec_kw={"width_ratios": [1.15, 1]})
+    ax = axes[0]
+    groups = [("layer 1", fl["layer1"], fl["one_l1"] + fl["one_l1_head3"]), ("layer 2", fl["layer2"], fl["one_l2"]),
+              ("layer 3", fl["layer3"], fl["one_l3"])]
+    for i, (label, whole, one) in enumerate(groups):
+        ax.scatter([i - 0.12] * len(whole), whole, s=30, color=COS, zorder=3, edgecolor=SURFACE, linewidth=0.8)
+        ax.scatter([i + 0.12] * len(one), one, s=30, facecolor=SURFACE, edgecolor=COS, linewidth=1.6, zorder=3)
+    ax.scatter([], [], s=30, color=COS, label="whole layer cosine")
+    ax.scatter([], [], s=30, facecolor=SURFACE, edgecolor=COS, linewidth=1.6, label="one cosine head")
+    ax.axhline(100, color=LEARNED, lw=1.2, ls="--")
+    ax.axhline(0, color=DOT, lw=1.0)
+    ax.set_xticks(range(len(groups)))
+    ax.set_xticklabels([g[0] for g in groups])
+    ax.set_ylabel("share of the learned gain kept (%)")
+    ax.set_title("3 layers: where the cosine head sits")
+    ax.legend(loc="upper right", fontsize=7.5)
+    ax.grid(axis="x", visible=False)
+    ax = axes[1]
+    arms = [("learned\ncurvature", sx["learned"], LEARNED, False), ("one head,\nlayer 1", sx["one_l1"], COS, False),
+            ("whole\nlayer 1", sx["layer1"], COS, True), ("one head,\nlayer 4", sx["one_l4"], AMP, False)]
+    for i, (label, vals, color, filled) in enumerate(arms):
+        offs = [(j - (len(vals) - 1) / 2) * 0.09 for j in range(len(vals))]
+        ax.scatter([i + o for o in offs], vals, s=30, color=color, zorder=3, edgecolor=SURFACE, linewidth=0.8)
+    ax.axhline(0, color=DOT, lw=1.0)
+    ax.set_xticks(range(len(arms)))
+    ax.set_xticklabels([a[0] for a in arms], fontsize=8)
+    ax.set_ylabel("improvement over no curvature (%)")
+    ax.set_title("6 layers: fixed beats learned")
+    ax.grid(axis="x", visible=False)
+    fig.tight_layout()
+    return _save(fig, out_dir, "fig9_first_layer.png")
+
+
 def main(out_dir):
     os.makedirs(out_dir, exist_ok=True)
-    names = [f(out_dir) for f in (fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8)]
+    names = [f(out_dir) for f in (fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9)]
     with open(os.path.join(out_dir, "CAPTIONS.md"), "w", encoding="utf-8", newline="\n") as f:
         f.write("# Figures\n\nRebuilt from `results/` by `python reproduce.py figures`.\n\n")
         for n in names:

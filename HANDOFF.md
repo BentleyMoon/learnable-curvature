@@ -1,5 +1,17 @@
 # Handoff
 
+## 2026-09-29: the lab's first-layer results folded in
+
+- Added T2d, T2e (3 layers) and T2f, T2g (6 layers) from `C:\engine\projects	ernary_native` as
+  claims C18 to C20 and Figure 9. The recipe the paper can state: one fixed cosine head in the first
+  layer. At 6 layers it improves on no curvature on 4 of 4 seeds; learned curvature does not.
+- Left out until they finish on the lab's lane: T2h and T2i (`tools/collect_results.py` skips them
+  by name in `PENDING`). T2i decides whether "first layer" is a finding or a cheaper subset of cosine
+  attention everywhere, so fold it in before the paper's framing is fixed. When each lands: remove it
+  from `PENDING`, run `python tools/collect_results.py`, add its claim in `src/claims.py`, then
+  `python reproduce.py claims` and `python reproduce.py check`.
+- Still no GitHub repository. The three publishing acts remain Bentley's.
+
 ## 2026-09-23: repository created
 
 **Old sessions retired:** none. The session brief listed no old sessions under "Old sessions", so
@@ -7,7 +19,7 @@ nothing was stopped or archived.
 
 **What exists now**
 
-- `CLAIMS.md`: 19 claims and 11 withdrawn draft claims, each computed from `results/` by `src/claims.py`.
+- `CLAIMS.md`: 19 claims (22 after 29 Sept) and 11 withdrawn draft claims, each computed from `results/` by `src/claims.py`.
 - `figures/`: 8 figures rebuilt from `results/`.
 - `paper/SKELETON.md`: section headings with claims and numbers. No publication prose; that is Bentley's.
 - Verified on a fresh clone of this repository:
