@@ -2,7 +2,7 @@
 
 ## 2026-09-29: the lab's first-layer results folded in
 
-- Added T2d, T2e (3 layers) and T2f, T2g (6 layers) from `C:\engine\projects	ernary_native` as
+- Added T2d, T2e (3 layers) and T2f, T2g (6 layers) from `C:\engine\projects\ternary_native` as
   claims C18 to C20 and Figure 9. The recipe the paper can state: one fixed cosine head in the first
   layer. At 6 layers it improves on no curvature on 4 of 4 seeds; learned curvature does not.
 - Left out until they finish on the lab's lane: T2h and T2i (`tools/collect_results.py` skips them
