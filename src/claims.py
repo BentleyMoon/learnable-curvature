@@ -561,8 +561,8 @@ LIMITATIONS = [
     "Seeds are few: 4 for C1, 2 per uniform arm for C2, 1 for most March runs. The March runs (C6-C9, C16, W7-W10) "
     "mostly have a single seed and no confidence interval.",
     "'Spherical' and 'hyperbolic' name scoring rules, not geometries (M1). The spherical rule is cosine-similarity "
-    "attention at a fixed scale, close to query-key normalisation, which is published prior work; the related-work "
-    "section has to say so.",
+    "attention at a fixed scale, close to query-key normalisation, which is published prior work; per-head learnable "
+    "curvature is also prior work (Cho et al., 2023). The related-work section has to say both.",
     "The attention-range analysis (C6, C7) is a proxy: attention mass by distance on character sequences. It is not a "
     "syntactic probe and says nothing about linguistic function.",
     "No speed, memory or deployment claim. The sign-only model (C4) still computes every branch; nothing was timed.",

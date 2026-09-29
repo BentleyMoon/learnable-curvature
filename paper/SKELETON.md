@@ -117,15 +117,47 @@ Computation") no longer fit what the data support.
 
 ## 5. Related work
 
-Verify each before citing; these are pointers, not checked references.
+Checked against primary sources on 2026-09-29. Items marked "unopened" were seen only in a search
+snippet; open them before citing.
 
-- Query-key normalisation and cosine attention (Henry et al., 2020; Swin Transformer V2, Liu et al.,
-  2022). The cosine rule here is close to both, so the surviving positive result is a small-scale
-  instance of known prior work, and the paper should say that.
-- Hyperbolic attention and embeddings (Gulcehre et al., 2019; Nickel and Kiela, 2017; Ganea et al., 2018).
-- Mixed-curvature product spaces (Gu et al., 2019).
-- Per-head learned span (Sukhbaatar et al., 2019).
-- Ternary weights (BitNet b1.58, Ma et al., 2024) for C17.
+**Where this sits.** Per-head learnable curvature is not new: Cho et al. (2023) already give each
+attention head its own learnable κ, spanning Euclidean, hyperbolic and spherical, with real
+stereographic operations. What this paper adds is that the geometry turned out to be unnecessary
+(cosine scoring, or a random fixed assignment, does as well), and that the benefit depends on where
+the cosine head sits (first layer). A search found no paper that applies cosine or QK-normalised
+attention to the first layer only. Every one checked applies it to all layers. That is "not found",
+not "does not exist".
+
+- Cosine and QK-normalised attention, all layers:
+  - Henry, Dachapally, Pawar, Chen. Query-Key Normalization for Transformers. Findings of EMNLP 2020,
+    4246-4253. https://aclanthology.org/2020.findings-emnlp.379/ (Uses a learnable scale; ours is a
+    fixed sqrt(d_k), so say "QK-norm with a fixed scale".)
+  - Liu et al. Swin Transformer V2: Scaling Up Capacity and Resolution. CVPR 2022.
+    https://arxiv.org/abs/2111.09883 (Scaled cosine attention; learnable temperature per head and layer.)
+  - Dehghani et al. Scaling Vision Transformers to 22 Billion Parameters. ICML 2023, PMLR 202.
+    https://proceedings.mlr.press/v202/dehghani23a.html (LayerNorm on Q and K for stability.)
+  - Loshchilov et al. nGPT: Normalized Transformer. ICLR 2025. https://arxiv.org/abs/2410.01131
+  - Zhai et al. Stabilizing Transformer Training by Preventing Attention Entropy Collapse. ICML 2023.
+    https://arxiv.org/abs/2303.06296 (Spectral normalisation of all linear layers, not QK-norm; cite
+    only for attention-logit scale and entropy.)
+- Per-head or per-token curvature in attention:
+  - Cho et al. Curve Your Attention: Mixed-Curvature Transformers for Graph Representation Learning.
+    2023. https://arxiv.org/abs/2309.04082 (Closest prior art. Venue unopened: a workshop poster.)
+  - Lin, Ojha, Bai. CAT: Curvature-Adaptive Transformers. arXiv 2510.01634, 2025 (per-token routing).
+  - Chen et al. Fully Hyperbolic Neural Networks. ACL 2022, 5672-5686.
+    https://aclanthology.org/2022.acl-long.389/
+  - Gulcehre et al. Hyperbolic Attention Networks. ICLR 2019. https://openreview.net/forum?id=rJxHsjRqFQ
+- Curved-space representations, background only:
+  - Nickel and Kiela. Poincaré Embeddings for Learning Hierarchical Representations. NeurIPS 2017.
+  - Ganea, Bécigneul, Hofmann. Hyperbolic Neural Networks. NeurIPS 2018.
+  - Gu, Sala, Gunel, Ré. Learning Mixed-Curvature Representations in Product Spaces. ICLR 2019.
+    https://openreview.net/forum?id=HJxeWnCcF7
+- Heads and layers learning different settings: Sukhbaatar, Grave, Bojanowski, Joulin. Adaptive
+  Attention Span in Transformers. ACL 2019, 331-335. https://aclanthology.org/P19-1032/
+- Layer 1 as special: Kim et al. First Attentions Last. arXiv 2510.14614, 2025 (reuse of first-layer
+  attention output, not scoring rules). Mix-LN (unopened): norm placement varies by depth.
+- Ternary weights, for C17: Ma et al. The Era of 1-bit LLMs: All Large Language Models are in 1.58
+  Bits. arXiv 2402.17764, 2024 (preprint; no venue).
 
 ## 6. Limitations
 
