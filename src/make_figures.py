@@ -65,7 +65,7 @@ CAPTIONS = {
         "Left, 3 layers: fixed cosine scoring in layer 1 keeps the learned gain, as a whole layer (filled) or as one "
         "head (open, two different heads); in layers 2 and 3 it keeps little. Right, 6 layers: improvement over no "
         "curvature on each seed. Learned curvature buys about nothing; one fixed cosine head in layer 1 helps on every "
-        "seed; the same head in layer 4 hurts.",
+        "seed, about as much as cosine on all 24 heads; the same head in layer 4 hurts.",
     "fig8_kappa_trajectories.png":
         "Kappa for each of the 8x4 model's 32 heads over 55 epochs. Heads leave zero in the first epochs and keep "
         "the side they choose.",
@@ -270,7 +270,8 @@ def fig9(out_dir):
     ax.grid(axis="x", visible=False)
     ax = axes[1]
     arms = [("learned\ncurvature", sx["learned"], LEARNED, False), ("one head,\nlayer 1", sx["one_l1"], COS, False),
-            ("whole\nlayer 1", sx["layer1"], COS, True), ("one head,\nlayer 4", sx["one_l4"], AMP, False)]
+            ("whole\nlayer 1", sx["layer1"], COS, True), ("all 24\nheads", claims.all_cosine_six()["all"], COS, True),
+            ("one head,\nlayer 4", sx["one_l4"], AMP, False)]
     for i, (label, vals, color, filled) in enumerate(arms):
         offs = [(j - (len(vals) - 1) / 2) * 0.09 for j in range(len(vals))]
         ax.scatter([i + o for o in offs], vals, s=30, color=color, zorder=3, edgecolor=SURFACE, linewidth=0.8)
@@ -278,7 +279,7 @@ def fig9(out_dir):
     ax.set_xticks(range(len(arms)))
     ax.set_xticklabels([a[0] for a in arms], fontsize=8)
     ax.set_ylabel("improvement over no curvature (%)")
-    ax.set_title("6 layers: fixed beats learned")
+    ax.set_title("6 layers: fixed cosine beats learned")
     ax.grid(axis="x", visible=False)
     fig.tight_layout()
     return _save(fig, out_dir, "fig9_first_layer.png")

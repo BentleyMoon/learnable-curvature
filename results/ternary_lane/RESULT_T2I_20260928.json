@@ -1,0 +1,28 @@
+{
+ "rows": [
+  {
+   "seed": 0,
+   "all_cosine_pct": 1.0565312540686211,
+   "layer1_pct": 1.3455420370939568,
+   "layer1_minus_all_cosine": 0.28901078302533567
+  },
+  {
+   "seed": 1,
+   "all_cosine_pct": 1.2900815961258394,
+   "layer1_pct": 1.4464263560468378,
+   "layer1_minus_all_cosine": 0.1563447599209984
+  },
+  {
+   "seed": 2,
+   "all_cosine_pct": 1.1693237092413313,
+   "layer1_pct": 1.5397622332449021,
+   "layer1_minus_all_cosine": 0.3704385240035708
+  },
+  {
+   "seed": 3,
+   "all_cosine_pct": 1.4879231150295644,
+   "layer1_pct": 1.8540239842473214,
+   "layer1_minus_all_cosine": 0.366100869217757
+  }
+ ]
+}

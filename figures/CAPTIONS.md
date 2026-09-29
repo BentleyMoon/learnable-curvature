@@ -18,5 +18,5 @@ Rebuilt from `results/` by `python reproduce.py figures`.
 
 **fig8_kappa_trajectories.png**: Kappa for each of the 8x4 model's 32 heads over 55 epochs. Heads leave zero in the first epochs and keep the side they choose.
 
-**fig9_first_layer.png**: Left, 3 layers: fixed cosine scoring in layer 1 keeps the learned gain, as a whole layer (filled) or as one head (open, two different heads); in layers 2 and 3 it keeps little. Right, 6 layers: improvement over no curvature on each seed. Learned curvature buys about nothing; one fixed cosine head in layer 1 helps on every seed; the same head in layer 4 hurts.
+**fig9_first_layer.png**: Left, 3 layers: fixed cosine scoring in layer 1 keeps the learned gain, as a whole layer (filled) or as one head (open, two different heads); in layers 2 and 3 it keeps little. Right, 6 layers: improvement over no curvature on each seed. Learned curvature buys about nothing; one fixed cosine head in layer 1 helps on every seed, about as much as cosine on all 24 heads; the same head in layer 4 hurts.
 

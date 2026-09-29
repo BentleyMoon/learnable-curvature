@@ -147,6 +147,13 @@ def six_layers():
     return out
 
 
+def all_cosine_six():
+    """T2i (6 layers): every head fixed to the cosine rule, against the same seed's zero model."""
+    rows = sorted(load("ternary_lane/RESULT_T2I_20260928.json")["rows"], key=lambda r: r["seed"])
+    return {"all": [r["all_cosine_pct"] for r in rows], "layer1": [r["layer1_pct"] for r in rows],
+            "l1_minus_all": [r["layer1_minus_all_cosine"] for r in rows]}
+
+
 def claims_t2_rows():
     rows = load("ternary_lane/RESULT_T2_20260921.json")["rows"]
     return [rows[k] for k in sorted(rows)]
@@ -512,6 +519,26 @@ def build():
          "Zero-curvature and learned-curvature models on the same seeds; the head moved to layer 4",
          "POSITIVE (6 layers, 4 seeds, preregistered)"),
     ])
+    ac = all_cosine_six()
+    one_minus_all = [a - b for a, b in zip(sx["one_l1"], ac["all"])]
+    kept_rows.extend([
+        ("C21", "At 6 layers, cosine scoring on every head improves on no curvature.",
+         "All 24 heads cosine: %s (better than zero on %d of %d seeds, mean %s). One cosine head in layer 1 (1 of "
+         "24 heads) minus all 24: %s (mean %s)."
+         % (", ".join("%+.2f%%" % x for x in ac["all"]), sum(x > 0 for x in ac["all"]), len(ac["all"]),
+            f2(st.mean(ac["all"])), ", ".join("%+.2f" % x for x in one_minus_all), "%+.2f points" % st.mean(one_minus_all)),
+         "ternary_lane/RESULT_T2I_20260928.json, RESULT_T2F_20260924.json, RESULT_T2G_20260925.json",
+         "Paired zero-curvature model per seed",
+         "POSITIVE (6 layers, 4 seeds, preregistered)"),
+        ("C22", "At 6 layers, confining cosine scoring to the first layer adds something beyond cosine on every head.",
+         "Layer 1 cosine minus all-cosine: %s points (ahead on %d of %d seeds, mean %+.2f). The bar written in "
+         "advance (at least 0.3 points on 3 of 4 seeds) was met on %d of 4."
+         % (", ".join("%+.2f" % x for x in ac["l1_minus_all"]), sum(x > 0 for x in ac["l1_minus_all"]),
+            len(ac["l1_minus_all"]), st.mean(ac["l1_minus_all"]), sum(x >= 0.3 for x in ac["l1_minus_all"])),
+         "ternary_lane/RESULT_T2I_20260928.json",
+         "All-cosine arm, same seeds; preregistered threshold",
+         "INCONCLUSIVE (direction consistent, under the registered bar)"),
+    ])
 
     withdrawn = [
         ("W1", "'Learnable curvature': the model finds its own geometry, and that is the source of the gain.",
@@ -573,12 +600,11 @@ LIMITATIONS = [
     "The March language runs loaded WikiText-2 through Hugging Face with the model file's own split; the d96 runs use "
     "a 90/10 split of the concatenated file with 2,500 validation sequences. Perplexities from the two families are "
     "not comparable with each other.",
-    "The d96 experiments (C1-C5, C10, C17-C20) were preregistered by the lab before they ran; the March experiments "
+    "The d96 experiments (C1-C5, C10, C17-C22) were preregistered by the lab before they ran; the March experiments "
     "were not. One reading in C19's source (learned runs do better when they happen to end with one cosine head in "
     "layer 1) was noticed after the runs and is not claimed.",
     "Running on the lab's lane when this was written, and not included: T2h (curvature started at the recipe and "
-    "then learned; the recipe at 12 layers) and T2i (cosine on every head at 6 layers, which tests whether the "
-    "first-layer recipe is more than cosine attention everywhere). Nothing above depends on them.",
+    "then learned; the recipe at 12 layers). Nothing above depends on it.",
 ]
 
 

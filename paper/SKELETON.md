@@ -16,7 +16,8 @@ Computation") no longer fit what the data support.
 - The reversal: a random fixed code keeps 111.6%, all-cosine keeps 100.7%, all-length-scaled keeps 2.1% (C2, C3).
 - Where: one fixed cosine head in the first layer keeps 81 to 95%; in later layers, 3 to 22% (C18).
 - Depth: at 6 layers learned curvature buys about nothing (mean +0.02%), while one fixed first-layer cosine
-  head improves on every seed (+1.08 to +1.25%) (C19, C20).
+  head improves on every seed (+1.08 to +1.25%), about as much as cosine on all 24 heads (+1.06 to +1.49%)
+  (C19 to C21). Whether the first layer adds anything beyond cosine everywhere is unsettled (C22).
 - Compression: in a trained model the sign carries it; shuffling signs costs +12.79% (C4).
 - Scope: character-level WikiText-2, under 0.9M parameters, width 96 only for the clear effects.
 
@@ -27,7 +28,8 @@ Computation") no longer fit what the data support.
 - Contributions, as the data now support them:
   - a control ladder that separates "learning the geometry" from "having the rule" (Figure 2)
   - the finding that cosine scoring on some heads is what helps at this scale (C2)
-  - where it helps: one fixed cosine head in the first layer, which at 6 layers beats learned curvature (C18, C20)
+  - how little is needed: one fixed cosine head in the first layer gets about what cosine on every head
+    gets, beats learned curvature at 6 layers, and hurts when moved to a later layer (C18, C20, C21)
   - sign-only compression of a trained model, with a permutation control (C4, C5)
   - an account of what the drafts claimed and which control removed each claim (W1 to W11)
 
@@ -75,8 +77,14 @@ Computation") no longer fit what the data support.
 - One fixed cosine head in layer 1: +1.25, +1.08, +1.10, +1.16%, better than learned on every seed.
 - Whole layer 1 cosine: +1.35 to +1.85%. The same head in layer 4 hurts: −0.35, −0.43%.
 - 40,000 steps, one seed: fixed +1.65% vs learned +1.09%.
-- Pending on the lab's lane: T2i (cosine on all 24 heads at 6 layers) decides whether "first layer" is a finding
-  or a cheaper subset of cosine attention everywhere. T2h tests starting learned curvature at the recipe, and 12 layers.
+
+### 3.3c Is the first layer more than cosine everywhere? (C21, C22)
+- Cosine on all 24 heads: +1.06, +1.29, +1.17, +1.49% (mean +1.25%), so cosine attention alone carries it.
+- One cosine head in layer 1 minus all 24: +0.20, −0.21, −0.07, −0.33 points: 1 head of 24 does about as well.
+- Whole layer 1 minus all 24: +0.29, +0.16, +0.37, +0.37 points: ahead on every seed, but the preregistered
+  bar (0.3 points on 3 of 4 seeds) was met on 2. The paper does not claim the first layer adds anything
+  beyond cosine attention; settling it needs more seeds.
+- Still running: T2h (learned curvature started at the recipe; the recipe at 12 layers).
 
 ### 3.4 Compressing a trained model to one bit per head (C4, C5)
 - 8×4: 3.7456 → 3.7455; d96: |change| ≤ 0.0041% on 4 seeds.
@@ -122,11 +130,13 @@ snippet; open them before citing.
 
 **Where this sits.** Per-head learnable curvature is not new: Cho et al. (2023) already give each
 attention head its own learnable κ, spanning Euclidean, hyperbolic and spherical, with real
-stereographic operations. What this paper adds is that the geometry turned out to be unnecessary
-(cosine scoring, or a random fixed assignment, does as well), and that the benefit depends on where
-the cosine head sits (first layer). A search found no paper that applies cosine or QK-normalised
-attention to the first layer only. Every one checked applies it to all layers. That is "not found",
-not "does not exist".
+stereographic operations. The gain itself is cosine attention, which is known (C21). What this
+paper adds is that the geometry turned out to be unnecessary (cosine scoring, or a random fixed
+assignment, does as well), and how little of it is needed: one fixed cosine head in the first layer
+gets about what cosine on all 24 heads gets, and the same head in a later layer hurts. A search
+found no paper that applies cosine or QK-normalised attention to the first layer only; every one
+checked applies it to all layers. That is "not found", not "does not exist", and C22 does not
+license a claim that first-layer placement beats cosine everywhere.
 
 - Cosine and QK-normalised attention, all layers:
   - Henry, Dachapally, Pawar, Chen. Query-Key Normalization for Transformers. Findings of EMNLP 2020,
