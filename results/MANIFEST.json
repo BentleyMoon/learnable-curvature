@@ -204,6 +204,11 @@
   "sha256": "279393208c82716c771bb24d8b8f4e3ea8d90011ef81354b76dd85cc8c9438cc",
   "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2G_20260925.json"
  },
+ "ternary_lane/RESULT_T2H_20260927.json": {
+  "bytes": 7968,
+  "sha256": "e12a1284efcb91ea4b79cbffd9645ae3e5bb3f3b644f1c692cdc4805ce6307fe",
+  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2H_20260927.json"
+ },
  "ternary_lane/RESULT_T2I_20260928.json": {
   "bytes": 643,
   "sha256": "c61f8d46cf9aab1a1e08cf65900c6faadae9a4ce3aaf48a30c088a4caf9a698b",
@@ -748,6 +753,96 @@
   "bytes": 2102,
   "sha256": "36a5544dba4d1d909928868b325b21aeb5b39308d9b65ae1c103a5c39c91cf41",
   "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\references\\zero_seed3.json"
+ },
+ "ternary_lane/t2h_runs/fixed_allminus/fixedcode_seed0.json": {
+  "bytes": 2150,
+  "sha256": "b8ffb5668eacc756f934005a508a8f7b490f9c2fdc76c4f4b6f144999f52cbd2",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\fixed_allminus\\fixedcode_seed0.json"
+ },
+ "ternary_lane/t2h_runs/fixed_allminus/fixedcode_seed1.json": {
+  "bytes": 2150,
+  "sha256": "7b1a2c30939cae3b21254e1b07f74f24243b0807174267bedd40942f9eef6bfe",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\fixed_allminus\\fixedcode_seed1.json"
+ },
+ "ternary_lane/t2h_runs/init_allminus/initcode_seed0.json": {
+  "bytes": 2221,
+  "sha256": "af35a89b2d5989c5ca94ff1b8c793b6dcb4d0c22770c008da436c07f433753ae",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_allminus\\initcode_seed0.json"
+ },
+ "ternary_lane/t2h_runs/init_allminus/initcode_seed1.json": {
+  "bytes": 2214,
+  "sha256": "c81bf9178b538dded7a5c653cef0f66b7642c32a157dde126ece543dafa848dd",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_allminus\\initcode_seed1.json"
+ },
+ "ternary_lane/t2h_runs/init_allminus/initcode_seed2.json": {
+  "bytes": 2218,
+  "sha256": "2f9bd733678a64b8158cd1213111e47a87fe07bfdecec6b7a4c0bba59c92ec70",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_allminus\\initcode_seed2.json"
+ },
+ "ternary_lane/t2h_runs/init_allminus/initcode_seed3.json": {
+  "bytes": 2215,
+  "sha256": "cfc99e28da8adb358c3ab33f56e5c6f683c1f5779d55dd62e186265ce8f7f44e",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_allminus\\initcode_seed3.json"
+ },
+ "ternary_lane/t2h_runs/init_one_l1/initcode_seed0.json": {
+  "bytes": 2216,
+  "sha256": "9445ea8a7dc4e9e722f920c6158e6a8605be1583f9e87e4bdaf1fb55daed5e3a",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_one_l1\\initcode_seed0.json"
+ },
+ "ternary_lane/t2h_runs/init_one_l1/initcode_seed1.json": {
+  "bytes": 2216,
+  "sha256": "a0d4e9408e1a54346487ef440cd855c278652d890ea35f200a30721ade5dbd67",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_one_l1\\initcode_seed1.json"
+ },
+ "ternary_lane/t2h_runs/init_one_l1/initcode_seed2.json": {
+  "bytes": 2218,
+  "sha256": "c7808ee5e1ac703007e30080397ab8233df76d44aaf5a0be4f42a5affde489d9",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_one_l1\\initcode_seed2.json"
+ },
+ "ternary_lane/t2h_runs/init_one_l1/initcode_seed3.json": {
+  "bytes": 2209,
+  "sha256": "cfe7bf96c5245a12fa6d94d45c0ed07d831d60f9f5b3af41c1df9ebba2478657",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_one_l1\\initcode_seed3.json"
+ },
+ "ternary_lane/t2h_runs/l12/layer1/fixedcode_seed0.json": {
+  "bytes": 2509,
+  "sha256": "ad3294f6bd313957c6e93f29318be4260fe12f8eddf5da8c5daff2e7d5457c56",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\layer1\\fixedcode_seed0.json"
+ },
+ "ternary_lane/t2h_runs/l12/layer1/fixedcode_seed1.json": {
+  "bytes": 2507,
+  "sha256": "180b5f362c0124cef630405ee5b8d63606394a702b350b0a31087c750842fb04",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\layer1\\fixedcode_seed1.json"
+ },
+ "ternary_lane/t2h_runs/l12/one_l1/fixedcode_seed0.json": {
+  "bytes": 2511,
+  "sha256": "fc4d0efec0a84591e8f5a0d28c9bf22c46cd7613329de609e0be480cfdd65d2c",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\one_l1\\fixedcode_seed0.json"
+ },
+ "ternary_lane/t2h_runs/l12/one_l1/fixedcode_seed1.json": {
+  "bytes": 2513,
+  "sha256": "a604e73579030c519b851a0da5e48861bba5afec50c59f6224311ca155eaa09c",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\one_l1\\fixedcode_seed1.json"
+ },
+ "ternary_lane/t2h_runs/l12/references/continuous_seed0.json": {
+  "bytes": 2595,
+  "sha256": "89f54ed2c6e4e29b648a99489ba3404bc3efb89e3c29c6e97dd3701dc6792d00",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\references\\continuous_seed0.json"
+ },
+ "ternary_lane/t2h_runs/l12/references/continuous_seed1.json": {
+  "bytes": 2584,
+  "sha256": "54fc6e36c83097b6e80acd1efc626021eb84ca12ab5199e2e712e9937f87b90c",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\references\\continuous_seed1.json"
+ },
+ "ternary_lane/t2h_runs/l12/references/zero_seed0.json": {
+  "bytes": 2413,
+  "sha256": "871be343cfcd96bca10039188201793ea17a33c62c4f1f8dd44283506165ff0a",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\references\\zero_seed0.json"
+ },
+ "ternary_lane/t2h_runs/l12/references/zero_seed1.json": {
+  "bytes": 2419,
+  "sha256": "f944a80d45380babdf29d6398ec11f20272ba8f3fb5d44604109e9bfcee88e3d",
+  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\references\\zero_seed1.json"
  },
  "ternary_lane/t2i_runs/all_cosine/fixedcode_seed0.json": {
   "bytes": 2130,

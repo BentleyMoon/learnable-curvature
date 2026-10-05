@@ -154,6 +154,18 @@ def all_cosine_six():
             "l1_minus_all": [r["layer1_minus_all_cosine"] for r in rows]}
 
 
+def t2h():
+    """T2h (preregistered 27 Sept): curvature started at the recipe then learned, all-hyperbolic starts and codes,
+    and the recipe at 12 layers. Each value is the improvement over the same seed's same-depth zero model."""
+    rows = load("ternary_lane/RESULT_T2H_20260927.json")["rows"]
+    out = {}
+    for r in sorted(rows, key=lambda r: r["seed"]):
+        out.setdefault(r["arm"], []).append(r["improvement_vs_zero_pct"])
+        if r["arm"] == "init_one_l1":
+            out.setdefault("kept_spherical", []).append(bool(r["layer1_head0_spherical"]))
+    return out
+
+
 def claims_t2_rows():
     rows = load("ternary_lane/RESULT_T2_20260921.json")["rows"]
     return [rows[k] for k in sorted(rows)]
@@ -539,6 +551,38 @@ def build():
          "All-cosine arm, same seeds; preregistered threshold",
          "INCONCLUSIVE (direction consistent, under the registered bar)"),
     ])
+    th = t2h()
+    init_minus_fixed = [a - b for a, b in zip(th["init_one_l1"], th["fixed_one_l1"])]
+    init_minus_hyp = [a - b for a, b in zip(th["init_one_l1"], th["init_allminus"])]
+    kept_rows.extend([
+        ("C23", "At 6 layers, starting one first-layer head cosine and letting curvature learn from there works as "
+                "well as fixing it; starting every head hyperbolic does not.",
+         "Started at the recipe, then learned: %s (mean %s); the first-layer head was still cosine at the end on %d "
+         "of %d seeds. Minus the fixed recipe, same seed: %s points (bar written in advance: within 0.25 on at least "
+         "3 seeds). Started all hyperbolic, then learned: %s. Recipe start minus hyperbolic start: %s points (bar: at "
+         "least 0.5 on 3 of 4)."
+         % (", ".join("%+.2f%%" % x for x in th["init_one_l1"]), f2(st.mean(th["init_one_l1"])),
+            sum(th["kept_spherical"]), len(th["kept_spherical"]), ", ".join("%+.2f" % x for x in init_minus_fixed),
+            ", ".join("%+.2f%%" % x for x in th["init_allminus"]), ", ".join("%+.2f" % x for x in init_minus_hyp)),
+         "ternary_lane/RESULT_T2H_20260927.json",
+         "Fixed recipe and all-hyperbolic start, same seeds; preregistered thresholds",
+         "POSITIVE (6 layers, 4 seeds, preregistered)"),
+        ("C24", "At 6 layers, fixed hyperbolic curvature on every head accounts for part of the gain.",
+         "All 24 heads fixed hyperbolic: %s against the same seed's zero model. The bar for this claim (at or above "
+         "zero on both seeds) was not met, so the first-layer result stands against zero curvature."
+         % ", ".join("%+.2f%%" % x for x in th["fixed_allminus"]),
+         "ternary_lane/RESULT_T2H_20260927.json",
+         "Paired zero-curvature model per seed",
+         "NEGATIVE (2 seeds, preregistered)"),
+        ("C25", "At 12 layers, one fixed cosine head in the first layer still improves on no curvature.",
+         "One fixed layer-1 head: %s. Whole layer 1 cosine: %s. Learned curvature: %s. The bar for 'holds to 12 "
+         "layers' was at least 0.75%% on both seeds, and for 'stops before 12' below 0.3%% on both; neither was met."
+         % (", ".join("%+.2f%%" % x for x in th["one_l1_12"]), ", ".join("%+.2f%%" % x for x in th["layer1_12"]),
+            ", ".join("%+.2f%%" % x for x in th["continuous_12"])),
+         "ternary_lane/RESULT_T2H_20260927.json",
+         "New 12-layer zero-curvature model per seed",
+         "INCONCLUSIVE (2 seeds; improves on both, under the registered bar on one)"),
+    ])
 
     withdrawn = [
         ("W1", "'Learnable curvature': the model finds its own geometry, and that is the source of the gain.",
@@ -600,11 +644,11 @@ LIMITATIONS = [
     "The March language runs loaded WikiText-2 through Hugging Face with the model file's own split; the d96 runs use "
     "a 90/10 split of the concatenated file with 2,500 validation sequences. Perplexities from the two families are "
     "not comparable with each other.",
-    "The d96 experiments (C1-C5, C10, C17-C22) were preregistered by the lab before they ran; the March experiments "
+    "The d96 experiments (C1-C5, C10, C17-C25) were preregistered by the lab before they ran; the March experiments "
     "were not. One reading in C19's source (learned runs do better when they happen to end with one cosine head in "
-    "layer 1) was noticed after the runs and is not claimed.",
-    "Running on the lab's lane when this was written, and not included: T2h (curvature started at the recipe and "
-    "then learned; the recipe at 12 layers). Nothing above depends on it.",
+    "layer 1) was noticed after the runs; T2h then tested it in advance, and C23 is that test.",
+    "C24 and C25 rest on two seeds each. C25 covers one corpus at one width and does not settle how the recipe "
+    "scales with depth.",
 ]
 
 

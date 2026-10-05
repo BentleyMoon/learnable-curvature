@@ -49,7 +49,7 @@ SOURCES = [
 for d in sorted(glob.glob(os.path.join(RUNS, "sweep_*"))):
     SOURCES.append(("wikitext_char/sweep/%s.json" % os.path.basename(d), os.path.join(d, "run_results.json")))
 # Experiments still running on the lab's lane are left out until their result file is final.
-PENDING = ("T2H",)
+PENDING = ()
 for p in sorted(glob.glob(os.path.join(TERNARY, "RESULT_*.json"))):
     if not any(("RESULT_%s_" % tag) in os.path.basename(p) for tag in PENDING):
         SOURCES.append(("ternary_lane/%s" % os.path.basename(p), p))

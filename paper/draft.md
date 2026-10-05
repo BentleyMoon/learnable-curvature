@@ -17,8 +17,9 @@ scaled up by the vectors' lengths, and cosine similarity. A random fixed setting
 keeps 2%. The gain is cosine attention, which is already known. What is left is a smaller and, I
 think, more useful finding about how little of it is needed: one fixed cosine head in the first layer
 keeps 81 to 95% of the gain at 3 layers, and at 6 layers it improves on plain attention on 4 of 4
-seeds (+1.08 to +1.25%) where learned κ improves on nothing (mean +0.02%). The same head placed in a
-later layer hurts. A trained model also compresses to one bit per head at no measurable cost. I
+seeds (+1.08 to +1.25%) where learned κ improves on nothing (mean +0.02%). Starting that head at
+cosine and letting κ learn does as well as fixing it, and at 12 layers the head still helps on both
+seeds tried. The same head placed in a later layer hurts. A trained model also compresses to one bit per head at no measurable cost. I
 report the claims from my earlier drafts that did not survive, next to the control that removed each
 one.
 
@@ -136,9 +137,21 @@ carries the effect. One head in layer 1 lands within a third of a point of that 
 was met on two. I do not claim that the first layer adds anything beyond cosine attention everywhere;
 four more seeds would settle it.
 
-The pattern in the learned runs is suggestive, though I noticed it after the fact and do not claim
-it: learning pushes nearly every first-layer head to the length-scaled side, and the learned runs that
-end with exactly one cosine head in layer 1 are the better ones.
+I noticed a pattern in the learned runs after the fact: learning pushes nearly every first-layer head
+to the length-scaled side, and the learned runs that end with exactly one cosine head in layer 1 are
+the better ones. So I wrote down a test before running it (C23). Start that one head at cosine and let
+κ learn from there, and the model lands within 0.04 points of the fixed recipe on all four seeds
+(+1.21, +1.06, +1.07, +1.12%), with the head still cosine at the end every time. Start every head on
+the length-scaled side instead and let κ learn, and it ends below plain attention on all four (−0.62,
+−0.29, −0.23, −0.35%). Learned κ at depth fails because of where it starts, not because learning
+walks away from the recipe. Fixing every head on the length-scaled side is worse than plain attention
+too (−0.62, −0.28%, two seeds; C24), so the gain is measured against no curvature, not against a
+length-scaled baseline.
+
+At 12 layers (two seeds; C25) the one-head recipe still improves on plain attention, by 0.67 and
+0.81%, and a whole cosine first layer by 0.82 and 1.01%, while learned κ gives 0.25 and 0.18%. I had
+set 0.75% on both seeds as the bar for saying the recipe holds to 12 layers, and one seed falls short
+of it, so I say only that it has not stopped working by 12 layers.
 
 ### 4.5 One bit per head
 
@@ -252,14 +265,14 @@ output worth reusing.
 - The exact-distance runs use a separate implementation with one seed each.
 - The width-96 experiments had their predictions written down before they ran; the March experiments
   did not.
-- Still running when this was written: learned κ started at the one-head recipe, and the recipe at 12
-  layers.
+- The 12-layer and all-length-scaled results rest on two seeds each, and do not settle how the recipe
+  scales with depth.
 
 ## 8. Conclusion
 
 I set out to let a model find its own geometry, and what it found was a switch. The part worth keeping
 is small and concrete: at this scale a single attention head that scores by direction instead of
-length, fixed in the first layer before training starts, does about as much good as cosine attention
+length, fixed in the first layer or simply started there, does about as much good as cosine attention
 everywhere and more than the curvature the model learned for itself, while the same head placed deeper
 does harm. I think that is a better result to hand on than the one I started with, because every step
 of it can be checked, and because the reasons the bigger story fell apart are written down beside it.

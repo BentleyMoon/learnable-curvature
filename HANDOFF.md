@@ -1,5 +1,15 @@
 # Handoff
 
+## 2026-10-04: T2h folded in; nothing is pending
+
+- T2h's 20 runs are claims C23 to C25 and are in the draft (4.4, abstract, limitations, conclusion).
+  Started at the recipe and then learned, the model matches the fixed recipe on 4 of 4 seeds and keeps
+  the head cosine; started all hyperbolic it ends below zero on 4 of 4. Fixed all hyperbolic is below
+  zero (2 seeds). At 12 layers the recipe helps on both seeds but is under the 0.75% bar on one.
+- `PENDING` in `tools/collect_results.py` is empty. `python reproduce.py check` passes.
+- What is left is Bentley's: choose the title (CITATION.cff and .zenodo.json still carry the
+  descriptive one), read the draft, and make the GitHub release that Zenodo turns into a DOI.
+
 ## 2026-09-29: the lab's first-layer results folded in
 
 - Added T2d, T2e (3 layers) and T2f, T2g (6 layers) from `C:\engine\projects\ternary_native` as

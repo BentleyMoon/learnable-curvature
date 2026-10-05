@@ -84,7 +84,11 @@ Computation") no longer fit what the data support.
 - Whole layer 1 minus all 24: +0.29, +0.16, +0.37, +0.37 points: ahead on every seed, but the preregistered
   bar (0.3 points on 3 of 4 seeds) was met on 2. The paper does not claim the first layer adds anything
   beyond cosine attention; settling it needs more seeds.
-- Still running: T2h (learned curvature started at the recipe; the recipe at 12 layers).
+
+### 3.3d Where learned curvature starts, and 12 layers (C23 to C25)
+- Started at the recipe, then learned: +1.21, +1.06, +1.07, +1.12%, within 0.04 points of fixed; head stays cosine 4 of 4.
+- Started all hyperbolic, then learned: −0.62, −0.29, −0.23, −0.35%. Fixed all hyperbolic: −0.62, −0.28% (2 seeds).
+- 12 layers, 2 seeds: one layer-1 head +0.67, +0.81%; whole layer 1 +0.82, +1.01%; learned +0.25, +0.18%. Under the 0.75% bar on one seed.
 
 ### 3.4 Compressing a trained model to one bit per head (C4, C5)
 - 8×4: 3.7456 → 3.7455; d96: |change| ≤ 0.0041% on 4 seeds.
