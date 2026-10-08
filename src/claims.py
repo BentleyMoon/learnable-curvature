@@ -166,6 +166,19 @@ def t2h():
     return out
 
 
+def t2j():
+    """T2j (preregistered 5 Oct): the recipe at twice the width, d_model 192 x 4 heads (head size 48), 6 layers.
+    Each value is the improvement over the same seed's d192 zero model, recomputed from the saved runs."""
+    def ppl(path):
+        return load(path)["val_ppl"]
+    out = {"one_l1": [], "continuous": []}
+    for seed in (0, 1):
+        z = ppl("ternary_lane/t2j_runs/references/zero_seed%d.json" % seed)
+        out["one_l1"].append(100.0 * (z - ppl("ternary_lane/t2j_runs/one_l1/fixedcode_seed%d.json" % seed)) / z)
+        out["continuous"].append(100.0 * (z - ppl("ternary_lane/t2j_runs/references/continuous_seed%d.json" % seed)) / z)
+    return out
+
+
 def claims_t2_rows():
     rows = load("ternary_lane/RESULT_T2_20260921.json")["rows"]
     return [rows[k] for k in sorted(rows)]
@@ -583,6 +596,17 @@ def build():
          "New 12-layer zero-curvature model per seed",
          "INCONCLUSIVE (2 seeds; improves on both, under the registered bar on one)"),
     ])
+    tj = t2j()
+    kept_rows.append(
+        ("C26", "At twice the width (d_model 192, 4 heads), one fixed cosine head in the first layer still improves "
+                "on no curvature.",
+         "One fixed layer-1 head: %s. Learned curvature: %s. The bar for 'holds at twice the width' was at least 0.5%% "
+         "on both seeds with the head ahead of learned curvature by at least 0.4 points, and for 'a narrow-model "
+         "effect' below 0.2%% on both; neither was met. At d_model 96, 6 layers, the same head gave +1.08%% to +1.25%% (C20)."
+         % (", ".join("%+.2f%%" % x for x in tj["one_l1"]), ", ".join("%+.2f%%" % x for x in tj["continuous"])),
+         "ternary_lane/RESULT_T2J_20261005.json",
+         "New d_model 192 zero-curvature model per seed",
+         "INCONCLUSIVE (2 seeds; the gain mostly fades at this width)"))
 
     withdrawn = [
         ("W1", "'Learnable curvature': the model finds its own geometry, and that is the source of the gain.",
@@ -644,7 +668,7 @@ LIMITATIONS = [
     "The March language runs loaded WikiText-2 through Hugging Face with the model file's own split; the d96 runs use "
     "a 90/10 split of the concatenated file with 2,500 validation sequences. Perplexities from the two families are "
     "not comparable with each other.",
-    "The d96 experiments (C1-C5, C10, C17-C25) were preregistered by the lab before they ran; the March experiments "
+    "The d96 experiments (C1-C5, C10, C17-C25) and the d192 experiment (C26) were preregistered by the lab before they ran; the March experiments "
     "were not. One reading in C19's source (learned runs do better when they happen to end with one cosine head in "
     "layer 1) was noticed after the runs; T2h then tested it in advance, and C23 is that test.",
     "C24 and C25 rest on two seeds each. C25 covers one corpus at one width and does not settle how the recipe "

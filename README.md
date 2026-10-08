@@ -15,7 +15,9 @@ that gain, and so does putting every head on the cosine rule from the first step
 learned. Putting every head on the length-scaled rule keeps none of it. So the gain comes from
 cosine scoring being present. Learning the curvature is not what produces it. Where the cosine
 head sits matters: one fixed cosine head in the first layer keeps 81 to 95% of the gain, and at
-6 layers it improves on no curvature on all 4 seeds while learned curvature does not. In a trained model
+6 layers it improves on no curvature on all 4 seeds while learned curvature does not. At twice the width
+(d_model 192, 4 heads) the same head mostly loses its gain (-0.00% and +0.26% on 2 seeds, C26), so the
+recipe is shown at d_model 96 only. In a trained model
 the sign of κ alone carries the whole effect. The full list, with what each claim was tested
 against, is in [CLAIMS.md](CLAIMS.md).
 

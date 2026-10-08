@@ -1,0 +1,24 @@
+{
+ "rows": [
+  {
+   "arm": "continuous",
+   "seed": 0,
+   "improvement_vs_zero_pct": -0.28221726285586857
+  },
+  {
+   "arm": "one_l1",
+   "seed": 0,
+   "improvement_vs_zero_pct": -0.0013742785862504118
+  },
+  {
+   "arm": "continuous",
+   "seed": 1,
+   "improvement_vs_zero_pct": -0.0373275727530423
+  },
+  {
+   "arm": "one_l1",
+   "seed": 1,
+   "improvement_vs_zero_pct": 0.2623477594676158
+  }
+ ]
+}

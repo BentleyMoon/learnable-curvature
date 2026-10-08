@@ -1188,5 +1188,40 @@
   "bytes": 71693,
   "sha256": "b6c8ca22a6161065e2d9a5ffc4684ed8ca8de7d018b682f0d9b1f3059c16f869",
   "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d96_L4\\run_results.json"
+ },
+ "ternary_lane/RESULT_T2J_20261005.json": {
+  "bytes": 422,
+  "sha256": "71abeaadee6db029211817782f1c9f75006cd4c46e8b3d856cb85db7fcd71ca5",
+  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2J_20261005.json"
+ },
+ "ternary_lane/t2j_runs/references/zero_seed0.json": {
+  "bytes": 2103,
+  "sha256": "5dc6c91768ff6df34d47ee5472ca1c3a3eea6aea8528b98d6abcb6a593ff44a3",
+  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\references\\zero_seed0.json"
+ },
+ "ternary_lane/t2j_runs/references/zero_seed1.json": {
+  "bytes": 2103,
+  "sha256": "9b925056d9cb354ea1a6fed31c2ec42c20aca4959572639e9dd91e4219194f34",
+  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\references\\zero_seed1.json"
+ },
+ "ternary_lane/t2j_runs/references/continuous_seed0.json": {
+  "bytes": 2195,
+  "sha256": "8d2fa0a950f06fa7a16e8961a3669c803f475e8f32047cbdda8ab308b236a070",
+  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\references\\continuous_seed0.json"
+ },
+ "ternary_lane/t2j_runs/references/continuous_seed1.json": {
+  "bytes": 2192,
+  "sha256": "ee1f0e55930651d897fc1e78d93d1e7c54833be30b8ccdf77072e4f43566114a",
+  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\references\\continuous_seed1.json"
+ },
+ "ternary_lane/t2j_runs/one_l1/fixedcode_seed0.json": {
+  "bytes": 2152,
+  "sha256": "0ef5f8c91b5cdec7902e373b8505a9f03c3732dc35f1903982421e0f333950ed",
+  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\one_l1\\fixedcode_seed0.json"
+ },
+ "ternary_lane/t2j_runs/one_l1/fixedcode_seed1.json": {
+  "bytes": 2154,
+  "sha256": "0428e4817c20e4e61c700ad248bb65d52eb9f87d91f29a9cd4917f0f5e1a94a8",
+  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\one_l1\\fixedcode_seed1.json"
  }
 }
