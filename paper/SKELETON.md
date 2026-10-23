@@ -1,7 +1,6 @@
 # Paper skeleton
 
-Headings, with the claims and numbers that belong under each. The prose is Bentley's; nothing below
-is written for publication. Claim IDs point to [CLAIMS.md](../CLAIMS.md), which is generated from
+Headings, with the claims and numbers that belong under each. Claim IDs point to [CLAIMS.md](../CLAIMS.md), which is generated from
 the saved runs and is the authority if a number here ever disagrees with it.
 
 The title is still to be chosen. The March titles ("Discovering Optimal Geometry for Neural

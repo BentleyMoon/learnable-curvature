@@ -2,47 +2,47 @@
  "mandel/control_matrix_20ep_learnable_c_20260313.json": {
   "bytes": 23097,
   "sha256": "263792b1a671311fdae8ac567b5cb4cd04928fe4a8e3c6286917324219823a73",
-  "source": "C:\\mandel\\runs\\control_matrix_20ep_learnable_c_20260313.json"
+  "source": "workstation: mandel/runs/control_matrix_20ep_learnable_c_20260313.json"
  },
  "mandel/control_matrix_5ep_20260313.json": {
   "bytes": 23071,
   "sha256": "6d8a21a9c715dbc49cc531cd572f39aa4b17d0442a2d1be9b9b6ef71fb5fc6bc",
-  "source": "C:\\mandel\\runs\\control_matrix_5ep_20260313.json"
+  "source": "workstation: mandel/runs/control_matrix_5ep_20260313.json"
  },
  "mandel/control_matrix_5ep_learnable_c_20260313.json": {
   "bytes": 23075,
   "sha256": "972be95bff27d690b1e42b8f2a6b4a482c4442f0bcbfafdf0521dc3bdba8f2af",
-  "source": "C:\\mandel\\runs\\control_matrix_5ep_learnable_c_20260313.json"
+  "source": "workstation: mandel/runs/control_matrix_5ep_learnable_c_20260313.json"
  },
  "mandel/wikitext_exact_euclidean.json": {
   "bytes": 73537,
   "sha256": "214984a313baac77905c1e2a57502d4fa15b16607aa83801b1fc50dc4d2060a3",
-  "source": "C:\\mandel\\runs\\wikitext_exact_euc\\run_results.json"
+  "source": "workstation: mandel/runs/wikitext_exact_euc/run_results.json"
  },
  "mandel/wikitext_standard_dot.json": {
   "bytes": 9165,
   "sha256": "c7a968bc9c106e434487f2eaa02749e202f5c4df31016c567824b1d9584e1059",
-  "source": "C:\\mandel\\runs\\wikitext_standard_dot\\run_results.json"
+  "source": "workstation: mandel/runs/wikitext_standard_dot/run_results.json"
  },
  "mandel/wikitext_temperature_tau.json": {
   "bytes": 49965,
   "sha256": "3c9eda0f0c0634e205be1dbd5b2153aa6a1a6404c123dc5c57ac5d05e3e5bbab",
-  "source": "C:\\mandel\\runs\\wikitext_temperature_tau\\run_results.json"
+  "source": "workstation: mandel/runs/wikitext_temperature_tau/run_results.json"
  },
  "synthetic_lm/curvature_transformer_results.json": {
   "bytes": 11627,
   "sha256": "8f3d3b01ebddc58a0a61d09e380ad31630155adcfd09b565b05f3ef184f960ae",
-  "source": "C:\\gptcodex\\fractaltest\\files\\curvature_transformer_results.json"
+  "source": "workstation: fractaltest/curvature_transformer_results.json"
  },
  "synthetic_lm/kappa_trajectory.json": {
   "bytes": 8495,
   "sha256": "ea7ea6f6a60a939da1bf0e661e4e0292692ed60a035f7b5f2d2e9746f34bb07b",
-  "source": "C:\\gptcodex\\fractaltest\\files\\kappa_trajectory.json"
+  "source": "workstation: fractaltest/kappa_trajectory.json"
  },
  "synthetic_numpy/autograd_geometry_results_seed42.json": {
   "bytes": 448,
   "sha256": "741775860f86d800ed3f9e9606b4144f631bb3f0af2d4801cda45718353f6e62",
-  "source": "C:\\gptcodex\\fractaltest\\files\\autograd_geometry_results.json"
+  "source": "workstation: fractaltest/autograd_geometry_results.json"
  },
  "synthetic_numpy/seeds/seed0.json": {
   "bytes": 450,
@@ -157,1071 +157,1071 @@
  "ternary_lane/RESULT_T0B_20260920.json": {
   "bytes": 912,
   "sha256": "cd97fa1a41b6542b5dd1f63a7dfa47cb41ac0b418f593adf411305af5a959cc1",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T0B_20260920.json"
+  "source": "workstation: ternary_native/RESULT_T0B_20260920.json"
  },
  "ternary_lane/RESULT_T0_20260920.json": {
   "bytes": 4271,
   "sha256": "8c43a47ea1532060965766ea62a6d0c8c391bf043adcacaa70d769d06a1c8ddd",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T0_20260920.json"
+  "source": "workstation: ternary_native/RESULT_T0_20260920.json"
  },
  "ternary_lane/RESULT_T1B_20260921.json": {
   "bytes": 1196,
   "sha256": "e97fe1d6280bd1967ff62c8912a53a96f2569ed8e2c8b0246324374e1441240a",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T1B_20260921.json"
+  "source": "workstation: ternary_native/RESULT_T1B_20260921.json"
  },
  "ternary_lane/RESULT_T1_20260921.json": {
   "bytes": 1250,
   "sha256": "36935bf5eb2de6744902193fa47064753e5d8bb09c58e84a0746f907f420dd31",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T1_20260921.json"
+  "source": "workstation: ternary_native/RESULT_T1_20260921.json"
  },
  "ternary_lane/RESULT_T2B_20260921.json": {
   "bytes": 2840,
   "sha256": "0e02800bfb475a3b07abedc76e2a5e1585b7c911e21df6981f6cf4560b720585",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2B_20260921.json"
+  "source": "workstation: ternary_native/RESULT_T2B_20260921.json"
  },
  "ternary_lane/RESULT_T2C_20260922.json": {
   "bytes": 2044,
   "sha256": "27d01ec1242aacc5bf6c18288edebfc28321a4762f2881e5395b805d3353e183",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2C_20260922.json"
+  "source": "workstation: ternary_native/RESULT_T2C_20260922.json"
  },
  "ternary_lane/RESULT_T2D_20260923.json": {
   "bytes": 1733,
   "sha256": "70ccafeab61ef89bfe987cb3b104b80ea08b7cdc6545ae82aabecefeb3185c5d",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2D_20260923.json"
+  "source": "workstation: ternary_native/RESULT_T2D_20260923.json"
  },
  "ternary_lane/RESULT_T2E_20260924.json": {
   "bytes": 1279,
   "sha256": "92958d9c7c5f8dcdc954b2e8e6964a3eb256536a670cfb80bd1ac4e5112db68d",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2E_20260924.json"
+  "source": "workstation: ternary_native/RESULT_T2E_20260924.json"
  },
  "ternary_lane/RESULT_T2F_20260924.json": {
   "bytes": 1740,
   "sha256": "f1089940be90b8e43221f06f21e8588693dbb3e67bdadffcb2fb8d4bb3ee5bdc",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2F_20260924.json"
+  "source": "workstation: ternary_native/RESULT_T2F_20260924.json"
  },
  "ternary_lane/RESULT_T2G_20260925.json": {
   "bytes": 1852,
   "sha256": "279393208c82716c771bb24d8b8f4e3ea8d90011ef81354b76dd85cc8c9438cc",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2G_20260925.json"
+  "source": "workstation: ternary_native/RESULT_T2G_20260925.json"
  },
  "ternary_lane/RESULT_T2H_20260927.json": {
   "bytes": 7968,
   "sha256": "e12a1284efcb91ea4b79cbffd9645ae3e5bb3f3b644f1c692cdc4805ce6307fe",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2H_20260927.json"
+  "source": "workstation: ternary_native/RESULT_T2H_20260927.json"
  },
  "ternary_lane/RESULT_T2I_20260928.json": {
   "bytes": 643,
   "sha256": "c61f8d46cf9aab1a1e08cf65900c6faadae9a4ce3aaf48a30c088a4caf9a698b",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2I_20260928.json"
+  "source": "workstation: ternary_native/RESULT_T2I_20260928.json"
  },
  "ternary_lane/RESULT_T2_20260921.json": {
   "bytes": 2513,
   "sha256": "c45260134a8e470de456d86cf2c304528a8a3c66b46dab55517760f99cdbb629",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2_20260921.json"
+  "source": "workstation: ternary_native/RESULT_T2_20260921.json"
  },
  "ternary_lane/RESULT_T3_20260921.json": {
   "bytes": 3283,
   "sha256": "934dae94be1cd906703d17e90720d15d93b94a20a49c5ee7a2b1ad6721fa8ca5",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T3_20260921.json"
+  "source": "workstation: ternary_native/RESULT_T3_20260921.json"
  },
  "ternary_lane/t1_runs/binary_seed0.json": {
   "bytes": 1795,
   "sha256": "9ff522ba23b92e0de783c6662228c9619b29bf9d1d42b342cba660b5793e12dd",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\binary_seed0.json"
+  "source": "workstation: ternary_native/t1_runs/binary_seed0.json"
  },
  "ternary_lane/t1_runs/binary_seed1.json": {
   "bytes": 1785,
   "sha256": "7bf8c45fa3718b4aff51021f899f7f18a6f9f8b49e23febb329b0cf4809e1f11",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\binary_seed1.json"
+  "source": "workstation: ternary_native/t1_runs/binary_seed1.json"
  },
  "ternary_lane/t1_runs/binary_seed2.json": {
   "bytes": 1786,
   "sha256": "45ef4280027de8c09f7cb6a324e2222db1fe40f37f4c52a4725250c9017da927",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\binary_seed2.json"
+  "source": "workstation: ternary_native/t1_runs/binary_seed2.json"
  },
  "ternary_lane/t1_runs/continuous_seed0.json": {
   "bytes": 1792,
   "sha256": "9df981f2201c6aacb761ac5e7b577511a90e220a92de5c5b068be7d881d7f529",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t1_runs/continuous_seed0.json"
  },
  "ternary_lane/t1_runs/continuous_seed1.json": {
   "bytes": 1792,
   "sha256": "0309e7e532e11664665b46240aebc6020fee4c80272befb9e343d0db3d571409",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\continuous_seed1.json"
+  "source": "workstation: ternary_native/t1_runs/continuous_seed1.json"
  },
  "ternary_lane/t1_runs/continuous_seed2.json": {
   "bytes": 1791,
   "sha256": "f84118b06ac970068e64b7c3246f1d66473dbf620d774b1a848468af6b14d0ef",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\continuous_seed2.json"
+  "source": "workstation: ternary_native/t1_runs/continuous_seed2.json"
  },
  "ternary_lane/t1_runs/randsign_seed0.json": {
   "bytes": 1765,
   "sha256": "759e471ecffe08ab7b7aa7c1534b971f021644d876f04dc363a0cb94505c772e",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\randsign_seed0.json"
+  "source": "workstation: ternary_native/t1_runs/randsign_seed0.json"
  },
  "ternary_lane/t1_runs/randsign_seed1.json": {
   "bytes": 1765,
   "sha256": "5bf38590b032900093069cdb74dd97a21788187f48fb70980d5434258310ffc8",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\randsign_seed1.json"
+  "source": "workstation: ternary_native/t1_runs/randsign_seed1.json"
  },
  "ternary_lane/t1_runs/randsign_seed2.json": {
   "bytes": 1765,
   "sha256": "fdcdeee6f1bc0edf424ee666b148d30311eb76b31178e45e11e0dce9c4e13add",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\randsign_seed2.json"
+  "source": "workstation: ternary_native/t1_runs/randsign_seed2.json"
  },
  "ternary_lane/t1_runs/ternary_seed0.json": {
   "bytes": 1800,
   "sha256": "a90c0239b259d0f00fbbbedf27b761fe72b16d23c5e48b2c03c0181fb326a00c",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\ternary_seed0.json"
+  "source": "workstation: ternary_native/t1_runs/ternary_seed0.json"
  },
  "ternary_lane/t1_runs/ternary_seed1.json": {
   "bytes": 1791,
   "sha256": "811dba5b27194867fe14871d50533a8bdcdfcb52bc1ce6bd54e9197407753567",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\ternary_seed1.json"
+  "source": "workstation: ternary_native/t1_runs/ternary_seed1.json"
  },
  "ternary_lane/t1_runs/ternary_seed2.json": {
   "bytes": 1792,
   "sha256": "a0087032d384fe1249ccf8a97ef1c0745808ed6adbddce2cb4612eb23206da3a",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\ternary_seed2.json"
+  "source": "workstation: ternary_native/t1_runs/ternary_seed2.json"
  },
  "ternary_lane/t1_runs/zero_seed0.json": {
   "bytes": 1759,
   "sha256": "d10a9f4689587872a9d0c734c549615d0a82ac61bada579da1eb2a4c5599f9a9",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\zero_seed0.json"
+  "source": "workstation: ternary_native/t1_runs/zero_seed0.json"
  },
  "ternary_lane/t1_runs/zero_seed1.json": {
   "bytes": 1758,
   "sha256": "757cb10414d0284464dba3e857f4e2aa835cf9f52826be53ccc525f14ac204b0",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\zero_seed1.json"
+  "source": "workstation: ternary_native/t1_runs/zero_seed1.json"
  },
  "ternary_lane/t1_runs/zero_seed2.json": {
   "bytes": 1757,
   "sha256": "59ca164d35efc95ed4fce46a175506acb5a52ffbfe8f075eac05819b91939d02",
-  "source": "C:\\engine\\projects\\ternary_native\\t1_runs\\zero_seed2.json"
+  "source": "workstation: ternary_native/t1_runs/zero_seed2.json"
  },
  "ternary_lane/t1b_runs/binary_seed0.json": {
   "bytes": 1870,
   "sha256": "c8b1918100848659d38039c881328c6159ff5d302728bb4ac7d9463b1d7beb34",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\binary_seed0.json"
+  "source": "workstation: ternary_native/t1b_runs/binary_seed0.json"
  },
  "ternary_lane/t1b_runs/binary_seed1.json": {
   "bytes": 1868,
   "sha256": "418b498ade428a1fce1b2a5fe6debf0a99e8666a676f5654e99968c95271807f",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\binary_seed1.json"
+  "source": "workstation: ternary_native/t1b_runs/binary_seed1.json"
  },
  "ternary_lane/t1b_runs/binary_seed2.json": {
   "bytes": 1876,
   "sha256": "f7553543e3bb9a06363ca5d56d09ff722bf18ffa3f2bcf4dab54f2bf50137c0a",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\binary_seed2.json"
+  "source": "workstation: ternary_native/t1b_runs/binary_seed2.json"
  },
  "ternary_lane/t1b_runs/binary_seed3.json": {
   "bytes": 1874,
   "sha256": "084a00609f7737c0f71cb849e33796a706b43ba38cc36f131d34aae8848f513f",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\binary_seed3.json"
+  "source": "workstation: ternary_native/t1b_runs/binary_seed3.json"
  },
  "ternary_lane/t1b_runs/continuous_seed0.json": {
   "bytes": 1872,
   "sha256": "431fd773e3b349f0e0073220bf18efdb3b4b64b024953b4cc2f86ee83536f57d",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t1b_runs/continuous_seed0.json"
  },
  "ternary_lane/t1b_runs/continuous_seed1.json": {
   "bytes": 1869,
   "sha256": "3877a9f0bbb95fe425d31b7024349aeb5041c705319c36ee52996d9a1dd28cec",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\continuous_seed1.json"
+  "source": "workstation: ternary_native/t1b_runs/continuous_seed1.json"
  },
  "ternary_lane/t1b_runs/continuous_seed2.json": {
   "bytes": 1871,
   "sha256": "a8a5cb74bb42504eac67a5157c5f63bdad30095158b8050c5332d9f8a07ce5bb",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\continuous_seed2.json"
+  "source": "workstation: ternary_native/t1b_runs/continuous_seed2.json"
  },
  "ternary_lane/t1b_runs/continuous_seed3.json": {
   "bytes": 1873,
   "sha256": "eac038b12061e497a0c3525435ea6e64e0e5cc530266524c3b2571b92c677466",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\continuous_seed3.json"
+  "source": "workstation: ternary_native/t1b_runs/continuous_seed3.json"
  },
  "ternary_lane/t1b_runs/zero_seed0.json": {
   "bytes": 1823,
   "sha256": "a99883b842c73b26ecd6e8ed30e32c25edd3389077d3c309a2735b64deb91b99",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\zero_seed0.json"
+  "source": "workstation: ternary_native/t1b_runs/zero_seed0.json"
  },
  "ternary_lane/t1b_runs/zero_seed1.json": {
   "bytes": 1824,
   "sha256": "d488f224ab1893ace3750393ab6612fb8c4ed266b16661c3963861cde07906e1",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\zero_seed1.json"
+  "source": "workstation: ternary_native/t1b_runs/zero_seed1.json"
  },
  "ternary_lane/t1b_runs/zero_seed2.json": {
   "bytes": 1821,
   "sha256": "87d7a7b65213544366629c84ff5041fa2d9e0922fa359a096166bfabf2a4ff15",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\zero_seed2.json"
+  "source": "workstation: ternary_native/t1b_runs/zero_seed2.json"
  },
  "ternary_lane/t1b_runs/zero_seed3.json": {
   "bytes": 1821,
   "sha256": "0ee84e93e650c2f1377dec74056e3d48e01cc7dda7d5ee27a7dedddfd4aa7189",
-  "source": "C:\\engine\\projects\\ternary_native\\t1b_runs\\zero_seed3.json"
+  "source": "workstation: ternary_native/t1b_runs/zero_seed3.json"
  },
  "ternary_lane/t2_runs/continuous_seed0.json": {
   "bytes": 2018,
   "sha256": "b99a68b2e13e481a501cae6a00548cdd16aed169cf16292e89acfabf189c44c9",
-  "source": "C:\\engine\\projects\\ternary_native\\t2_runs\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t2_runs/continuous_seed0.json"
  },
  "ternary_lane/t2_runs/continuous_seed1.json": {
   "bytes": 2022,
   "sha256": "7a26599fb7764aa2130aa275e037f7651a77ba19c06a8f6d94a0b9e681975e1a",
-  "source": "C:\\engine\\projects\\ternary_native\\t2_runs\\continuous_seed1.json"
+  "source": "workstation: ternary_native/t2_runs/continuous_seed1.json"
  },
  "ternary_lane/t2_runs/continuous_seed2.json": {
   "bytes": 2019,
   "sha256": "7bcbd1acdb574f8db9e9e5f3b646b473f5fe388aa7fba085b7efd62fd0efa783",
-  "source": "C:\\engine\\projects\\ternary_native\\t2_runs\\continuous_seed2.json"
+  "source": "workstation: ternary_native/t2_runs/continuous_seed2.json"
  },
  "ternary_lane/t2_runs/continuous_seed3.json": {
   "bytes": 2020,
   "sha256": "24166208d13fd532562e4caf4799bbe3a19e54e54eab7edd6620191dfd15615b",
-  "source": "C:\\engine\\projects\\ternary_native\\t2_runs\\continuous_seed3.json"
+  "source": "workstation: ternary_native/t2_runs/continuous_seed3.json"
  },
  "ternary_lane/t2_runs/late_binary_seed0.json": {
   "bytes": 1919,
   "sha256": "831d3e599b73bdbc5610ec4ee1616b4c4bea715b6cc9df1d0958585394f3de88",
-  "source": "C:\\engine\\projects\\ternary_native\\t2_runs\\late_binary_seed0.json"
+  "source": "workstation: ternary_native/t2_runs/late_binary_seed0.json"
  },
  "ternary_lane/t2_runs/late_binary_seed1.json": {
   "bytes": 1914,
   "sha256": "c315d6f7bd501ab006cb9abf48235027fe17bcaf26c0801fb535c437bc931dc3",
-  "source": "C:\\engine\\projects\\ternary_native\\t2_runs\\late_binary_seed1.json"
+  "source": "workstation: ternary_native/t2_runs/late_binary_seed1.json"
  },
  "ternary_lane/t2_runs/late_binary_seed2.json": {
   "bytes": 1917,
   "sha256": "daa7e15616f27516e0d01bd80802e80302b063ced61c7199da0127d0442e2ea3",
-  "source": "C:\\engine\\projects\\ternary_native\\t2_runs\\late_binary_seed2.json"
+  "source": "workstation: ternary_native/t2_runs/late_binary_seed2.json"
  },
  "ternary_lane/t2_runs/late_binary_seed3.json": {
   "bytes": 1919,
   "sha256": "3c42f51025ecbfa9e3c4485a676054cadf31471f404b2e7048f6e9b85c5e1e2f",
-  "source": "C:\\engine\\projects\\ternary_native\\t2_runs\\late_binary_seed3.json"
+  "source": "workstation: ternary_native/t2_runs/late_binary_seed3.json"
  },
  "ternary_lane/t2b_runs/fixedcode_seed0.json": {
   "bytes": 1964,
   "sha256": "48a628e2440e81156bf554cbe9b0953bc40feb7f61af7fdc8f631980b2c3ef94",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2b_runs/fixedcode_seed0.json"
  },
  "ternary_lane/t2b_runs/fixedcode_seed1.json": {
   "bytes": 1967,
   "sha256": "41e1cb6b5baa5ff180041736d41b975d2e503cc3035aadb1d615537bbb3a8da5",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2b_runs/fixedcode_seed1.json"
  },
  "ternary_lane/t2b_runs/fixedcode_seed2.json": {
   "bytes": 1959,
   "sha256": "d9990f5a7d530778e188f4d42640392046c5180bfe4ccb079c7b4826784c42e3",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\fixedcode_seed2.json"
+  "source": "workstation: ternary_native/t2b_runs/fixedcode_seed2.json"
  },
  "ternary_lane/t2b_runs/fixedcode_seed3.json": {
   "bytes": 1972,
   "sha256": "b4242529ddc05212d1fcdb30fd6397ba7a62804214f352195f5ba00c2c0dac6f",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\fixedcode_seed3.json"
+  "source": "workstation: ternary_native/t2b_runs/fixedcode_seed3.json"
  },
  "ternary_lane/t2b_runs/late_binary_seed0.json": {
   "bytes": 34394,
   "sha256": "ed0329547a090e2334ffed50010d01082f51d5a4558d9a66a02950cb4a0fa371",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\late_binary_seed0.json"
+  "source": "workstation: ternary_native/t2b_runs/late_binary_seed0.json"
  },
  "ternary_lane/t2b_runs/late_binary_seed1.json": {
   "bytes": 34393,
   "sha256": "6d65e73566c88de3c23bd0f7986cab618b16b37df3aa45831cd40d3b36416063",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\late_binary_seed1.json"
+  "source": "workstation: ternary_native/t2b_runs/late_binary_seed1.json"
  },
  "ternary_lane/t2b_runs/late_binary_seed2.json": {
   "bytes": 34392,
   "sha256": "9c81530503b5e22f5d4ef11e54784ab48dec86b7ef7679c7865e5205e3881edc",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\late_binary_seed2.json"
+  "source": "workstation: ternary_native/t2b_runs/late_binary_seed2.json"
  },
  "ternary_lane/t2b_runs/late_binary_seed3.json": {
   "bytes": 34395,
   "sha256": "3cfdf48d108a5e096397a28df4f153c68b462fdf7596156dacaf86c3173612bf",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\late_binary_seed3.json"
+  "source": "workstation: ternary_native/t2b_runs/late_binary_seed3.json"
  },
  "ternary_lane/t2b_runs/randsign_seed0.json": {
   "bytes": 1955,
   "sha256": "5516a04ac4df4fd94b3de28c355c2a97eb0c2cab5e04758c5f3690a651e72c01",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\randsign_seed0.json"
+  "source": "workstation: ternary_native/t2b_runs/randsign_seed0.json"
  },
  "ternary_lane/t2b_runs/randsign_seed1.json": {
   "bytes": 1955,
   "sha256": "13d3b5d0ab7756c447c1a86d81ce53cbff6b011e810d18798bcd442f690fbb52",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\randsign_seed1.json"
+  "source": "workstation: ternary_native/t2b_runs/randsign_seed1.json"
  },
  "ternary_lane/t2b_runs/randsign_seed2.json": {
   "bytes": 1949,
   "sha256": "5c344bb52647b5d5e5b6a78184e24cb4f1da15427629eaa337999f5af6f5de42",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\randsign_seed2.json"
+  "source": "workstation: ternary_native/t2b_runs/randsign_seed2.json"
  },
  "ternary_lane/t2b_runs/randsign_seed3.json": {
   "bytes": 1953,
   "sha256": "0b88aaee9e871af24f6a3a254a77e0b4ebad6bda986d6af15c0ed16280c4fe57",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\randsign_seed3.json"
+  "source": "workstation: ternary_native/t2b_runs/randsign_seed3.json"
  },
  "ternary_lane/t2b_runs/xseed/fixedcode_seed0.json": {
   "bytes": 1966,
   "sha256": "25e89b6fa9520433ffcfeb0a2f58284c2e6ff6fe77b57a4ecfb1a8fb502162a3",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\xseed\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2b_runs/xseed/fixedcode_seed0.json"
  },
  "ternary_lane/t2b_runs/xseed/fixedcode_seed1.json": {
   "bytes": 1965,
   "sha256": "63bdb993ee649ff40770a9d297924a3503f33436f35e295c34dafb01d7194094",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\xseed\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2b_runs/xseed/fixedcode_seed1.json"
  },
  "ternary_lane/t2b_runs/xseed/fixedcode_seed2.json": {
   "bytes": 1968,
   "sha256": "8335df093f4d07ebf87b5b5c6f0918610e2fdf967e4f308d98d66f9a3ad4d926",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\xseed\\fixedcode_seed2.json"
+  "source": "workstation: ternary_native/t2b_runs/xseed/fixedcode_seed2.json"
  },
  "ternary_lane/t2b_runs/xseed/fixedcode_seed3.json": {
   "bytes": 1970,
   "sha256": "76079fb55ce806667745e455af3d95029d83d72e8be4296524ae745daee3113d",
-  "source": "C:\\engine\\projects\\ternary_native\\t2b_runs\\xseed\\fixedcode_seed3.json"
+  "source": "workstation: ternary_native/t2b_runs/xseed/fixedcode_seed3.json"
  },
  "ternary_lane/t2c_runs/allhyp/fixedcode_seed0.json": {
   "bytes": 1972,
   "sha256": "4a22f50fcce70ec7107f6321bfda33175856f021ba90d06ea9bc629071dbc509",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\allhyp\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/allhyp/fixedcode_seed0.json"
  },
  "ternary_lane/t2c_runs/allhyp/fixedcode_seed1.json": {
   "bytes": 1974,
   "sha256": "2517a35258ed1516c0d095fb363f4c8ec46a84a98066a6d4f97bbe931e11283f",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\allhyp\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2c_runs/allhyp/fixedcode_seed1.json"
  },
  "ternary_lane/t2c_runs/allsph/fixedcode_seed0.json": {
   "bytes": 1961,
   "sha256": "08d33b01d9a5079354111e2abf27302f54cae581fee510f480b932defc645bee",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\allsph\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/allsph/fixedcode_seed0.json"
  },
  "ternary_lane/t2c_runs/allsph/fixedcode_seed1.json": {
   "bytes": 1959,
   "sha256": "272090e2a6934e419d9ff0a2043748349d5897980b0a16f43c44222068a679c1",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\allsph\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2c_runs/allsph/fixedcode_seed1.json"
  },
  "ternary_lane/t2c_runs/bad/fixedcode_seed2.json": {
   "bytes": 1969,
   "sha256": "70304d39f37b716a1ebd13000e3f5845e3e713c8916de471f4f462e4639af562",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\bad\\fixedcode_seed2.json"
+  "source": "workstation: ternary_native/t2c_runs/bad/fixedcode_seed2.json"
  },
  "ternary_lane/t2c_runs/badmirror/fixedcode_seed0.json": {
   "bytes": 1967,
   "sha256": "bb9c6b404f140b68d25d4e4803cc1120cb8d205679faedfc2b13b3ec82309512",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\badmirror\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/badmirror/fixedcode_seed0.json"
  },
  "ternary_lane/t2c_runs/hyp0/fixedcode_seed0.json": {
   "bytes": 1967,
   "sha256": "aeae23dde93a91b16d458e6534e95df89e604d540601ea33b7123d17c5dc4b83",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\hyp0\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/hyp0/fixedcode_seed0.json"
  },
  "ternary_lane/t2c_runs/hyp1/fixedcode_seed0.json": {
   "bytes": 1973,
   "sha256": "3912e5cdffb5c42520af0d077116c03a55c7de2f3c16767be583195f28f28c74",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\hyp1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/hyp1/fixedcode_seed0.json"
  },
  "ternary_lane/t2c_runs/hyp2/fixedcode_seed0.json": {
   "bytes": 1968,
   "sha256": "5e6a19b3eefe96e26236e113a4eb242f3aa5b4f1cbc23f2a1d1981bdf521320b",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\hyp2\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/hyp2/fixedcode_seed0.json"
  },
  "ternary_lane/t2c_runs/sph0/fixedcode_seed0.json": {
   "bytes": 1965,
   "sha256": "e31a64d4c8a0910d8407453a63189b3046726f7185a60c30d667b0a20ef0365c",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\sph0\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/sph0/fixedcode_seed0.json"
  },
  "ternary_lane/t2c_runs/sph1/fixedcode_seed0.json": {
   "bytes": 1963,
   "sha256": "c9f840e696afb52fcfbdd2931379cce09508054641c06856ea9c96ef4f90b231",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\sph1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/sph1/fixedcode_seed0.json"
  },
  "ternary_lane/t2c_runs/sph2/fixedcode_seed0.json": {
   "bytes": 1964,
   "sha256": "3448d1557eacc173cb491b99f898503e6f38a9e93214f6f4cad6ba5a9f0399f6",
-  "source": "C:\\engine\\projects\\ternary_native\\t2c_runs\\sph2\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2c_runs/sph2/fixedcode_seed0.json"
  },
  "ternary_lane/t2d_runs/k1/fixedcode_seed0.json": {
   "bytes": 1976,
   "sha256": "b1ffc07f3fc71092ab677eeda08c83b3bde9d2a8bf7f31a02857cdfd3237ce9c",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\k1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2d_runs/k1/fixedcode_seed0.json"
  },
  "ternary_lane/t2d_runs/k1/fixedcode_seed1.json": {
   "bytes": 1973,
   "sha256": "3fd0aa602d75af40debcc052eef60f24433568f6b335c9ea0781280005337438",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\k1\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2d_runs/k1/fixedcode_seed1.json"
  },
  "ternary_lane/t2d_runs/k2/fixedcode_seed0.json": {
   "bytes": 1975,
   "sha256": "6e225d4fc1739ea796f624d297a63af3a46511acf952b5a3d706e5ed27450a50",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\k2\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2d_runs/k2/fixedcode_seed0.json"
  },
  "ternary_lane/t2d_runs/k2/fixedcode_seed1.json": {
   "bytes": 1972,
   "sha256": "d6c15cfda8ad278f257d13ccbe896f1056eaa309f19c148d577a06b744830e8a",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\k2\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2d_runs/k2/fixedcode_seed1.json"
  },
  "ternary_lane/t2d_runs/k4/fixedcode_seed0.json": {
   "bytes": 1973,
   "sha256": "55b6244f4c1ebdd704bd835d243e61dc6ceb0a54b535c038e374ccfc2773677f",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\k4\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2d_runs/k4/fixedcode_seed0.json"
  },
  "ternary_lane/t2d_runs/k4/fixedcode_seed1.json": {
   "bytes": 1964,
   "sha256": "70bd8238fdb2b9700d297face2568b5746e40a1be74640e5c40ea44276be643d",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\k4\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2d_runs/k4/fixedcode_seed1.json"
  },
  "ternary_lane/t2d_runs/k8/fixedcode_seed0.json": {
   "bytes": 1963,
   "sha256": "7a6b38ccc5767718b6ebf593cedfb5e5c6463064c14486d49439d13ac08925b5",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\k8\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2d_runs/k8/fixedcode_seed0.json"
  },
  "ternary_lane/t2d_runs/k8/fixedcode_seed1.json": {
   "bytes": 1966,
   "sha256": "6b6c1bc85d7d70cc9bd15cda523a5c17f13437562dff894bec9d07cdd6e699b3",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\k8\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2d_runs/k8/fixedcode_seed1.json"
  },
  "ternary_lane/t2d_runs/layer1/fixedcode_seed0.json": {
   "bytes": 1963,
   "sha256": "8846a4873417ceb95d19bfbd83a94cc7bc9ed890701f7a8bce66fd72587ddb15",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\layer1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2d_runs/layer1/fixedcode_seed0.json"
  },
  "ternary_lane/t2d_runs/layer2/fixedcode_seed0.json": {
   "bytes": 1969,
   "sha256": "d644ee2ac9fa96c1bbf46271d262efa6d73f44f0d8f3a91c1569af498edd011b",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\layer2\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2d_runs/layer2/fixedcode_seed0.json"
  },
  "ternary_lane/t2d_runs/layer3/fixedcode_seed0.json": {
   "bytes": 1964,
   "sha256": "a0d21ee87cf6bcec6ef12fd716598fde77bbaf28ab903dfb9970d2d953fce9c4",
-  "source": "C:\\engine\\projects\\ternary_native\\t2d_runs\\layer3\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2d_runs/layer3/fixedcode_seed0.json"
  },
  "ternary_lane/t2e_runs/layer1/fixedcode_seed1.json": {
   "bytes": 1970,
   "sha256": "65b5899734c6dff8ff859d47c922a0a8ee3742a0cb844cbfaa5d8b258079b3f4",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\layer1\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2e_runs/layer1/fixedcode_seed1.json"
  },
  "ternary_lane/t2e_runs/layer2/fixedcode_seed1.json": {
   "bytes": 1960,
   "sha256": "5b728d82ce344cb3435e914c6eb795d56fb7b2931b1c008c9d02d3ca4746817a",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\layer2\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2e_runs/layer2/fixedcode_seed1.json"
  },
  "ternary_lane/t2e_runs/layer3/fixedcode_seed1.json": {
   "bytes": 1964,
   "sha256": "f28f70a5266ff8c92e21b509a82f074e9937e1c234269b5339ee128cc56a79e8",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\layer3\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2e_runs/layer3/fixedcode_seed1.json"
  },
  "ternary_lane/t2e_runs/one_l1/fixedcode_seed0.json": {
   "bytes": 1973,
   "sha256": "86e98307b231d14770c207f600ac8f016c4a3d1b5bef9dd5368e28d785f5bda6",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\one_l1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2e_runs/one_l1/fixedcode_seed0.json"
  },
  "ternary_lane/t2e_runs/one_l1/fixedcode_seed1.json": {
   "bytes": 1974,
   "sha256": "afaa878d2a576f530c024562fbf4360594c41f92fcd0919dbb0034031ab6505e",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\one_l1\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2e_runs/one_l1/fixedcode_seed1.json"
  },
  "ternary_lane/t2e_runs/one_l2/fixedcode_seed0.json": {
   "bytes": 1970,
   "sha256": "0a1325a389a2fd87321f8043a28edfda84d2c9738ee132512171bb60df7e2e73",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\one_l2\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2e_runs/one_l2/fixedcode_seed0.json"
  },
  "ternary_lane/t2e_runs/one_l2/fixedcode_seed1.json": {
   "bytes": 1971,
   "sha256": "d94efed37f9ab688549477708317e12568b8b43f655befa965df7e2768ab1388",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\one_l2\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2e_runs/one_l2/fixedcode_seed1.json"
  },
  "ternary_lane/t2e_runs/one_l3/fixedcode_seed0.json": {
   "bytes": 1969,
   "sha256": "e025e1e7a1c3b8d278a02ae0462bd77adf5978c2a91b53d298070a741674c12b",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\one_l3\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2e_runs/one_l3/fixedcode_seed0.json"
  },
  "ternary_lane/t2e_runs/one_l3/fixedcode_seed1.json": {
   "bytes": 1974,
   "sha256": "3f6ef8d853ceb69c65449cfda6de92d13b876b926cde8349f12ffc53eef8a548",
-  "source": "C:\\engine\\projects\\ternary_native\\t2e_runs\\one_l3\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2e_runs/one_l3/fixedcode_seed1.json"
  },
  "ternary_lane/t2f_runs/layer1/fixedcode_seed0.json": {
   "bytes": 2149,
   "sha256": "5d601915795f20d2c5b18491d77af44db64e8c76c42d860e1cee6f2b777f24f2",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\layer1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2f_runs/layer1/fixedcode_seed0.json"
  },
  "ternary_lane/t2f_runs/layer1/fixedcode_seed1.json": {
   "bytes": 2148,
   "sha256": "c5322e8e3348661f865251f424f0abb880db0c84748d1dd2dc6c3e27be580cb0",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\layer1\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2f_runs/layer1/fixedcode_seed1.json"
  },
  "ternary_lane/t2f_runs/one_l1/fixedcode_seed0.json": {
   "bytes": 2154,
   "sha256": "530dfcd5ea79b0832dc8a025e757ccece035309266345d67f9543125b9b8865f",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\one_l1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2f_runs/one_l1/fixedcode_seed0.json"
  },
  "ternary_lane/t2f_runs/one_l1/fixedcode_seed1.json": {
   "bytes": 2150,
   "sha256": "4ab4dc1bb67189fbd776851ff870741f8459c14e68499bbc973d5f9f197e0435",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\one_l1\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2f_runs/one_l1/fixedcode_seed1.json"
  },
  "ternary_lane/t2f_runs/one_l4/fixedcode_seed0.json": {
   "bytes": 2149,
   "sha256": "dae1148504a13ff9873caeb76206a99b6679cde8a130be433f1cd461ae442a0c",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\one_l4\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2f_runs/one_l4/fixedcode_seed0.json"
  },
  "ternary_lane/t2f_runs/one_l4/fixedcode_seed1.json": {
   "bytes": 2150,
   "sha256": "25a423ea3c3d24614153e860e03af3fffa2277090ef270641d7208f00591b2f7",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\one_l4\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2f_runs/one_l4/fixedcode_seed1.json"
  },
  "ternary_lane/t2f_runs/references/continuous_seed0.json": {
   "bytes": 2195,
   "sha256": "ec3fa7c5526e4905f4fdfd51bf560086af4449855aad6d1554d99aa08f9edd09",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\references\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t2f_runs/references/continuous_seed0.json"
  },
  "ternary_lane/t2f_runs/references/continuous_seed1.json": {
   "bytes": 2192,
   "sha256": "167658cbee0a92021850ba68484584046d93ffd14f9b7805456818a3cccea788",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\references\\continuous_seed1.json"
+  "source": "workstation: ternary_native/t2f_runs/references/continuous_seed1.json"
  },
  "ternary_lane/t2f_runs/references/zero_seed0.json": {
   "bytes": 2104,
   "sha256": "e936db091afef88c965ca8b4aec74080dbd34c6c2cbbdad91982ba59b6e26536",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\references\\zero_seed0.json"
+  "source": "workstation: ternary_native/t2f_runs/references/zero_seed0.json"
  },
  "ternary_lane/t2f_runs/references/zero_seed1.json": {
   "bytes": 2102,
   "sha256": "2f80cf3ac632ff6b81e1d01d154518c7cb8033fbefae0f29ce29d9c82b6dd8ca",
-  "source": "C:\\engine\\projects\\ternary_native\\t2f_runs\\references\\zero_seed1.json"
+  "source": "workstation: ternary_native/t2f_runs/references/zero_seed1.json"
  },
  "ternary_lane/t2g_runs/continuous_lrk3/continuous_seed0.json": {
   "bytes": 2188,
   "sha256": "fb4d77ccb99f4f7851ce4fd15dae94778e89a77327fa0cdb061a787874b018b6",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\continuous_lrk3\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t2g_runs/continuous_lrk3/continuous_seed0.json"
  },
  "ternary_lane/t2g_runs/continuous_lrk3/continuous_seed1.json": {
   "bytes": 2191,
   "sha256": "3e298a7c0df89d88511f214b3c48b877bbefce67a878f0d413fc4c0c15a1ac9a",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\continuous_lrk3\\continuous_seed1.json"
+  "source": "workstation: ternary_native/t2g_runs/continuous_lrk3/continuous_seed1.json"
  },
  "ternary_lane/t2g_runs/layer1/fixedcode_seed2.json": {
   "bytes": 2150,
   "sha256": "2f96100d3b048a53492adddb9c24eb78f4c38c1d9020aa783b16b7027c0a8393",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\layer1\\fixedcode_seed2.json"
+  "source": "workstation: ternary_native/t2g_runs/layer1/fixedcode_seed2.json"
  },
  "ternary_lane/t2g_runs/layer1/fixedcode_seed3.json": {
   "bytes": 2146,
   "sha256": "66f810705014263beb1a9c6c9f12014804dd50791ded9b149428089b4249c39d",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\layer1\\fixedcode_seed3.json"
+  "source": "workstation: ternary_native/t2g_runs/layer1/fixedcode_seed3.json"
  },
  "ternary_lane/t2g_runs/long40k/continuous_seed0.json": {
   "bytes": 2198,
   "sha256": "2ce32aaff4b2651dd1467ac18f93743378dfe509d2cc42703fa6e1e7b0668a9b",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\long40k\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t2g_runs/long40k/continuous_seed0.json"
  },
  "ternary_lane/t2g_runs/long40k/fixedcode_seed0.json": {
   "bytes": 2151,
   "sha256": "f7b6a2fb4fd26b206d7807ee99462a56f69b4b23f6f4c41e08715669b2eda8ab",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\long40k\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2g_runs/long40k/fixedcode_seed0.json"
  },
  "ternary_lane/t2g_runs/long40k/zero_seed0.json": {
   "bytes": 2102,
   "sha256": "2fbf82cba5ef4510074c2be8712cdabab31bad09f6fe1f6e2dae01a5398832ee",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\long40k\\zero_seed0.json"
+  "source": "workstation: ternary_native/t2g_runs/long40k/zero_seed0.json"
  },
  "ternary_lane/t2g_runs/one_l1/fixedcode_seed2.json": {
   "bytes": 2151,
   "sha256": "695be16e99020a25112222d5aebbbc6d00d12710d84efd4cedc7eee2512b6577",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\one_l1\\fixedcode_seed2.json"
+  "source": "workstation: ternary_native/t2g_runs/one_l1/fixedcode_seed2.json"
  },
  "ternary_lane/t2g_runs/one_l1/fixedcode_seed3.json": {
   "bytes": 2148,
   "sha256": "2c8bb2da9299c04cd2eee94565714f788f6da77a78a50a437e334cb68a9e5bac",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\one_l1\\fixedcode_seed3.json"
+  "source": "workstation: ternary_native/t2g_runs/one_l1/fixedcode_seed3.json"
  },
  "ternary_lane/t2g_runs/references/continuous_seed2.json": {
   "bytes": 2191,
   "sha256": "26b01b60c4c764d4850ede70001100b372774ea81c2a13b854a09fbb1d3ac670",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\references\\continuous_seed2.json"
+  "source": "workstation: ternary_native/t2g_runs/references/continuous_seed2.json"
  },
  "ternary_lane/t2g_runs/references/continuous_seed3.json": {
   "bytes": 2189,
   "sha256": "ecb761276ec4e1a917e51aece8571fdb346911c1af876b7a4c7851d6ec7e02b2",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\references\\continuous_seed3.json"
+  "source": "workstation: ternary_native/t2g_runs/references/continuous_seed3.json"
  },
  "ternary_lane/t2g_runs/references/zero_seed2.json": {
   "bytes": 2100,
   "sha256": "28d3ccb9c212ad78b47b0a006113cc4f6b1c6a029b82e6eafb3a610cf9180d43",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\references\\zero_seed2.json"
+  "source": "workstation: ternary_native/t2g_runs/references/zero_seed2.json"
  },
  "ternary_lane/t2g_runs/references/zero_seed3.json": {
   "bytes": 2102,
   "sha256": "36a5544dba4d1d909928868b325b21aeb5b39308d9b65ae1c103a5c39c91cf41",
-  "source": "C:\\engine\\projects\\ternary_native\\t2g_runs\\references\\zero_seed3.json"
+  "source": "workstation: ternary_native/t2g_runs/references/zero_seed3.json"
  },
  "ternary_lane/t2h_runs/fixed_allminus/fixedcode_seed0.json": {
   "bytes": 2150,
   "sha256": "b8ffb5668eacc756f934005a508a8f7b490f9c2fdc76c4f4b6f144999f52cbd2",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\fixed_allminus\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2h_runs/fixed_allminus/fixedcode_seed0.json"
  },
  "ternary_lane/t2h_runs/fixed_allminus/fixedcode_seed1.json": {
   "bytes": 2150,
   "sha256": "7b1a2c30939cae3b21254e1b07f74f24243b0807174267bedd40942f9eef6bfe",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\fixed_allminus\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2h_runs/fixed_allminus/fixedcode_seed1.json"
  },
  "ternary_lane/t2h_runs/init_allminus/initcode_seed0.json": {
   "bytes": 2221,
   "sha256": "af35a89b2d5989c5ca94ff1b8c793b6dcb4d0c22770c008da436c07f433753ae",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_allminus\\initcode_seed0.json"
+  "source": "workstation: ternary_native/t2h_runs/init_allminus/initcode_seed0.json"
  },
  "ternary_lane/t2h_runs/init_allminus/initcode_seed1.json": {
   "bytes": 2214,
   "sha256": "c81bf9178b538dded7a5c653cef0f66b7642c32a157dde126ece543dafa848dd",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_allminus\\initcode_seed1.json"
+  "source": "workstation: ternary_native/t2h_runs/init_allminus/initcode_seed1.json"
  },
  "ternary_lane/t2h_runs/init_allminus/initcode_seed2.json": {
   "bytes": 2218,
   "sha256": "2f9bd733678a64b8158cd1213111e47a87fe07bfdecec6b7a4c0bba59c92ec70",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_allminus\\initcode_seed2.json"
+  "source": "workstation: ternary_native/t2h_runs/init_allminus/initcode_seed2.json"
  },
  "ternary_lane/t2h_runs/init_allminus/initcode_seed3.json": {
   "bytes": 2215,
   "sha256": "cfc99e28da8adb358c3ab33f56e5c6f683c1f5779d55dd62e186265ce8f7f44e",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_allminus\\initcode_seed3.json"
+  "source": "workstation: ternary_native/t2h_runs/init_allminus/initcode_seed3.json"
  },
  "ternary_lane/t2h_runs/init_one_l1/initcode_seed0.json": {
   "bytes": 2216,
   "sha256": "9445ea8a7dc4e9e722f920c6158e6a8605be1583f9e87e4bdaf1fb55daed5e3a",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_one_l1\\initcode_seed0.json"
+  "source": "workstation: ternary_native/t2h_runs/init_one_l1/initcode_seed0.json"
  },
  "ternary_lane/t2h_runs/init_one_l1/initcode_seed1.json": {
   "bytes": 2216,
   "sha256": "a0d4e9408e1a54346487ef440cd855c278652d890ea35f200a30721ade5dbd67",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_one_l1\\initcode_seed1.json"
+  "source": "workstation: ternary_native/t2h_runs/init_one_l1/initcode_seed1.json"
  },
  "ternary_lane/t2h_runs/init_one_l1/initcode_seed2.json": {
   "bytes": 2218,
   "sha256": "c7808ee5e1ac703007e30080397ab8233df76d44aaf5a0be4f42a5affde489d9",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_one_l1\\initcode_seed2.json"
+  "source": "workstation: ternary_native/t2h_runs/init_one_l1/initcode_seed2.json"
  },
  "ternary_lane/t2h_runs/init_one_l1/initcode_seed3.json": {
   "bytes": 2209,
   "sha256": "cfe7bf96c5245a12fa6d94d45c0ed07d831d60f9f5b3af41c1df9ebba2478657",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\init_one_l1\\initcode_seed3.json"
+  "source": "workstation: ternary_native/t2h_runs/init_one_l1/initcode_seed3.json"
  },
  "ternary_lane/t2h_runs/l12/layer1/fixedcode_seed0.json": {
   "bytes": 2509,
   "sha256": "ad3294f6bd313957c6e93f29318be4260fe12f8eddf5da8c5daff2e7d5457c56",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\layer1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2h_runs/l12/layer1/fixedcode_seed0.json"
  },
  "ternary_lane/t2h_runs/l12/layer1/fixedcode_seed1.json": {
   "bytes": 2507,
   "sha256": "180b5f362c0124cef630405ee5b8d63606394a702b350b0a31087c750842fb04",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\layer1\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2h_runs/l12/layer1/fixedcode_seed1.json"
  },
  "ternary_lane/t2h_runs/l12/one_l1/fixedcode_seed0.json": {
   "bytes": 2511,
   "sha256": "fc4d0efec0a84591e8f5a0d28c9bf22c46cd7613329de609e0be480cfdd65d2c",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\one_l1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2h_runs/l12/one_l1/fixedcode_seed0.json"
  },
  "ternary_lane/t2h_runs/l12/one_l1/fixedcode_seed1.json": {
   "bytes": 2513,
   "sha256": "a604e73579030c519b851a0da5e48861bba5afec50c59f6224311ca155eaa09c",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\one_l1\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2h_runs/l12/one_l1/fixedcode_seed1.json"
  },
  "ternary_lane/t2h_runs/l12/references/continuous_seed0.json": {
   "bytes": 2595,
   "sha256": "89f54ed2c6e4e29b648a99489ba3404bc3efb89e3c29c6e97dd3701dc6792d00",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\references\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t2h_runs/l12/references/continuous_seed0.json"
  },
  "ternary_lane/t2h_runs/l12/references/continuous_seed1.json": {
   "bytes": 2584,
   "sha256": "54fc6e36c83097b6e80acd1efc626021eb84ca12ab5199e2e712e9937f87b90c",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\references\\continuous_seed1.json"
+  "source": "workstation: ternary_native/t2h_runs/l12/references/continuous_seed1.json"
  },
  "ternary_lane/t2h_runs/l12/references/zero_seed0.json": {
   "bytes": 2413,
   "sha256": "871be343cfcd96bca10039188201793ea17a33c62c4f1f8dd44283506165ff0a",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\references\\zero_seed0.json"
+  "source": "workstation: ternary_native/t2h_runs/l12/references/zero_seed0.json"
  },
  "ternary_lane/t2h_runs/l12/references/zero_seed1.json": {
   "bytes": 2419,
   "sha256": "f944a80d45380babdf29d6398ec11f20272ba8f3fb5d44604109e9bfcee88e3d",
-  "source": "C:\\engine\\projects\\ternary_native\\t2h_runs\\l12\\references\\zero_seed1.json"
+  "source": "workstation: ternary_native/t2h_runs/l12/references/zero_seed1.json"
  },
  "ternary_lane/t2i_runs/all_cosine/fixedcode_seed0.json": {
   "bytes": 2130,
   "sha256": "17e0a68872f5c966621eacbae36ff44601a2698ff17d9a01c9c0a752661512e4",
-  "source": "C:\\engine\\projects\\ternary_native\\t2i_runs\\all_cosine\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2i_runs/all_cosine/fixedcode_seed0.json"
  },
  "ternary_lane/t2i_runs/all_cosine/fixedcode_seed1.json": {
   "bytes": 2126,
   "sha256": "fd13c2c59ad3a4ada79263838aa2d2d4ee9bbae5853d2f6a6cc24d85062d87a1",
-  "source": "C:\\engine\\projects\\ternary_native\\t2i_runs\\all_cosine\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2i_runs/all_cosine/fixedcode_seed1.json"
  },
  "ternary_lane/t2i_runs/all_cosine/fixedcode_seed2.json": {
   "bytes": 2126,
   "sha256": "d474d64cf98b8d559eeaf1c3d5357d46045a0d4202c6785d25468d27aaffabc3",
-  "source": "C:\\engine\\projects\\ternary_native\\t2i_runs\\all_cosine\\fixedcode_seed2.json"
+  "source": "workstation: ternary_native/t2i_runs/all_cosine/fixedcode_seed2.json"
  },
  "ternary_lane/t2i_runs/all_cosine/fixedcode_seed3.json": {
   "bytes": 2130,
   "sha256": "07f0cbf3a1531885cfe52afa4dbeedbe66e210fda20b79df73652d5d24680ddf",
-  "source": "C:\\engine\\projects\\ternary_native\\t2i_runs\\all_cosine\\fixedcode_seed3.json"
+  "source": "workstation: ternary_native/t2i_runs/all_cosine/fixedcode_seed3.json"
  },
  "ternary_lane/t3_runs/continuous_seed0.json": {
   "bytes": 2121,
   "sha256": "53f34d3a34ca83a79240e8793729a4dd0292901626a5f4c57eba428315c30e23",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t3_runs/continuous_seed0.json"
  },
  "ternary_lane/t3_runs/continuous_seed1.json": {
   "bytes": 2124,
   "sha256": "130f0bf6566d57010fc1000dfc5b5f386c53a22d21057d98cc6b550b2347845c",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\continuous_seed1.json"
+  "source": "workstation: ternary_native/t3_runs/continuous_seed1.json"
  },
  "ternary_lane/t3_runs/continuous_seed2.json": {
   "bytes": 2116,
   "sha256": "09f3149698a733a65a48c66c386dce8b3ef64fdf8df8c934b728b178c419ea8a",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\continuous_seed2.json"
+  "source": "workstation: ternary_native/t3_runs/continuous_seed2.json"
  },
  "ternary_lane/t3_runs/continuous_seed3.json": {
   "bytes": 2123,
   "sha256": "6f11f5cd824c8d19d69e10936a3404d55adcb93f26b9b95a9a799738fb858f5f",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\continuous_seed3.json"
+  "source": "workstation: ternary_native/t3_runs/continuous_seed3.json"
  },
  "ternary_lane/t3_runs/late_binary_seed0.json": {
   "bytes": 2013,
   "sha256": "bd8344e58ce2a645b739bc5d0de7eba4eae3aa6c1c9b42f12bb94806546fddc1",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\late_binary_seed0.json"
+  "source": "workstation: ternary_native/t3_runs/late_binary_seed0.json"
  },
  "ternary_lane/t3_runs/late_binary_seed1.json": {
   "bytes": 2016,
   "sha256": "c911709d3b82d03f2d1e3099a247d4f3d94991874def7631b198af433da7974a",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\late_binary_seed1.json"
+  "source": "workstation: ternary_native/t3_runs/late_binary_seed1.json"
  },
  "ternary_lane/t3_runs/late_binary_seed2.json": {
   "bytes": 2010,
   "sha256": "bc03485bff8e7f06c7e8574dc3cf1e1802f7673e259822bc4959304a20ba8b2c",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\late_binary_seed2.json"
+  "source": "workstation: ternary_native/t3_runs/late_binary_seed2.json"
  },
  "ternary_lane/t3_runs/late_binary_seed3.json": {
   "bytes": 2008,
   "sha256": "72dc9ec2be701a89d75f006fdf43353646ac689da87cf9c64214a41e07fff8d5",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\late_binary_seed3.json"
+  "source": "workstation: ternary_native/t3_runs/late_binary_seed3.json"
  },
  "ternary_lane/t3_runs/zero_seed0.json": {
   "bytes": 1965,
   "sha256": "6ab555fce168c9b58c8951bf5b0a78961030978c8e0ff664a8f95a0cc9e72063",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\zero_seed0.json"
+  "source": "workstation: ternary_native/t3_runs/zero_seed0.json"
  },
  "ternary_lane/t3_runs/zero_seed1.json": {
   "bytes": 1963,
   "sha256": "ac82f6b9517de08e20c780ed7a157b169be4f9b4090458ef6629d20485ccc767",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\zero_seed1.json"
+  "source": "workstation: ternary_native/t3_runs/zero_seed1.json"
  },
  "ternary_lane/t3_runs/zero_seed2.json": {
   "bytes": 1963,
   "sha256": "31743839d16d6ffc1708f54ea612bd1851b0b5c93c8d7d81607235dc42962ef1",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\zero_seed2.json"
+  "source": "workstation: ternary_native/t3_runs/zero_seed2.json"
  },
  "ternary_lane/t3_runs/zero_seed3.json": {
   "bytes": 1964,
   "sha256": "f5f51bb01067dbd9fe3501c46476918eead4f960cd9f9afe911b9bae268b7cd6",
-  "source": "C:\\engine\\projects\\ternary_native\\t3_runs\\zero_seed3.json"
+  "source": "workstation: ternary_native/t3_runs/zero_seed3.json"
  },
  "wikitext_char/ablation_3arm_20260305/results.json": {
   "bytes": 14956,
   "sha256": "0dc2b59b4426a7238f2367e057b692fb42bcc520a11b243b2b136718ad9397b0",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_ablation\\run_ablation_results.json"
+  "source": "workstation: fractaltest/runs/language_20260305_ablation/run_ablation_results.json"
  },
  "wikitext_char/ablation_4arm_random_20260312/results.json": {
   "bytes": 17506,
   "sha256": "2f15dc0ef73972227bbfd11b956b229a050da145a95d6f8cc9e022f5a342ba94",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260312_ablation_random\\run_ablation_results.json"
+  "source": "workstation: fractaltest/runs/language_20260312_ablation_random/run_ablation_results.json"
  },
  "wikitext_char/clamp_20260305/results.json": {
   "bytes": 9693,
   "sha256": "3b4ce7642c2fac02f19b76a726e63d56e4d01ef94686d1f3b5d09959931c6cea",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_clamp\\run_results.json"
+  "source": "workstation: fractaltest/runs/language_20260305_clamp/run_results.json"
  },
  "wikitext_char/forced_geometry_20260312/results.json": {
   "bytes": 34152,
   "sha256": "2a8411ea0e22b852c95d25c62ecf6c0adfceeea4d3ef3820f13a32f139388f6d",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260312_forced_geometry\\run_results.json"
+  "source": "workstation: fractaltest/runs/language_20260312_forced_geometry/run_results.json"
  },
  "wikitext_char/kappa_timing_20260312.json": {
   "bytes": 34714,
   "sha256": "7bdfbf5228ef275756b8abf8a45cab0181feef609c4b18dad4132524459dfe6a",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\kappa_trajectory_timing_20260312.json"
+  "source": "workstation: fractaltest/runs/kappa_trajectory_timing_20260312.json"
  },
  "wikitext_char/phaseA_4h2l/attention_analysis.json": {
   "bytes": 6612,
   "sha256": "7d50070b39110f5439d42a1b9a7da864de49a5a84a230aa37026fab6430a6c3c",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_cpu_pilot\\attention_geometry_analysis_55ep.json"
+  "source": "workstation: fractaltest/runs/language_20260305_cpu_pilot/attention_geometry_analysis_55ep.json"
  },
  "wikitext_char/phaseA_4h2l/kappa_trajectory.json": {
   "bytes": 24215,
   "sha256": "495e485ad886e9e9e42e2469a3b3c916aadd5bcce1b5db24b6ea29399ba29bb6",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_cpu_pilot\\resume_long55_kappa_trajectory.json"
+  "source": "workstation: fractaltest/runs/language_20260305_cpu_pilot/resume_long55_kappa_trajectory.json"
  },
  "wikitext_char/phaseA_4h2l/results.json": {
   "bytes": 33792,
   "sha256": "afae69b9d068ae78dbfd72b03d30e3d81a117a4894878187042396c6208ae54c",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_cpu_pilot\\resume_long55_results.json"
+  "source": "workstation: fractaltest/runs/language_20260305_cpu_pilot/resume_long55_results.json"
  },
  "wikitext_char/phaseB_8h4l/attention_analysis.json": {
   "bytes": 24527,
   "sha256": "add85e85231abafc936b9f2942cb6be5ffba6545670260231db60cf6590f8105",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_8h4l\\attention_geometry_analysis_55ep.json"
+  "source": "workstation: fractaltest/runs/language_20260305_8h4l/attention_geometry_analysis_55ep.json"
  },
  "wikitext_char/phaseB_8h4l/kappa_trajectory.json": {
   "bytes": 83852,
   "sha256": "343d4a0a996a5d3ea90d0037456dae3abf0b1935f7b88e5b2691fd127db29d7f",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_8h4l\\run_kappa_trajectory.json"
+  "source": "workstation: fractaltest/runs/language_20260305_8h4l/run_kappa_trajectory.json"
  },
  "wikitext_char/phaseB_8h4l/results.json": {
   "bytes": 89926,
   "sha256": "25c7073a56d808b0e120bb47b3b0725f0b0f632768cfd423e06ec07f76f9d71d",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_8h4l\\run_results.json"
+  "source": "workstation: fractaltest/runs/language_20260305_8h4l/run_results.json"
  },
  "wikitext_char/phaseB_8h4l/sign_only_eval_20260318.json": {
   "bytes": 2952,
   "sha256": "98f3b9ba37d99140f21c19b4a86f6e46fb179a95957962fdc7f259f5779b754e",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\ternary_kappa_quantization_eval_20260318.json"
+  "source": "workstation: fractaltest/runs/ternary_kappa_quantization_eval_20260318.json"
  },
  "wikitext_char/pilot_4h2l/results.json": {
   "bytes": 2966,
   "sha256": "db2fdcfe31d3cffbfe3b836157eb26efff8b632b55e418fc108b14cd6b36f303",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\language_20260305_cpu_pilot\\curvature_transformer_results.json"
+  "source": "workstation: fractaltest/runs/language_20260305_cpu_pilot/curvature_transformer_results.json"
  },
  "wikitext_char/sweep/crash_log_std_d128_L1.txt": {
   "bytes": 1025,
   "sha256": "d7be457ebce37595c4c98c730dc77d5ee5bf26292bed14230cdd5ad6d008074d",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\run_compression_restart2_worker0_20260311.err.log"
+  "source": "workstation: fractaltest/runs/run_compression_restart2_worker0_20260311.err.log"
  },
  "wikitext_char/sweep/summary_20260310.json": {
   "bytes": 28967,
   "sha256": "1cfad7b77c7a4586855bfc5897b9269e7f2b87199057ecde42714aa2a435b4e9",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\compression_sweep_summary_20260307.json"
+  "source": "workstation: fractaltest/runs/compression_sweep_summary_20260307.json"
  },
  "wikitext_char/sweep/sweep_kappa_d128_L1.json": {
   "bytes": 30402,
   "sha256": "c914e2d87a0d6d14f91446c69a45f56ab6e759d5e1075bd34744c3e7ea3fda7e",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d128_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d128_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d128_L3.json": {
   "bytes": 6457,
   "sha256": "ab994162f73ec85ffd94a01f96ab8cd36dd08b8e744e8ca40781ab12d98d8590",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d128_L3\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d128_L3/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d16_L1.json": {
   "bytes": 13027,
   "sha256": "43adf870e0fce3be7fd1109195d4030497686b557b3eb41eea9bcd076e85f097",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d16_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d16_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d16_L2.json": {
   "bytes": 15423,
   "sha256": "7c8a0198b40d15fdf95453199e06848e7b52600a531ce03c90a627b2022eb949",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d16_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d16_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d24_L1.json": {
   "bytes": 15475,
   "sha256": "4a5d5187429d55a7793660a7baebb33cf3b9ad0287f6078229052683d1ea4cc3",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d24_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d24_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d24_L2.json": {
   "bytes": 20494,
   "sha256": "61885513165270b7414ce4216aa326437b384fc69ab55b38aecac8830e0ff272",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d24_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d24_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d32_L1.json": {
   "bytes": 15498,
   "sha256": "46b47574e0064160180ec92361aa61f248480974973fdd13999c893d66a4283b",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d32_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d32_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d32_L2.json": {
   "bytes": 20340,
   "sha256": "9bdb3fe408017d20863dbb42e13df03aeb01fef28c35aaeba20240548a44c48a",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d32_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d32_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d48_L1.json": {
   "bytes": 17953,
   "sha256": "37f37b92666cdaa029081ffe3df2e710a2ec19b28840d269ed60dcb8adfc5a39",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d48_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d48_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d48_L2.json": {
   "bytes": 25400,
   "sha256": "60a33d95dfdcd9a6fd82e564f59d4d11892d7262c82ea2e91b15d38eaf234e06",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d48_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d48_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d48_L3.json": {
   "bytes": 32855,
   "sha256": "4802d0604595d9e7aba4a516616df5d4b01ccc9fd29ff44448ea895c1dbb4504",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d48_L3\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d48_L3/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d48_L4.json": {
   "bytes": 40360,
   "sha256": "56177d1a789099f526918e90b9d691a89ec627e075f2c9204bd7e574f1258b6d",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d48_L4\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d48_L4/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d64_L1.json": {
   "bytes": 20449,
   "sha256": "44200615ea2a3ddf3aed34b7b098419a5ac313c5670edd71a82c42a11c28fdd5",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d64_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d64_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d64_L2.json": {
   "bytes": 30440,
   "sha256": "6d769cd955992e849d0ac8b3d286fdce423fcecab815b50725c7497f478f810e",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d64_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d64_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d64_L3.json": {
   "bytes": 40077,
   "sha256": "cf65cb1550c267e1407693e0fdd552d007da0d2c1c8d9094dd648534d00ef53a",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d64_L3\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d64_L3/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d64_L4.json": {
   "bytes": 50146,
   "sha256": "4134198642edb2fcdf8260b404ba7cd6abec4f59f9bd84caf792da6c4cca91e6",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d64_L4\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d64_L4/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d96_L1.json": {
   "bytes": 25404,
   "sha256": "47c942252fe330ab40cd61096da7c242399db9355d204317734f7be8dd724227",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d96_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d96_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d96_L2.json": {
   "bytes": 40376,
   "sha256": "e0d5b900889844066537236da9acbe764f132ec5054c8a16bf391388ccb6e744",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d96_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d96_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d96_L3.json": {
   "bytes": 55111,
   "sha256": "5c5fc7bbb9deaae65f29f570e13b0acb18866fbde82f05e52d254cd3d0b36ad3",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d96_L3\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d96_L3/run_results.json"
  },
  "wikitext_char/sweep/sweep_kappa_d96_L4.json": {
   "bytes": 69913,
   "sha256": "3acc0ead3968c2941f3b1ed4005205035aba4ed06ecf7e440ffd4b43ad7ffa4a",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_kappa_d96_L4\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_kappa_d96_L4/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d16_L1.json": {
   "bytes": 14498,
   "sha256": "dea5c37ba8b7f8c9dea8ee14eb825ea61efd148bb56b756020142f1f978e85dc",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d16_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d16_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d16_L2.json": {
   "bytes": 16885,
   "sha256": "1e4ab7152ba3758d22f6b9a07753a3b71b5338b23c403b5411d1dc15321f38a6",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d16_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d16_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d24_L1.json": {
   "bytes": 16933,
   "sha256": "f52692b3d936add2bac9a674cf0866a8d459e713ba59fa0983a097f1317380c3",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d24_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d24_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d24_L2.json": {
   "bytes": 21925,
   "sha256": "fb38fd22b44e7c6b97766d345bd2a8d9818c484d01a3ff9baae52b9bc99e2b39",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d24_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d24_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d32_L1.json": {
   "bytes": 16975,
   "sha256": "ad638ca68ef7f9966c150007f6556954e8d3b227f1ee5f759944247ffaaa6753",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d32_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d32_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d32_L2.json": {
   "bytes": 21929,
   "sha256": "3d3b04418b83e9ef20d0c0c189e4f97fc2593fb42aa2311d45f55a5073bd27a7",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d32_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d32_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d48_L1.json": {
   "bytes": 19452,
   "sha256": "33d31a00d15ea0e6e0a4faa9200eca6babdf7d8935d9f1ff7980cadaa226d286",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d48_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d48_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d48_L2.json": {
   "bytes": 26870,
   "sha256": "6580748b55718c4033f45bd89f418cc01089177604229fd131d8ebb9549e1c60",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d48_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d48_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d48_L3.json": {
   "bytes": 34505,
   "sha256": "50bb4f2ff6423169a1e1d988a36f66d47feee996309208e90d2a7516d479f65c",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d48_L3\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d48_L3/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d48_L4.json": {
   "bytes": 41679,
   "sha256": "eaaaaa2ed70c78edc8bace704080d914dcb542687a48bfe84f1dbea2a8192624",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d48_L4\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d48_L4/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d64_L1.json": {
   "bytes": 22039,
   "sha256": "6828e561c89d096ff041b79bcb02a28cadd2ce4141ffe1ce153e3daa40ea793d",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d64_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d64_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d64_L2.json": {
   "bytes": 31756,
   "sha256": "8bc07b9032eecbde598b7a70c113a2b7149e17efa293e98516ceff2593e90270",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d64_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d64_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d64_L3.json": {
   "bytes": 41873,
   "sha256": "dbd2af0b579fcd7c98148cb798dadf5694093104cc57f321dec03a0602dac203",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d64_L3\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d64_L3/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d64_L4.json": {
   "bytes": 51708,
   "sha256": "46f0eeabf1c87e240683f5c19c5e33035c8494ef55f1e7253c0f4501f1c131f1",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d64_L4\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d64_L4/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d96_L1.json": {
   "bytes": 26943,
   "sha256": "2e755db18eef74c5034dfb6b286e023d9bca3bfb7731b54868da6316ec3d7b35",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d96_L1\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d96_L1/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d96_L2.json": {
   "bytes": 41778,
   "sha256": "80e0c945af946a869ff2dec10da791f65b945526c65a1aba4395e378c9ad5949",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d96_L2\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d96_L2/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d96_L3.json": {
   "bytes": 56406,
   "sha256": "57ab034b4db5421f094f76d6b17a5ecc19c2ab784aca6fec5041cb29b529a0e3",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d96_L3\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d96_L3/run_results.json"
  },
  "wikitext_char/sweep/sweep_std_d96_L4.json": {
   "bytes": 71693,
   "sha256": "b6c8ca22a6161065e2d9a5ffc4684ed8ca8de7d018b682f0d9b1f3059c16f869",
-  "source": "C:\\gptcodex\\fractaltest\\files\\runs\\sweep_std_d96_L4\\run_results.json"
+  "source": "workstation: fractaltest/runs/sweep_std_d96_L4/run_results.json"
  },
  "ternary_lane/RESULT_T2J_20261005.json": {
   "bytes": 422,
   "sha256": "71abeaadee6db029211817782f1c9f75006cd4c46e8b3d856cb85db7fcd71ca5",
-  "source": "C:\\engine\\projects\\ternary_native\\RESULT_T2J_20261005.json"
+  "source": "workstation: ternary_native/RESULT_T2J_20261005.json"
  },
  "ternary_lane/t2j_runs/references/zero_seed0.json": {
   "bytes": 2103,
   "sha256": "5dc6c91768ff6df34d47ee5472ca1c3a3eea6aea8528b98d6abcb6a593ff44a3",
-  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\references\\zero_seed0.json"
+  "source": "workstation: ternary_native/t2j_runs/references/zero_seed0.json"
  },
  "ternary_lane/t2j_runs/references/zero_seed1.json": {
   "bytes": 2103,
   "sha256": "9b925056d9cb354ea1a6fed31c2ec42c20aca4959572639e9dd91e4219194f34",
-  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\references\\zero_seed1.json"
+  "source": "workstation: ternary_native/t2j_runs/references/zero_seed1.json"
  },
  "ternary_lane/t2j_runs/references/continuous_seed0.json": {
   "bytes": 2195,
   "sha256": "8d2fa0a950f06fa7a16e8961a3669c803f475e8f32047cbdda8ab308b236a070",
-  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\references\\continuous_seed0.json"
+  "source": "workstation: ternary_native/t2j_runs/references/continuous_seed0.json"
  },
  "ternary_lane/t2j_runs/references/continuous_seed1.json": {
   "bytes": 2192,
   "sha256": "ee1f0e55930651d897fc1e78d93d1e7c54833be30b8ccdf77072e4f43566114a",
-  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\references\\continuous_seed1.json"
+  "source": "workstation: ternary_native/t2j_runs/references/continuous_seed1.json"
  },
  "ternary_lane/t2j_runs/one_l1/fixedcode_seed0.json": {
   "bytes": 2152,
   "sha256": "0ef5f8c91b5cdec7902e373b8505a9f03c3732dc35f1903982421e0f333950ed",
-  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\one_l1\\fixedcode_seed0.json"
+  "source": "workstation: ternary_native/t2j_runs/one_l1/fixedcode_seed0.json"
  },
  "ternary_lane/t2j_runs/one_l1/fixedcode_seed1.json": {
   "bytes": 2154,
   "sha256": "0428e4817c20e4e61c700ad248bb65d52eb9f87d91f29a9cd4917f0f5e1a94a8",
-  "source": "C:\\engine\\projects\\ternary_native\\t2j_runs\\one_l1\\fixedcode_seed1.json"
+  "source": "workstation: ternary_native/t2j_runs/one_l1/fixedcode_seed1.json"
  }
 }

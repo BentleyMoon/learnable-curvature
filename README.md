@@ -1,6 +1,6 @@
 # learnable-curvature
 
-Code, saved results and figures for the learnable-curvature preprint (Bentley Moon, 2026).
+Code, saved results and figures for the learnable-curvature paper draft (Bentley Moon, 2026).
 
 In March 2026 each attention head of a small transformer was given one trainable number, kappa (κ),
 described as the curvature of that head's representation space. This repository keeps every run

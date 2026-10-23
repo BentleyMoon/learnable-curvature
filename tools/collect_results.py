@@ -1,8 +1,10 @@
 """Copy the saved result files this paper cites into results/, and record where each came from.
 
-Maintainer tool. The source paths are the author's machine; a clone never needs to run this.
-Every copied file gets its source path and SHA-256 in results/MANIFEST.json, so any number in
-CLAIMS.md can be traced back to the file the original run wrote.
+Maintainer tool. The sources are folders on the author's workstation, named in an untracked
+tools/roots.local.json ({"fractaltest": ..., "mandel/runs": ..., "ternary_native": ...}); a clone
+never needs to run this. Every copied file gets its source, as a label relative to one of those
+roots, and its SHA-256 in results/MANIFEST.json, so any number in CLAIMS.md can be traced back to
+the file the original run wrote.
 
     python tools/collect_results.py
 """
@@ -12,11 +14,26 @@ import json
 import os
 import shutil
 
-FRACTAL = r"C:\gptcodex\fractaltest\files"
-RUNS = os.path.join(FRACTAL, "runs")
-MANDEL = r"C:\mandel\runs"
-TERNARY = r"C:\engine\projects\ternary_native"
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOTS_FILE = os.path.join(HERE, "tools", "roots.local.json")
+if not os.path.exists(ROOTS_FILE):
+    raise SystemExit("tools/roots.local.json is missing: it names the three source folders "
+                     '("fractaltest", "mandel/runs", "ternary_native") on this machine')
+with open(ROOTS_FILE, encoding="utf-8") as f:
+    ROOTS = json.load(f)
+FRACTAL = ROOTS["fractaltest"]
+RUNS = os.path.join(FRACTAL, "runs")
+MANDEL = ROOTS["mandel/runs"]
+TERNARY = ROOTS["ternary_native"]
+
+
+def label(src):
+    """The source as a label relative to its root, never an absolute path."""
+    for name, root in ROOTS.items():
+        rootn = os.path.normcase(os.path.abspath(root))
+        if os.path.normcase(os.path.abspath(src)).startswith(rootn + os.sep):
+            return "workstation: " + name + "/" + os.path.relpath(src, root).replace(os.sep, "/")
+    return src
 OUT = os.path.join(HERE, "results")
 
 # (destination under results/, source path or glob)
@@ -76,7 +93,7 @@ def main():
         target = os.path.join(OUT, dest)
         os.makedirs(os.path.dirname(target), exist_ok=True)
         shutil.copy2(src, target)
-        manifest[dest] = {"source": src, "sha256": sha256(target), "bytes": os.path.getsize(target)}
+        manifest[dest] = {"source": label(src), "sha256": sha256(target), "bytes": os.path.getsize(target)}
     # Files this repository generated itself (the synthetic toy's fresh seeds) are listed too.
     for root, _, files in os.walk(OUT):
         for name in files:

@@ -1,4 +1,4 @@
-# A Switch, Not a Shape: What Learnable Curvature in Attention Actually Learned
+# Learnable Curvature in Attention Is a Per-Head Choice of Scoring Rule
 
 **Bentley Moon**, independent researcher
 Working draft, September 2026. Code, saved runs and every number: https://github.com/BentleyMoon/learnable-curvature

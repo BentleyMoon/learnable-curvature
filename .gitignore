@@ -11,3 +11,4 @@ __pycache__/
 *.pyc
 # outputs of `python reproduce.py rerun`
 reruns/
+tools/roots.local.json
