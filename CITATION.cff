@@ -8,7 +8,9 @@ authors:
     website: "https://bentleymoon.com"
 type: software
 license: MIT
-version: 1.0.0
+version: 1.0.1
+doi: 10.5281/zenodo.23165431
+date-released: "2026-10-05"
 repository-code: "https://github.com/BentleyMoon/learnable-curvature"
 url: "https://bentleymoon.com"
 keywords:

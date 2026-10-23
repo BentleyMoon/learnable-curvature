@@ -1,7 +1,7 @@
 {
   "title": "Learnable curvature: code, results and reproduction",
   "upload_type": "software",
-  "description": "<p>Code, saved results and figures for the learnable-curvature preprint. Every number in CLAIMS.md is recomputed from the saved runs in results/ by reproduce.py, and each claim names the control it was tested against.</p>",
+  "description": "<p>Code, saved results and figures for the learnable-curvature paper draft (paper/draft.md). Every number in CLAIMS.md is recomputed from the saved runs in results/ by reproduce.py, and each claim names the control it was tested against.</p>",
   "creators": [
     {
       "name": "Moon, Bentley",
