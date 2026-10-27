@@ -1223,5 +1223,155 @@
   "bytes": 2154,
   "sha256": "0428e4817c20e4e61c700ad248bb65d52eb9f87d91f29a9cd4917f0f5e1a94a8",
   "source": "workstation: ternary_native/t2j_runs/one_l1/fixedcode_seed1.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr1.2e-3_seed0.json": {
+  "bytes": 868,
+  "sha256": "5eea0a5ca3a6d536e8c90bc2e87b7ba3c40a7b65a532a270d072670df7a6498c",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr1.2e-3_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr1.2e-3_seed1.json": {
+  "bytes": 865,
+  "sha256": "7991375ef218610eb686544f0200f3cc5e256fac296235fe5bfe59691cf72b5d",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr1.2e-3_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr1.2e-3_seed2.json": {
+  "bytes": 867,
+  "sha256": "2dd11cdeeeb30ee6f5fd25e01c7831641ad7fac6cf341ddf70e0d48b388d60d9",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr1.2e-3_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr2.4e-3_seed0.json": {
+  "bytes": 869,
+  "sha256": "753f602b302e40c2bd5402b94a31d92230a49ba87b3a15967b807f76e0a43c28",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr2.4e-3_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr2.4e-3_seed1.json": {
+  "bytes": 866,
+  "sha256": "665b2f85318d10c9362d62393983267585ed1aaf3434de042fcb21730b2ac3f7",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr2.4e-3_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr2.4e-3_seed2.json": {
+  "bytes": 869,
+  "sha256": "e49f74b5af020251d83e98c269fb1420eebb517498276649e166de881883c689",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr2.4e-3_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr3e-4_seed0.json": {
+  "bytes": 870,
+  "sha256": "196ef7bef46437988619676a39098180409d935e06044e0496f07157ea860d77",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr3e-4_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr3e-4_seed1.json": {
+  "bytes": 868,
+  "sha256": "fcf59ca7fb282ccf8de5fc87723123eb7035d83669b3aab20cd3d247cd9abfd5",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr3e-4_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr3e-4_seed2.json": {
+  "bytes": 868,
+  "sha256": "28a50eecdff83c5f0157b274d1b570051d24bd6068055096cb4fc8ed48147cfa",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr3e-4_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr4.8e-3_seed0.json": {
+  "bytes": 871,
+  "sha256": "c796ef9c37a43cbd48762fdd9006cacc552b64de5dd6be84b0aea56150b3fb73",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr4.8e-3_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr4.8e-3_seed1.json": {
+  "bytes": 869,
+  "sha256": "ab7d529bcb6c7427556a1e607c79a773b08ee5040dc1ee89cfe3c4adb0ad53f2",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr4.8e-3_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr4.8e-3_seed2.json": {
+  "bytes": 868,
+  "sha256": "990f26b34ad7e512ad50b2d1486b1ec25b33813c084936b1408852e014bcd1f7",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr4.8e-3_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr6e-4_seed0.json": {
+  "bytes": 868,
+  "sha256": "3c4c1851286489a7d0fcaa50064db3e4aabc418badd25677ac2867dccb2e632a",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr6e-4_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr6e-4_seed1.json": {
+  "bytes": 869,
+  "sha256": "2db352e2994c8f03704eab943f5c80f415ad69a610dc2dfc1dcc8c6d50c5edc7",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr6e-4_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/allsph_lr6e-4_seed2.json": {
+  "bytes": 868,
+  "sha256": "060ba5087213acd57f4d55ade9e302a6f4450fcc3c0b9e733bbec927e5f84a34",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/allsph_lr6e-4_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr1.2e-3_seed0.json": {
+  "bytes": 865,
+  "sha256": "e1e2a05842f4f3cf32dea8f5e76c265feaaa8f5d264a97aed4c1d4b630cc508e",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr1.2e-3_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr1.2e-3_seed1.json": {
+  "bytes": 865,
+  "sha256": "a9d0f10a5bbaf125ca77cf4094a8f772df5b0faa4f6b8a050ead1d60b2c8d3c6",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr1.2e-3_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr1.2e-3_seed2.json": {
+  "bytes": 867,
+  "sha256": "5feaab9c0f6f49f047ad25e348e58fe06d9742cd8618307a4fa37ba4f7828d10",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr1.2e-3_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr2.4e-3_seed0.json": {
+  "bytes": 866,
+  "sha256": "f1426bdc13b2a3aeff3b965a0d395b8b6ee2d4d9b516178bee09614be8fad6ec",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr2.4e-3_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr2.4e-3_seed1.json": {
+  "bytes": 867,
+  "sha256": "6fec3b2fefd5517b08b99c7571ef00f2a84c03a56582924a36683f2af63bbb00",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr2.4e-3_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr2.4e-3_seed2.json": {
+  "bytes": 867,
+  "sha256": "24f822a494b5e5c5abf1e4e2f672408795d07632358f87fb2027b94e8572c2fb",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr2.4e-3_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr3e-4_seed0.json": {
+  "bytes": 865,
+  "sha256": "7c08247a3170dd9a2bafc0333503e09ca7591213182f00752d57e0d6e7eeb970",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr3e-4_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr3e-4_seed1.json": {
+  "bytes": 866,
+  "sha256": "5814d6383ea2119d481ffa7d841497b8fc02f216063d3455a99cce6c418b6deb",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr3e-4_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr3e-4_seed2.json": {
+  "bytes": 868,
+  "sha256": "0dd47ac98446c904d77652bf74b15e250e53b00977aa440785a4e1311d287923",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr3e-4_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr4.8e-3_seed0.json": {
+  "bytes": 867,
+  "sha256": "fe34fc716c97a84bc261f169d7ef92831f0068a60f8e8138fd06711150b1faaa",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr4.8e-3_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr4.8e-3_seed1.json": {
+  "bytes": 867,
+  "sha256": "a5f9d993906963a81454e7286960ab8822d32cd3d8293e78e33051f05eeb1e6e",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr4.8e-3_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr4.8e-3_seed2.json": {
+  "bytes": 867,
+  "sha256": "68ed90db1237b1c92cf672e3df814b9e6849013387318100c19d7f55a0c9ee82",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr4.8e-3_s2.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr6e-4_seed0.json": {
+  "bytes": 865,
+  "sha256": "f26b866577fa7dcb194569a95d8cce13318113c6e6a1f6708bef314f61e02704",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr6e-4_s0.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr6e-4_seed1.json": {
+  "bytes": 865,
+  "sha256": "9067d7197b4655cc6009cec25355f24856c4d291ec334c9df95deb06b487b892",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr6e-4_s1.json"
+ },
+ "ternary_lane/t2k_lr_runs/zero_lr6e-4_seed2.json": {
+  "bytes": 867,
+  "sha256": "d1b2b89fb0bde651a31c4d7ac890ead8b76cbc18bb97ffb285be1c43fda6e26e",
+  "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr6e-4_s2.json"
  }
 }

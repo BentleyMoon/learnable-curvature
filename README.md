@@ -21,6 +21,14 @@ recipe is shown at d_model 96 only. In a trained model
 the sign of κ alone carries the whole effect. The full list, with what each claim was tested
 against, is in [CLAIMS.md](CLAIMS.md).
 
+**Added 2026-10-23.** Every run above used one constant learning rate, 3·10⁻⁴. A sweep over five
+learning rates at d_model 96 with 3 layers (3 seeds each, C27 in CLAIMS.md) reproduces the gain at that
+rate (all cosine against the dot product, −2.33%). With each arm at its own best rate the gap is +0.04%:
+dot product 4.336 at 2.4·10⁻³, all cosine 4.338 at 1.2·10⁻³. At 4.8·10⁻³ the dot product is better by
+1.7% on all 3 seeds. Cosine scoring moves the best learning rate lower and makes runs more consistent
+across seeds (sd 0.002 against 0.032 at each arm's best); at matched tuning it does not lower perplexity
+at this scale. Learned κ and the 6-layer first-layer recipe were not swept.
+
 ## Reproduce
 
 ```bash

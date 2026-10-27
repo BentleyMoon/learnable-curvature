@@ -23,6 +23,10 @@ seeds tried. The same head placed in a later layer hurts. A trained model also c
 report the claims from my earlier drafts that did not survive, next to the control that removed each
 one.
 
+*Added 2026-10-23:* every run in this draft used one learning rate, 3·10⁻⁴. With each arm given its own
+best of five learning rates, the cosine gain at width 96 is +0.04% (Section 4.1; C27 in CLAIMS.md), so
+the gains reported here are gains at that rate.
+
 ## 1. Introduction
 
 Most of the structure in a neural network has to be learned from data, and the geometry it computes
@@ -99,6 +103,14 @@ seed's zero model instead.
 At 3 layers, learned κ lowers perplexity against κ = 0 by 2.32, 2.46, 2.18 and 2.69% on four paired
 seeds (mean 2.41%, sd 0.22). This is the one size where the effect is clear and repeatable; smaller
 models are discussed in Section 4.7.
+
+*Added 2026-10-23:* Every run above used one constant learning rate, 3·10⁻⁴. A sweep over five learning
+rates at d_model 96 with 3 layers (3 seeds each, C27 in CLAIMS.md) reproduces the gain at that rate (all
+cosine against the dot product, −2.33%). With each arm at its own best rate the gap is +0.04%: dot
+product 4.336 at 2.4·10⁻³, all cosine 4.338 at 1.2·10⁻³. At 4.8·10⁻³ the dot product is better by 1.7%
+on all 3 seeds. Cosine scoring moves the best learning rate lower and makes runs more consistent across
+seeds (sd 0.002 against 0.032 at each arm's best); at matched tuning it does not lower perplexity at
+this scale. Learned κ and the 6-layer first-layer recipe were not swept.
 
 ### 4.2 The controls: a random switch does as well
 
@@ -267,6 +279,9 @@ output worth reusing.
   did not.
 - The 12-layer and all-length-scaled results rest on two seeds each, and do not settle how the recipe
   scales with depth.
+- *Added 2026-10-23:* every run used one constant learning rate (3·10⁻⁴, no warmup, no schedule). Tuned
+  per arm, the cosine gain at width 96 disappears (C27). The first-layer recipe and learned κ have not
+  been re-tested that way.
 
 ## 8. Conclusion
 

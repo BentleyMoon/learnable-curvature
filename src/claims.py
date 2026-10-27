@@ -179,6 +179,26 @@ def t2j():
     return out
 
 
+T2K_LRS = ("3e-4", "6e-4", "1.2e-3", "2.4e-3", "4.8e-3")
+
+
+def t2k():
+    """T2k (preregistered in src/ternary/t2k_lr_sweep_gpu.py before any run): all-cosine against the dot product at
+    five constant learning rates, 3 seeds each, d_model 96, 4 heads, 3 layers, 20,000 steps, on the GPU."""
+    out = {"zero": {}, "allsph": {}, "paired": {}}
+    for lr in T2K_LRS:
+        for arm in ("zero", "allsph"):
+            out[arm][lr] = [load("ternary_lane/t2k_lr_runs/%s_lr%s_seed%d.json" % (arm, lr, s))["val_ppl"] for s in (0, 1, 2)]
+        out["paired"][lr] = st.mean(pct(a, z) for a, z in zip(out["allsph"][lr], out["zero"][lr]))
+    out["best"] = {arm: min(T2K_LRS, key=lambda lr: st.mean(out[arm][lr])) for arm in ("zero", "allsph")}
+    out["best_ppl"] = {arm: st.mean(out[arm][out["best"][arm]]) for arm in ("zero", "allsph")}
+    out["best_sd"] = {arm: st.stdev(out[arm][out["best"][arm]]) for arm in ("zero", "allsph")}
+    out["best_gap"] = pct(out["best_ppl"]["allsph"], out["best_ppl"]["zero"])
+    out["gpu"] = load("ternary_lane/t2k_lr_runs/zero_lr3e-4_seed0.json")["val_ppl"]
+    out["cpu"] = load("ternary_lane/t1b_runs/zero_seed0.json")["val_ppl"]
+    return out
+
+
 def claims_t2_rows():
     rows = load("ternary_lane/RESULT_T2_20260921.json")["rows"]
     return [rows[k] for k in sorted(rows)]
@@ -379,7 +399,7 @@ def build():
          % (f2(b1["mean"]), b1["sd"], ", ".join("%+.2f" % x for x in b1["diffs"])),
          "ternary_lane/RESULT_T1B_20260921.json",
          "Paired seeds: same initial weights per seed, only kappa differs",
-         "POSITIVE (one scale)"),
+         "POSITIVE (one scale, one learning rate; see C27)"),
         ("C2", "The gain comes from cosine scoring being present: fixing every head to the cosine rule from step 1, "
                "with nothing learned, keeps it; fixing every head to the length-scaled rule does not.",
          "Share of the learned gain kept: all cosine %.1f%% (seeds: %s); all length-scaled %.1f%% (seeds: %s)."
@@ -387,7 +407,7 @@ def build():
             st.mean(c2c["allhyp"]), ", ".join("%.1f" % x for x in c2c["allhyp"])),
          "ternary_lane/RESULT_T2C_20260922.json",
          "Mirror arm (all length-scaled) and the zero arm, same seeds",
-         "POSITIVE (one scale, 2 seeds)"),
+         "POSITIVE (one scale, 2 seeds, one learning rate; see C27)"),
         ("C3", "Learning which heads get which rule matters (a learned assignment beats a random one).",
          "Random frozen +/-1 code keeps %.1f%% of the learned gain (seeds %s). At d_model 128, 2 layers: random %.4f, "
          "learned %.4f, fixed-discovered %.4f (one seed). Frozen mixed codes overall: %d of %d runs keep >= 90%%; the "
@@ -607,6 +627,20 @@ def build():
          "ternary_lane/RESULT_T2J_20261005.json",
          "New d_model 192 zero-curvature model per seed",
          "INCONCLUSIVE (2 seeds; the gain mostly fades at this width)"))
+    tk = t2k()
+    kept_rows.append(
+        ("C27", "The d_model 96 cosine gain (C1, C2) survives giving each arm its own best learning rate. Every "
+                "earlier d96 and d192 run used one constant rate, 3e-4. Swept here: all cosine against the dot product at 3 "
+                "layers; learned kappa and the 6-layer layer-1 recipe (C18, C20) were not swept.",
+         "All cosine against the dot product, mean of 3 paired seeds: %s. Best dot product %.4f at %s; best all "
+         "cosine %.4f at %s; best against best %s. Seed sd at each arm's best: dot product %.3f, all cosine %.3f."
+         % ("; ".join("%s %s" % (lr, f2(tk["paired"][lr])) for lr in T2K_LRS),
+            tk["best_ppl"]["zero"], tk["best"]["zero"], tk["best_ppl"]["allsph"], tk["best"]["allsph"],
+            f2(tk["best_gap"]), tk["best_sd"]["zero"], tk["best_sd"]["allsph"]),
+         "ternary_lane/t2k_lr_runs/",
+         "Each arm at its own best of five learning rates, same seeds. GPU port of the d96 protocol: dot product, 3e-4, "
+         "seed 0 gives %.4f on the GPU against %.4f committed from the CPU" % (tk["gpu"], tk["cpu"]),
+         "ANTI (one scale, 3 seeds)"))
 
     withdrawn = [
         ("W1", "'Learnable curvature': the model finds its own geometry, and that is the source of the gain.",
@@ -668,9 +702,14 @@ LIMITATIONS = [
     "The March language runs loaded WikiText-2 through Hugging Face with the model file's own split; the d96 runs use "
     "a 90/10 split of the concatenated file with 2,500 validation sequences. Perplexities from the two families are "
     "not comparable with each other.",
-    "The d96 experiments (C1-C5, C10, C17-C25) and the d192 experiment (C26) were preregistered by the lab before they ran; the March experiments "
+    "The d96 experiments (C1-C5, C10, C17-C25), the d192 experiment (C26) and the learning-rate sweep (C27; its "
+    "4.8e-3 arm was added after the dot product's best result fell at the edge of the grid, before that arm ran) "
+    "were preregistered by the lab before they ran; the March experiments "
     "were not. One reading in C19's source (learned runs do better when they happen to end with one cosine head in "
     "layer 1) was noticed after the runs; T2h then tested it in advance, and C23 is that test.",
+    "Every d96 and d192 run before C27 used one constant learning rate (3e-4, no warmup, no schedule). C27 tunes "
+    "the rate per arm at d96 and the gain is gone; read every other gain in this file as a gain at that rate. C27 "
+    "itself uses constant rates only, so a warmup and schedule could move both optima.",
     "C24 and C25 rest on two seeds each. C25 covers one corpus at one width and does not settle how the recipe "
     "scales with depth.",
 ]
