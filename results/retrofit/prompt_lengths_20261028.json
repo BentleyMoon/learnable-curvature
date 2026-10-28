@@ -1,0 +1,5 @@
+{
+ "what": "Token counts of the retrieval prompts plus their targets, from retrieval_items() in src/retrofit/exp_retrofit.py with R_KV100=1, counted with each model's own tokenizer on 2026-10-28. Each family has 100 items: min, mean, max.",
+ "HuggingFaceTB/SmolLM-1.7B": {"kv8": [81, 84, 88], "kv32": [294, 300, 306], "kv64": [576, 587, 598], "kv100": [905, 911, 919], "ind40": [82, 90, 104], "ind150": [317, 333, 354]},
+ "Qwen/Qwen2.5-1.5B": {"kv8": [76, 80, 84], "kv32": [285, 291, 298], "kv64": [563, 573, 579], "kv100": [885, 890, 896], "ind40": [87, 95, 109], "ind150": [331, 352, 383]}
+}

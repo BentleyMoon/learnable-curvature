@@ -1,0 +1,37 @@
+{
+ "cond": "none",
+ "seed": 1,
+ "model": "HuggingFaceTB/SmolLM-1.7B",
+ "swapped_layers": [],
+ "budget": 1000000,
+ "ppl_teacher": 16.6004,
+ "ppl_teacher_zero": 16.6004,
+ "ppl_swapped": 16.6004,
+ "ret_teacher": {
+  "kv8": 0.87,
+  "kv32": 0.71,
+  "kv64": 0.62,
+  "ind40": 0.9309,
+  "ind150": 0.7766,
+  "wiki_rep": 4.4803,
+  "wiki_new": 50.1908,
+  "wiki_rep_share": 0.4579
+ },
+ "train_s": 4945.5,
+ "steps": 489,
+ "last_kl": 0.0010235195513814688,
+ "ppl_healed": 16.6028,
+ "ppl_healed_zero": 16.6028,
+ "ret_healed": {
+  "kv8": 0.88,
+  "kv32": 0.72,
+  "kv64": 0.66,
+  "ind40": 0.9307,
+  "ind150": 0.776,
+  "wiki_rep": 4.4786,
+  "wiki_new": 50.2205,
+  "wiki_rep_share": 0.4579
+ },
+ "kappa": {},
+ "tau": {}
+}

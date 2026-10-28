@@ -1373,5 +1373,70 @@
   "bytes": 867,
   "sha256": "d1b2b89fb0bde651a31c4d7ac890ead8b76cbc18bb97ffb285be1c43fda6e26e",
   "source": "workstation: obviousthoughtmachine/analysis/2026-10-21/exp1_lr/runs/zero_lr6e-4_s2.json"
+ },
+ "retrofit/ret3_qwen/cos_Q_seed0.json": {
+  "bytes": 3852,
+  "sha256": "3fa88b25ad328f86c78e78548b016dc9ec452e977c275016227d46cf54d7f677",
+  "source": "workstation: curvature_retrofit/results_ret/cos_Q_seed0.json"
+ },
+ "retrofit/ret3_qwen/cos_Q_seed1.json": {
+  "bytes": 3848,
+  "sha256": "52cedf61ab0f47cb1e7c053b5a40a756ae2fa120f355ae6dbe2ca554f3ef91dd",
+  "source": "workstation: curvature_retrofit/results_ret/cos_Q_seed1.json"
+ },
+ "retrofit/ret3_qwen/none_seed0.json": {
+  "bytes": 691,
+  "sha256": "c871a010e5ffd594db0611cec435784a785500ddda7ea1138fb0605cbb8ad2c4",
+  "source": "workstation: curvature_retrofit/results_ret/none_seed0.json"
+ },
+ "retrofit/ret3_qwen/none_seed1.json": {
+  "bytes": 692,
+  "sha256": "e6a87edb43f005e64deb4b589d3ffe56e02917949ff5b1b4a22cbf4675a63971",
+  "source": "workstation: curvature_retrofit/results_ret/none_seed1.json"
+ },
+ "retrofit/ret3_smol/cos_Q_seed0.json": {
+  "bytes": 5758,
+  "sha256": "2573ffbb7f3c8f13194c287bf91e12475945308cbd838b7d9dff9d0df47192fa",
+  "source": "workstation: curvature_retrofit/results_ret_smol/cos_Q_seed0.json"
+ },
+ "retrofit/ret3_smol/cos_Q_seed1.json": {
+  "bytes": 5760,
+  "sha256": "178e11b134d7617caec13863b9fdefb23b199d121bf58a2874b3289bb6e11e1d",
+  "source": "workstation: curvature_retrofit/results_ret_smol/cos_Q_seed1.json"
+ },
+ "retrofit/ret3_smol/none_seed0.json": {
+  "bytes": 701,
+  "sha256": "52d78b3c3a8240e9dbf4909164b517731da7163ecc8c7c1fe92b44df910c1907",
+  "source": "workstation: curvature_retrofit/results_ret_smol/none_seed0.json"
+ },
+ "retrofit/ret3_smol/none_seed1.json": {
+  "bytes": 700,
+  "sha256": "d1076f8196087d313590071989e3a56c59b0208ac6e0527fd68dee9ae82a5a93",
+  "source": "workstation: curvature_retrofit/results_ret_smol/none_seed1.json"
+ },
+ "retrofit/ret4_smol/cos_Q_seed0.json": {
+  "bytes": 5844,
+  "sha256": "b23a58a4193e2293250998db9cefa9b7b6e97cf269fd90aa07175928e5d32bde",
+  "source": "workstation: curvature_retrofit/results_ret4_smol/cos_Q_seed0.json"
+ },
+ "retrofit/ret4_smol/cos_Q_seed1.json": {
+  "bytes": 5843,
+  "sha256": "60b180d1854a7e2ea04d3c050a5ef461d3b259a0287678bc3bb9154fee5f25b3",
+  "source": "workstation: curvature_retrofit/results_ret4_smol/cos_Q_seed1.json"
+ },
+ "retrofit/ret4_smol/none_seed0.json": {
+  "bytes": 735,
+  "sha256": "7bdfa0bd7fc59af99f76d47cb70d5f0fa5f6ee5bc95f48e6f9784fc488de6041",
+  "source": "workstation: curvature_retrofit/results_ret4_smol/none_seed0.json"
+ },
+ "retrofit/ret4_smol/none_seed1.json": {
+  "bytes": 731,
+  "sha256": "6bb90509c38efa04674703f5fef22fa282e0e0491f816224cde32e648009fe0e",
+  "source": "workstation: curvature_retrofit/results_ret4_smol/none_seed1.json"
+ },
+ "retrofit/prompt_lengths_20261028.json": {
+  "bytes": 594,
+  "sha256": "297bdc8a7f08e2646f6d9c9f64759f5987b9f3e8f0a811494f70f752ebb1f905",
+  "source": "counted on the Mac mini on 2026-10-28: retrieval_items() from src/retrofit/exp_retrofit.py (R_KV100=1), each model's own tokenizer"
  }
 }

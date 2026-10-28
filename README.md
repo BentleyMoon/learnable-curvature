@@ -29,6 +29,14 @@ dot product 4.336 at 2.4·10⁻³, all cosine 4.338 at 1.2·10⁻³. At 4.8·10�
 across seeds (sd 0.002 against 0.032 at each arm's best); at matched tuning it does not lower perplexity
 at this scale. Learned κ and the 6-layer first-layer recipe were not swept.
 
+**Added 2026-10-28: the cosine rule in a pretrained model.** Every fourth attention layer of
+Qwen2.5-1.5B and SmolLM-1.7B was switched to the cosine rule and healed with LoRA and distillation on
+1M WikiText-2 tokens (C28-C30). Against the same healing with nothing switched, perplexity rose 0.29%
+(Qwen) and 1.73% (SmolLM). Perplexity hid a recall cost: from a list of 64 word-value pairs (about
+590 tokens), SmolLM recalled 0.27 against 0.655, and Qwen 0.535 against 0.75. Healed on 512-token
+sequences instead of 256, SmolLM recalled 0.65 from 64 pairs and 0.335 against 0.655 from 100 pairs
+(about 910 tokens). Longer healing moved the recall limit out; it did not remove it.
+
 ## Reproduce
 
 ```bash
@@ -69,12 +77,16 @@ WikiText-2 through Hugging Face themselves.
 | `src/random_kappa_ablation.py`, `src/forced_geometry_suite.py` | The March controls |
 | `src/ternary/` | The d_model 96 runs (T0 to T3): continuous, zero, fixed-code, one-bit and ternary-weight arms |
 | `src/mandel/` | The separate exact-distance attention model |
+| `src/retrofit/exp_retrofit.py` | The cosine rule put into a pretrained model, healed by distillation (C28-C30) |
+| `paper/preregistrations/` | The preregistrations for C28-C30, copied unchanged |
 | `src/claims.py`, `src/make_figures.py` | Build CLAIMS.md and the figures |
 | `scripts/get_data.py` | Corpus download |
 | `tools/collect_results.py` | Maintainer tool that copied the results in; paths are the author's machine |
 
 Changes made to copied scripts: file paths now point inside this repository, and the numpy toy
 reads its seed from `LG_SEED` (default 42, as originally run). Nothing else was edited.
+`src/retrofit/exp_retrofit.py` needs PyTorch, Transformers and PEFT and the cached Hugging Face models;
+the runs used a WikiText-2 file with MD5 35b15569176735ed34ae61388bccef63.
 
 ## Not included
 

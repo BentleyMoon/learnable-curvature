@@ -27,6 +27,10 @@ one.
 best of five learning rates, the cosine gain at width 96 is +0.04% (Section 4.1; C27 in CLAIMS.md), so
 the gains reported here are gains at that rate.
 
+*Added 2026-10-28:* I also put the cosine rule into two pretrained models of 1.5 and 1.7 billion parameters
+(Section 4.11). After healing, perplexity rose 0.29% and 1.73%, but recall from about 590 tokens back fell
+sharply, and healing on longer sequences moved that limit out without removing it.
+
 ## 1. Introduction
 
 Most of the structure in a neural network has to be learned from data, and the geometry it computes
@@ -225,6 +229,29 @@ With block weights restricted to three values in the style of BitNet b1.58 (Ma e
 against zero gives −1.13% (sd 1.37, better on 3 of 4 seeds), about half of the float-weight gain and
 not reliably.
 
+### 4.11 Cosine scoring in a pretrained model
+
+*Added 2026-10-28; C28-C30 in CLAIMS.md, each preregistered.* The question here is different from the rest of
+the paper: not whether the rule helps a model trained with it, but whether a model trained without it can take
+it. I switched every head of every fourth attention layer of Qwen2.5-1.5B (7 of 28 layers) and SmolLM-1.7B (6
+of 24) to the cosine rule, then healed each model with LoRA (rank 16) and distillation from its unmodified self
+on 1M WikiText-2 tokens. The control is the same healing with no layer switched.
+
+Against the control, perplexity rose 0.29% for Qwen and 1.73% for SmolLM. Recall showed a larger cost. Asked
+for the number paired with one word in a list of 64 word-number pairs (about 590 tokens), the healed Qwen model
+recalled 0.535 against 0.75, and SmolLM 0.27 against 0.655. From 8 pairs both recalled as well as the control.
+
+Those models were healed on 256-token sequences. Healed on 512-token sequences instead, with the same tokens
+per step and the same step count, SmolLM recalled 0.65 from 64 pairs, level with the control, and 0.335
+against 0.655 from 100 pairs (about 910 tokens). Healing longer moved the limit out, to somewhere between 590
+and 910 tokens; it did not remove it. The unmodified model recalls as well from 100 pairs as from 64, so the
+limit belongs to the new heads. After 512-token healing the network relies on them: reverting them to the dot
+product lowers recall from 64 pairs from 0.65 to 0.465.
+
+Two seeds per condition, one model for the 512-token result, and synthetic recall and copying tasks. On copying a
+150-word list (about 333 tokens), the gap to the control narrowed from 0.22 to 0.10 with longer healing and did
+not close, although the list fits inside 512 tokens.
+
 ## 5. What the earlier drafts claimed, and what removed it
 
 | Earlier claim | What removed it |
@@ -262,10 +289,11 @@ output worth reusing.
 
 ## 7. Limitations
 
-- Every language result is character-level WikiText-2. Nothing here is tested on subword tokens,
-  another corpus, or any task beyond next-character prediction.
+- Every language result except Section 4.11 is character-level WikiText-2. Section 4.11 uses subword
+  WikiText-2 and synthetic recall and copying prompts; no other corpus or task is tested.
 - The clear effects appear only at width 96, at 3 and 6 layers, and the largest model is under 0.9M
-  parameters. I make no claim about larger models.
+  parameters. I make no claim about training larger models with κ; Section 4.11 only puts a fixed cosine
+  rule into pretrained ones.
 - Seeds are few: four for most width-96 claims, two for the uniform arms at 3 layers, and one for most
   of the March runs, which have no confidence intervals.
 - "Spherical" and "hyperbolic" name scoring rules, not geometries.

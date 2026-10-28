@@ -74,6 +74,12 @@ for p in sorted(glob.glob(os.path.join(TERNARY, "t*_runs", "**", "*.json"), recu
     rel = os.path.relpath(p, TERNARY).replace(os.sep, "/")
     if not any(rel.startswith("%s_runs/" % tag.lower()) for tag in PENDING):
         SOURCES.append(("ternary_lane/%s" % rel, p))
+# The pretrained-model runs (C28-C30), when this machine names their folder as "curvature_retrofit".
+RETRO = ROOTS.get("curvature_retrofit")
+if RETRO:
+    for dest, sub in (("ret3_qwen", "results_ret"), ("ret3_smol", "results_ret_smol"), ("ret4_smol", "results_ret4_smol")):
+        for p in sorted(glob.glob(os.path.join(RETRO, sub, "*.json"))):
+            SOURCES.append(("retrofit/%s/%s" % (dest, os.path.basename(p)), p))
 
 
 def sha256(path):
@@ -85,6 +91,8 @@ def sha256(path):
 
 
 def main():
+    with open(os.path.join(OUT, "MANIFEST.json"), encoding="utf-8") as f:
+        previous = json.load(f)
     manifest = {}
     for dest, src in SOURCES:
         if not os.path.exists(src):
@@ -99,7 +107,9 @@ def main():
         for name in files:
             rel = os.path.relpath(os.path.join(root, name), OUT).replace(os.sep, "/")
             if rel != "MANIFEST.json" and rel not in manifest:
-                manifest[rel] = {"source": "generated in this repository by src/run_synthetic_seeds.py",
+                # A file whose source is not one of the roots above keeps the label it was given when added.
+                source = previous.get(rel, {}).get("source", "generated in this repository by src/run_synthetic_seeds.py")
+                manifest[rel] = {"source": source,
                                  "sha256": sha256(os.path.join(root, name)),
                                  "bytes": os.path.getsize(os.path.join(root, name))}
     with open(os.path.join(OUT, "MANIFEST.json"), "w", encoding="utf-8") as f:

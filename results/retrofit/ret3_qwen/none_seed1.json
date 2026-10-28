@@ -1,0 +1,37 @@
+{
+ "cond": "none",
+ "seed": 1,
+ "model": "Qwen/Qwen2.5-1.5B",
+ "swapped_layers": [],
+ "budget": 1000000,
+ "ppl_teacher": 15.9069,
+ "ppl_teacher_zero": 15.9069,
+ "ppl_swapped": 15.9069,
+ "ret_teacher": {
+  "kv8": 0.97,
+  "kv32": 0.89,
+  "kv64": 0.57,
+  "ind40": 0.9985,
+  "ind150": 0.9985,
+  "wiki_rep": 4.1569,
+  "wiki_new": 49.7472,
+  "wiki_rep_share": 0.4594
+ },
+ "train_s": 4388.5,
+ "steps": 489,
+ "last_kl": 0.030716273933649063,
+ "ppl_healed": 15.5643,
+ "ppl_healed_zero": 15.5643,
+ "ret_healed": {
+  "kv8": 0.98,
+  "kv32": 0.95,
+  "kv64": 0.71,
+  "ind40": 0.9987,
+  "ind150": 0.9982,
+  "wiki_rep": 4.0773,
+  "wiki_new": 48.5749,
+  "wiki_rep_share": 0.4594
+ },
+ "kappa": {},
+ "tau": {}
+}

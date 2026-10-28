@@ -199,6 +199,25 @@ def t2k():
     return out
 
 
+def retrofit():
+    """RETRO3 and RETRO4 (preregistered, paper/preregistrations/): every fourth attention layer of a pretrained model
+    switched to the cosine rule (cos_Q) against the same healing with nothing switched (none), 2 seeds each."""
+    def arm(d, cond, field):
+        return [load("retrofit/%s/%s_seed%d.json" % (d, cond, s))[field] for s in (0, 1)]
+    out = {"len": load("retrofit/prompt_lengths_20261028.json")}
+    for d in ("ret3_qwen", "ret3_smol", "ret4_smol"):
+        r = {"ppl": {c: st.mean(arm(d, c, "ppl_healed")) for c in ("cos_Q", "none")},
+             "teacher": load("retrofit/%s/none_seed0.json" % d)["ppl_teacher"],
+             "swapped": st.mean(arm(d, "cos_Q", "ppl_swapped"))}
+        r["cost"] = pct(r["ppl"]["cos_Q"], r["ppl"]["none"])
+        tests = ["kv8", "kv32", "kv64", "ind150"] + (["kv100"] if d == "ret4_smol" else [])
+        for c, f in (("cos_Q", "ret_healed"), ("none", "ret_healed"), ("rev", "ret_healed_reverted")):
+            rows = arm(d, "cos_Q" if c != "none" else "none", f)
+            r[c] = {t: st.mean(x[t] for x in rows) for t in tests}
+        out[d] = r
+    return out
+
+
 def claims_t2_rows():
     rows = load("ternary_lane/RESULT_T2_20260921.json")["rows"]
     return [rows[k] for k in sorted(rows)]
@@ -642,6 +661,47 @@ def build():
          "seed 0 gives %.4f on the GPU against %.4f committed from the CPU" % (tk["gpu"], tk["cpu"]),
          "ANTI (one scale, 3 seeds)"))
 
+    rf = retrofit()
+    q, m, m4 = rf["ret3_qwen"], rf["ret3_smol"], rf["ret4_smol"]
+    ls, lq = rf["len"]["HuggingFaceTB/SmolLM-1.7B"], rf["len"]["Qwen/Qwen2.5-1.5B"]
+    kept_rows.append(
+        ("C28", "The cosine rule can be put into a pretrained model: switching every head of every fourth attention layer "
+                "of Qwen2.5-1.5B (7 of 28 layers) and SmolLM-1.7B (6 of 24) to it, then healing with LoRA and "
+                "distillation from the unmodified model on 1M WikiText-2 tokens, costs little perplexity.",
+         "Healed perplexity, cosine against heal-only: Qwen %.2f against %.2f (%s), SmolLM %.2f against %.2f (%s). "
+         "Before healing the switch cost Qwen %s and SmolLM %s against the unmodified model."
+         % (q["ppl"]["cos_Q"], q["ppl"]["none"], f2(q["cost"]), m["ppl"]["cos_Q"], m["ppl"]["none"], f2(m["cost"]),
+            f2(pct(q["swapped"], q["teacher"])), f2(pct(m["swapped"], m["teacher"]))),
+         "retrofit/ret3_qwen/, retrofit/ret3_smol/",
+         "Heal-only: the same healing with no layer switched, same seeds",
+         "POSITIVE (perplexity only, 2 models, 2 seeds; see C29)"))
+    kept_rows.append(
+        ("C29", "That small perplexity cost means the model keeps what it could do (tested on recall and copying, "
+                "healing on 256-token sequences).",
+         "Recall of one 4-digit value from 8 / 32 / 64 word-value pairs (about %d / %d / %d SmolLM tokens): Qwen cosine "
+         "%.3f / %.3f / %.3f against heal-only %.3f / %.3f / %.3f; SmolLM %.3f / %.3f / %.3f against %.3f / %.3f / %.3f. "
+         "Copying a 150-word list (about %d tokens), SmolLM: %.3f against %.3f."
+         % (ls["kv8"][1], ls["kv32"][1], ls["kv64"][1],
+            q["cos_Q"]["kv8"], q["cos_Q"]["kv32"], q["cos_Q"]["kv64"], q["none"]["kv8"], q["none"]["kv32"], q["none"]["kv64"],
+            m["cos_Q"]["kv8"], m["cos_Q"]["kv32"], m["cos_Q"]["kv64"], m["none"]["kv8"], m["none"]["kv32"], m["none"]["kv64"],
+            ls["ind150"][1], m["cos_Q"]["ind150"], m["none"]["ind150"]),
+         "retrofit/ret3_qwen/, retrofit/ret3_smol/, retrofit/prompt_lengths_20261028.json",
+         "Heal-only, same seeds; prompt lengths counted with each model's tokenizer",
+         "ANTI (recall at about %d tokens falls; short-range recall is kept)" % ls["kv64"][1]))
+    kept_rows.append(
+        ("C30", "The recall cost in C29 is set by the healing sequence length (SmolLM healed on 512-token sequences, "
+                "the same tokens per step and step count).",
+         "64 pairs (about %d tokens): cosine %.3f against heal-only %.3f (healed at 256: %.3f against %.3f). 100 pairs "
+         "(about %d tokens): %.3f against %.3f. Cosine heads reverted to the dot product after healing: %.3f at 64 pairs. "
+         "Perplexity cost %s. Copying 150 words: %.3f against %.3f."
+         % (ls["kv64"][1], m4["cos_Q"]["kv64"], m4["none"]["kv64"], m["cos_Q"]["kv64"], m["none"]["kv64"],
+            ls["kv100"][1], m4["cos_Q"]["kv100"], m4["none"]["kv100"], m4["rev"]["kv64"], f2(m4["cost"]),
+            m4["cos_Q"]["ind150"], m4["none"]["ind150"]),
+         "retrofit/ret4_smol/, retrofit/prompt_lengths_20261028.json",
+         "Heal-only, also healed at 512, same seeds",
+         "POSITIVE (one model, 2 seeds; the limit moved out to between %d and %d tokens, it did not go away)"
+         % (ls["kv64"][1], ls["kv100"][1])))
+
     withdrawn = [
         ("W1", "'Learnable curvature': the model finds its own geometry, and that is the source of the gain.",
          "C3 and C2: a random frozen code keeps %.0f%%, all-cosine keeps %.0f%%." % (b2b["randsign_mean"], st.mean(c2c["allsph"]))),
@@ -682,11 +742,12 @@ def build():
 
 
 LIMITATIONS = [
-    "Every language result is character-level WikiText-2 (256 byte values, 64-character windows). Nothing here is "
-    "tested on subword tokens, another corpus, or any task beyond next-character prediction.",
+    "Every language result except C28-C30 is character-level WikiText-2 (256 byte values, 64-character windows). "
+    "C28-C30 use subword WikiText-2 and synthetic recall and copying prompts; no other corpus or task is tested.",
     "The largest trained model (8 heads x 4 layers, d_model 128) has under 0.9M parameters. Clear gains appear only at d_model 96 (C1, C2 at 3 "
     "layers; C18, C20 at 3 and 6 layers). At d_model 48 no gain was seen (C10) and the sweep's gains are inside "
-    "run-to-run spread (C9). Nothing here says how this behaves in larger models.",
+    "run-to-run spread (C9). Nothing here says how training with the switch from scratch behaves in larger "
+    "models. C28-C30 put a fixed cosine rule into pretrained 1.5-1.7B models; kappa was not learned there.",
     "Seeds are few: 4 for C1, 2 per uniform arm for C2, 1 for most March runs. The March runs (C6-C9, C16, W7-W10) "
     "mostly have a single seed and no confidence interval.",
     "'Spherical' and 'hyperbolic' name scoring rules, not geometries (M1). The spherical rule is cosine-similarity "
@@ -712,6 +773,11 @@ LIMITATIONS = [
     "itself uses constant rates only, so a warmup and schedule could move both optima.",
     "C24 and C25 rest on two seeds each. C25 covers one corpus at one width and does not settle how the recipe "
     "scales with depth.",
+    "C28-C30 were preregistered (paper/preregistrations/) and ran on a Mac mini (MPS) with "
+    "src/retrofit/exp_retrofit.py, 2 seeds per condition. C30 is SmolLM only; Qwen was not healed at 512 tokens, and "
+    "healing at 1,024 is untested. The preregistrations gave the 64- and 100-pair prompts as about 500 and 900 "
+    "tokens; counted afterwards they are about 587 and 911 (results/retrofit/prompt_lengths_20261028.json). No "
+    "prediction depended on the lengths.",
 ]
 
 
