@@ -12,9 +12,9 @@ Computation") no longer fit what the data support.
 
 - What κ is: a per-head switch between three scoring rules (M1).
 - The gain at d_model 96 / 3 layers: −2.41% perplexity vs dot product, 4 of 4 paired seeds (C1).
-- The reversal: a random fixed code keeps 111.6%, all-cosine keeps 100.7%, all-length-scaled keeps 2.1% (C2, C3).
+- Controls: a random fixed code keeps 111.6%, all-cosine keeps 100.7%, all-length-scaled keeps 2.1% (C2, C3).
 - Where: one fixed cosine head in the first layer keeps 81 to 95%; in later layers, 3 to 22% (C18).
-- Depth: at 6 layers learned curvature buys about nothing (mean +0.02%), while one fixed first-layer cosine
+- Depth: at 6 layers learned curvature gives almost no improvement (mean +0.02%), while one fixed first-layer cosine
   head improves on every seed (+1.08 to +1.25%), about as much as cosine on all 24 heads (+1.06 to +1.49%)
   (C19 to C21). Whether the first layer adds anything beyond cosine everywhere is unsettled (C22).
 - Compression: in a trained model the sign carries it; shuffling signs costs +12.79% (C4).
@@ -25,7 +25,7 @@ Computation") no longer fit what the data support.
 - The March hypothesis: let each head learn its geometry (the original drafts).
 - What the controls found instead (C2, C3; withdrawn W1).
 - Contributions, as the data now support them:
-  - a control ladder that separates "learning the geometry" from "having the rule" (Figure 2)
+  - a set of controls that separates "learning the geometry" from "having the rule" (Figure 2)
   - the finding that cosine scoring on some heads is what helps at this scale (C2)
   - how little is needed: one fixed cosine head in the first layer gets about what cosine on every head
     gets, beats learned curvature at 6 layers, and hurts when moved to a later layer (C18, C20, C21)
@@ -59,17 +59,17 @@ Computation") no longer fit what the data support.
 ### 3.2 The rule beats dot product at d_model 96 (C1)
 - −2.32, −2.46, −2.18, −2.69% per seed; mean −2.41%, sd 0.22.
 
-### 3.3 The control ladder (C2, C3; Figure 2): the central result
+### 3.3 Controls on the d_model 96 gain (C2, C3; Figure 2), the main result
 - All cosine, fixed: 101.1, 100.2% kept.
 - Random ±1 code, fixed: 99.9 to 123.5% (mean 111.6%).
 - All length-scaled, fixed: 3.4, 0.8% kept, the same as no rule.
 - Frozen mixed codes: 18 of 20 runs keep ≥ 90%; the two failures share one code, which kept 98% on a third seed.
-- March echo at d_model 128 / 2 layers: random 4.1812, learned 4.1834, fixed 4.1857 (one seed; Figure 3).
+- The March run at d_model 128 / 2 layers points the same way: random 4.1812, learned 4.1834, fixed 4.1857 (one seed; Figure 3).
 
 ### 3.3a Where the cosine head has to be (C18; Figure 9, left)
 - Whole layer cosine: layer 1 keeps 112%, 109%; layer 2 6%, 3%; layer 3 14%, 35%.
 - One cosine head: in layer 1 95%, 90% (head 0) and 81%, 88% (head 3); in layer 2 9%, 19%; in layer 3 3%, 22%.
-- So the recipe needs no learned curvature at all: one fixed cosine head in the first layer.
+- One fixed cosine head in the first layer, with no learned curvature, keeps most of the gain.
 
 ### 3.3b Deeper: 6 layers (C19, C20; Figure 9, right)
 - Learned curvature vs none: +0.64, −0.38, −0.52, +0.35% (mean +0.02%); a 3x larger curvature step does not rescue it.
@@ -85,7 +85,7 @@ Computation") no longer fit what the data support.
   beyond cosine attention; settling it needs more seeds.
 
 ### 3.3d Where learned curvature starts, and 12 layers (C23 to C25)
-- Started at the recipe, then learned: +1.21, +1.06, +1.07, +1.12%, within 0.04 points of fixed; head stays cosine 4 of 4.
+- Started with one cosine head in layer 1, then learned: +1.21, +1.06, +1.07, +1.12%, within 0.04 points of fixed; head stays cosine 4 of 4.
 - Started all hyperbolic, then learned: −0.62, −0.29, −0.23, −0.35%. Fixed all hyperbolic: −0.62, −0.28% (2 seeds).
 - 12 layers, 2 seeds: one layer-1 head +0.67, +0.81%; whole layer 1 +0.82, +1.01%; learned +0.25, +0.18%. Under the 0.75% bar on one seed.
 
@@ -188,7 +188,7 @@ license a claim that first-layer placement beats cosine everywhere.
 ## Figures
 
 1. Scoring-rule weights against κ
-2. The d_model 96 control ladder
+2. The d_model 96 controls
 3. The d_model 128 ablations
 4. Attention range: trained heads vs forced rules
 5. The compression sweep at 55 epochs

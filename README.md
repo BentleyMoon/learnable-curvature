@@ -12,13 +12,13 @@ plain dot product, a dot product scaled up by the vectors' lengths (called "hype
 similarity (called "spherical"). At d_model 96 with 3 layers the switch beats plain dot-product
 attention by 2.41% perplexity on every one of 4 paired seeds. A random fixed assignment keeps all of
 that gain, and so does putting every head on the cosine rule from the first step with nothing
-learned. Putting every head on the length-scaled rule keeps none of it. So the gain comes from
-cosine scoring being present. Learning the curvature is not what produces it. Where the cosine
-head sits matters: one fixed cosine head in the first layer keeps 81 to 95% of the gain, and at
-6 layers it improves on no curvature on all 4 seeds while learned curvature does not. At twice the width
+learned. Putting every head on the length-scaled rule keeps none of it. The gain therefore comes
+from having cosine scoring in the model, not from learning the curvature. The position of the cosine
+head matters. One fixed cosine head in the first layer keeps 81 to 95% of the gain, and at 6 layers
+it improves on no curvature on all 4 seeds while learned curvature does not. At twice the width
 (d_model 192, 4 heads) the same head mostly loses its gain (-0.00% and +0.26% on 2 seeds, C26), so the
-recipe is shown at d_model 96 only. In a trained model
-the sign of κ alone carries the whole effect. The full list, with what each claim was tested
+one-head result is shown at d_model 96 only. In a trained model the sign of κ alone carries the whole
+effect. The full list, with what each claim was tested
 against, is in [CLAIMS.md](CLAIMS.md).
 
 **Added 2026-10-23.** Every run above used one constant learning rate, 3·10⁻⁴. A sweep over five
@@ -27,15 +27,16 @@ rate (all cosine against the dot product, −2.33%). With each arm at its own be
 dot product 4.336 at 2.4·10⁻³, all cosine 4.338 at 1.2·10⁻³. At 4.8·10⁻³ the dot product is better by
 1.7% on all 3 seeds. Cosine scoring moves the best learning rate lower and makes runs more consistent
 across seeds (sd 0.002 against 0.032 at each arm's best); at matched tuning it does not lower perplexity
-at this scale. Learned κ and the 6-layer first-layer recipe were not swept.
+at this scale. Learned κ and the 6-layer first-layer cosine head were not swept.
 
 **Added 2026-10-28: the cosine rule in a pretrained model.** Every fourth attention layer of
 Qwen2.5-1.5B and SmolLM-1.7B was switched to the cosine rule and healed with LoRA and distillation on
 1M WikiText-2 tokens (C28-C30). Against the same healing with nothing switched, perplexity rose 0.29%
-(Qwen) and 1.73% (SmolLM). Perplexity hid a recall cost: from a list of 64 word-value pairs (about
-590 tokens), SmolLM recalled 0.27 against 0.655, and Qwen 0.535 against 0.75. Healed on 512-token
-sequences instead of 256, SmolLM recalled 0.65 from 64 pairs and 0.335 against 0.655 from 100 pairs
-(about 910 tokens). Longer healing moved the recall limit out; it did not remove it.
+(Qwen) and 1.73% (SmolLM). Perplexity did not show a recall cost. From a list of 64
+word-value pairs (about 590 tokens), SmolLM recalled 0.27 against 0.655, and Qwen 0.535 against 0.75.
+Healed on 512-token sequences instead of 256, SmolLM recalled 0.65 from 64 pairs and 0.335 against
+0.655 from 100 pairs (about 910 tokens). Longer healing moved the recall limit out, and recall still
+fell beyond it.
 
 ## Reproduce
 

@@ -609,15 +609,15 @@ def build():
     kept_rows.extend([
         ("C23", "At 6 layers, starting one first-layer head cosine and letting curvature learn from there works as "
                 "well as fixing it; starting every head hyperbolic does not.",
-         "Started at the recipe, then learned: %s (mean %s); the first-layer head was still cosine at the end on %d "
-         "of %d seeds. Minus the fixed recipe, same seed: %s points (bar written in advance: within 0.25 on at least "
-         "3 seeds). Started all hyperbolic, then learned: %s. Recipe start minus hyperbolic start: %s points (bar: at "
+         "Started with one cosine head in layer 1, then learned: %s (mean %s); that head was still cosine at the end on %d "
+         "of %d seeds. Minus the fixed head, same seed: %s points (bar written in advance: within 0.25 on at least "
+         "3 seeds). Started all hyperbolic, then learned: %s. One-head start minus hyperbolic start: %s points (bar: at "
          "least 0.5 on 3 of 4)."
          % (", ".join("%+.2f%%" % x for x in th["init_one_l1"]), f2(st.mean(th["init_one_l1"])),
             sum(th["kept_spherical"]), len(th["kept_spherical"]), ", ".join("%+.2f" % x for x in init_minus_fixed),
             ", ".join("%+.2f%%" % x for x in th["init_allminus"]), ", ".join("%+.2f" % x for x in init_minus_hyp)),
          "ternary_lane/RESULT_T2H_20260927.json",
-         "Fixed recipe and all-hyperbolic start, same seeds; preregistered thresholds",
+         "Fixed first-layer cosine head and all-hyperbolic start, same seeds; preregistered thresholds",
          "POSITIVE (6 layers, 4 seeds, preregistered)"),
         ("C24", "At 6 layers, fixed hyperbolic curvature on every head accounts for part of the gain.",
          "All 24 heads fixed hyperbolic: %s against the same seed's zero model. The bar for this claim (at or above "
@@ -650,7 +650,7 @@ def build():
     kept_rows.append(
         ("C27", "The d_model 96 cosine gain (C1, C2) survives giving each arm its own best learning rate. Every "
                 "earlier d96 and d192 run used one constant rate, 3e-4. Swept here: all cosine against the dot product at 3 "
-                "layers; learned kappa and the 6-layer layer-1 recipe (C18, C20) were not swept.",
+                "layers; learned kappa and the 6-layer first-layer cosine head (C18, C20) were not swept.",
          "All cosine against the dot product, mean of 3 paired seeds: %s. Best dot product %.4f at %s; best all "
          "cosine %.4f at %s; best against best %s. Seed sd at each arm's best: dot product %.3f, all cosine %.3f."
          % ("; ".join("%s %s" % (lr, f2(tk["paired"][lr])) for lr in T2K_LRS),
@@ -699,7 +699,7 @@ def build():
             m4["cos_Q"]["ind150"], m4["none"]["ind150"]),
          "retrofit/ret4_smol/, retrofit/prompt_lengths_20261028.json",
          "Heal-only, also healed at 512, same seeds",
-         "POSITIVE (one model, 2 seeds; the limit moved out to between %d and %d tokens, it did not go away)"
+         "POSITIVE (one model, 2 seeds; the limit moved out to between %d and %d tokens and is still there)"
          % (ls["kv64"][1], ls["kv100"][1])))
 
     withdrawn = [
@@ -752,7 +752,7 @@ LIMITATIONS = [
     "mostly have a single seed and no confidence interval.",
     "'Spherical' and 'hyperbolic' name scoring rules, not geometries (M1). The spherical rule is cosine-similarity "
     "attention at a fixed scale, close to query-key normalisation, which is published prior work; per-head learnable "
-    "curvature is also prior work (Cho et al., 2023). The related-work section has to say both.",
+    "curvature is also prior work (Cho et al., 2023). Both are cited in the related work of paper/draft.md.",
     "The attention-range analysis (C6, C7) is a proxy: attention mass by distance on character sequences. It is not a "
     "syntactic probe and says nothing about linguistic function.",
     "No speed, memory or deployment claim. The sign-only model (C4) still computes every branch; nothing was timed.",
@@ -771,7 +771,7 @@ LIMITATIONS = [
     "Every d96 and d192 run before C27 used one constant learning rate (3e-4, no warmup, no schedule). C27 tunes "
     "the rate per arm at d96 and the gain is gone; read every other gain in this file as a gain at that rate. C27 "
     "itself uses constant rates only, so a warmup and schedule could move both optima.",
-    "C24 and C25 rest on two seeds each. C25 covers one corpus at one width and does not settle how the recipe "
+    "C24 and C25 rest on two seeds each. C25 covers one corpus at one width and does not settle how the one-head result "
     "scales with depth.",
     "C28-C30 were preregistered (paper/preregistrations/) and ran on a Mac mini (MPS) with "
     "src/retrofit/exp_retrofit.py, 2 seeds per condition. C30 is SmolLM only; Qwen was not healed at 512 tokens, and "
@@ -795,8 +795,8 @@ def markdown():
     out.append("|---|---|---|---|---|---|")
     for row in kept_rows:
         out.append("| " + " | ".join(cell.replace("|", "\\|") for cell in row) + " |")
-    out.append("\n## What the drafts claimed and the controls took away\n")
-    out.append("| ID | Draft claim | Why it goes |")
+    out.append("\n## Draft claims withdrawn after the controls\n")
+    out.append("| ID | Draft claim | What removed it |")
     out.append("|---|---|---|")
     for row in withdrawn:
         out.append("| " + " | ".join(cell.replace("|", "\\|") for cell in row) + " |")

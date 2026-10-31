@@ -10,18 +10,18 @@ Working draft, September 2026. Code, saved runs and every number: https://github
 I gave each attention head in a small transformer one trainable number, κ, meant as the curvature of
 the space that head measures similarity in, so the model could choose its own geometry. On
 character-level WikiText-2 at width 96 with 3 layers, the model with κ beats plain dot-product
-attention by 2.41% perplexity on all 4 paired seeds. The controls then took the geometry story
-apart. Read in the code, κ is a switch between three scoring rules: the dot product, a dot product
+attention by 2.41% perplexity on all 4 paired seeds. The controls then ruled out the geometric
+reading. Read in the code, κ is a switch between three scoring rules: the dot product, a dot product
 scaled up by the vectors' lengths, and cosine similarity. A random fixed setting of that switch keeps
 112% of the learned gain, cosine on every head keeps 101%, and the length-scaled rule on every head
-keeps 2%. The gain is cosine attention, which is already known. What is left is a smaller and, I
-think, more useful finding about how little of it is needed: one fixed cosine head in the first layer
-keeps 81 to 95% of the gain at 3 layers, and at 6 layers it improves on plain attention on 4 of 4
-seeds (+1.08 to +1.25%) where learned κ improves on nothing (mean +0.02%). Starting that head at
-cosine and letting κ learn does as well as fixing it, and at 12 layers the head still helps on both
-seeds tried. The same head placed in a later layer hurts. A trained model also compresses to one bit per head at no measurable cost. I
-report the claims from my earlier drafts that did not survive, next to the control that removed each
-one.
+keeps 2%. The gain is cosine attention, which is already known. The smaller finding that remains is
+about how little cosine scoring is needed. One fixed cosine head in the first layer keeps 81 to 95% of
+the gain at 3 layers, and at 6 layers it improves on plain attention on 4 of 4 seeds (+1.08 to
++1.25%) where learned κ improves on nothing (mean +0.02%). Starting that head at cosine and letting κ
+learn does as well as fixing it, and at 12 layers the head still helps on both seeds tried. The same
+head placed in a later layer hurts. A trained model also compresses to one bit per head at no
+measurable cost. I list the claims from my earlier drafts that the controls removed, each next to the
+control that removed it.
 
 *Added 2026-10-23:* every run in this draft used one learning rate, 3·10⁻⁴. With each arm given its own
 best of five learning rates, the cosine gain at width 96 is +0.04% (Section 4.1; C27 in CLAIMS.md), so
@@ -43,18 +43,17 @@ zero, and watched where the heads went.
 
 They left zero within the first few epochs and split between the two sides, and the model with κ
 trained to a lower perplexity than the one without. My first drafts read this as a model discovering
-the geometry of language. This paper is what happened when I tested that reading. Every experiment at
-width 96 had its predictions written down before it ran, and most of the controls were built to break
-the result rather than confirm it.
+the geometry of language. I then tested that reading. Every experiment at width 96 had its predictions
+written down before it ran, and most of the controls were designed to break the result.
 
-The geometry did not survive. What survived is this:
+The geometric reading did not hold. The findings are:
 
 - κ is a per-head switch between three scoring rules, and trained heads sit fully on one rule (Section 2).
 - The gain at width 96 comes from cosine scoring being present. A random or uniform fixed assignment
   does as well as a learned one (Section 4.2).
-- How little is needed: one fixed cosine head in the first layer gets most of it at 3 layers, about as
-  much as cosine on all 24 heads at 6 layers, and more than learned κ does at 6 layers. In a later layer
-  the same head hurts (Sections 4.3 and 4.4).
+- One fixed cosine head in the first layer gets most of the gain at 3 layers, about as much as cosine
+  on all 24 heads at 6 layers, and more than learned κ does at 6 layers. In a later layer the same head
+  hurts (Sections 4.3 and 4.4).
 - A trained model's κ compresses to one bit per head at no cost, and the bits are tied to the weights
   around them (Section 4.5).
 - An account of eleven claims from my earlier drafts and the control that removed each (Section 5).
@@ -114,7 +113,7 @@ cosine against the dot product, −2.33%). With each arm at its own best rate th
 product 4.336 at 2.4·10⁻³, all cosine 4.338 at 1.2·10⁻³. At 4.8·10⁻³ the dot product is better by 1.7%
 on all 3 seeds. Cosine scoring moves the best learning rate lower and makes runs more consistent across
 seeds (sd 0.002 against 0.032 at each arm's best); at matched tuning it does not lower perplexity at
-this scale. Learned κ and the 6-layer first-layer recipe were not swept.
+this scale. Learned κ and the 6-layer first-layer cosine head were not swept.
 
 ### 4.2 The controls: a random switch does as well
 
@@ -126,7 +125,7 @@ mixed codes, 18 keep at least 90%; the two that fall below 60% (19.4 and 46.6%) 
 code kept 98% on a third seed. An earlier single-seed run at width 128 with 2 layers pointed the same
 way: random 4.1812, learned 4.1834, fixed to a previously learned code 4.1857 (Figure 3).
 
-So learning which head gets which rule adds nothing I can measure. What matters is that some heads
+Learning which head gets which rule adds nothing I can measure. The gain needs only some heads that
 score by cosine.
 
 ### 4.3 Where the cosine head sits
@@ -156,17 +155,17 @@ four more seeds would settle it.
 I noticed a pattern in the learned runs after the fact: learning pushes nearly every first-layer head
 to the length-scaled side, and the learned runs that end with exactly one cosine head in layer 1 are
 the better ones. So I wrote down a test before running it (C23). Start that one head at cosine and let
-κ learn from there, and the model lands within 0.04 points of the fixed recipe on all four seeds
+κ learn from there, and the model lands within 0.04 points of the fixed head on all four seeds
 (+1.21, +1.06, +1.07, +1.12%), with the head still cosine at the end every time. Start every head on
 the length-scaled side instead and let κ learn, and it ends below plain attention on all four (−0.62,
-−0.29, −0.23, −0.35%). Learned κ at depth fails because of where it starts, not because learning
-walks away from the recipe. Fixing every head on the length-scaled side is worse than plain attention
-too (−0.62, −0.28%, two seeds; C24), so the gain is measured against no curvature, not against a
+−0.29, −0.23, −0.35%). Learned κ at depth fails because of its starting point; started from one cosine
+head in layer 1, learning keeps that head cosine. Fixing every head on the length-scaled side is worse
+than plain attention too (−0.62, −0.28%, two seeds; C24), so the gain is measured against no curvature, not against a
 length-scaled baseline.
 
-At 12 layers (two seeds; C25) the one-head recipe still improves on plain attention, by 0.67 and
-0.81%, and a whole cosine first layer by 0.82 and 1.01%, while learned κ gives 0.25 and 0.18%. I had
-set 0.75% on both seeds as the bar for saying the recipe holds to 12 layers, and one seed falls short
+At 12 layers (two seeds; C25) one fixed cosine head in layer 1 still improves on plain attention, by
+0.67 and 0.81%, and a whole cosine first layer by 0.82 and 1.01%, while learned κ gives 0.25 and 0.18%.
+I had set 0.75% on both seeds as the bar for saying the result holds to 12 layers, and one seed falls short
 of it, so I say only that it has not stopped working by 12 layers.
 
 ### 4.5 One bit per head
@@ -231,9 +230,8 @@ not reliably.
 
 ### 4.11 Cosine scoring in a pretrained model
 
-*Added 2026-10-28; C28-C30 in CLAIMS.md, each preregistered.* The question here is different from the rest of
-the paper: not whether the rule helps a model trained with it, but whether a model trained without it can take
-it. I switched every head of every fourth attention layer of Qwen2.5-1.5B (7 of 28 layers) and SmolLM-1.7B (6
+*Added 2026-10-28; C28-C30 in CLAIMS.md, each preregistered.* Here the model was pretrained with the dot
+product, and the cosine rule was put in afterwards. I switched every head of every fourth attention layer of Qwen2.5-1.5B (7 of 28 layers) and SmolLM-1.7B (6
 of 24) to the cosine rule, then healed each model with LoRA (rank 16) and distillation from its unmodified self
 on 1M WikiText-2 tokens. The control is the same healing with no layer switched.
 
@@ -243,12 +241,13 @@ recalled 0.535 against 0.75, and SmolLM 0.27 against 0.655. From 8 pairs both re
 
 Those models were healed on 256-token sequences. Healed on 512-token sequences instead, with the same tokens
 per step and the same step count, SmolLM recalled 0.65 from 64 pairs, level with the control, and 0.335
-against 0.655 from 100 pairs (about 910 tokens). Healing longer moved the limit out, to somewhere between 590
-and 910 tokens; it did not remove it. The unmodified model recalls as well from 100 pairs as from 64, so the
+against 0.655 from 100 pairs (about 910 tokens). Healing on longer sequences moved the limit out to somewhere
+between 590 and 910 tokens, and recall still fell beyond it. The unmodified model recalls as well from 100 pairs as from 64, so the
 limit belongs to the new heads. After 512-token healing the network relies on them: reverting them to the dot
 product lowers recall from 64 pairs from 0.65 to 0.465.
 
-Two seeds per condition, one model for the 512-token result, and synthetic recall and copying tasks. On copying a
+These results rest on two seeds per condition, one model for the 512-token result, and synthetic recall and
+copying tasks. On copying a
 150-word list (about 333 tokens), the gap to the control narrowed from 0.22 to 0.10 with longer healing and did
 not close, although the list fits inside 512 tokens.
 
@@ -305,20 +304,20 @@ output worth reusing.
 - The exact-distance runs use a separate implementation with one seed each.
 - The width-96 experiments had their predictions written down before they ran; the March experiments
   did not.
-- The 12-layer and all-length-scaled results rest on two seeds each, and do not settle how the recipe
-  scales with depth.
+- The 12-layer and all-length-scaled results rest on two seeds each, and do not settle how the one-head
+  result scales with depth.
 - *Added 2026-10-23:* every run used one constant learning rate (3·10⁻⁴, no warmup, no schedule). Tuned
-  per arm, the cosine gain at width 96 disappears (C27). The first-layer recipe and learned κ have not
-  been re-tested that way.
+  per arm, the cosine gain at width 96 disappears (C27). The first-layer cosine head and learned κ have
+  not been re-tested that way.
 
 ## 8. Conclusion
 
-I set out to let a model find its own geometry, and what it found was a switch. The part worth keeping
-is small and concrete: at this scale a single attention head that scores by direction instead of
-length, fixed in the first layer or simply started there, does about as much good as cosine attention
-everywhere and more than the curvature the model learned for itself, while the same head placed deeper
-does harm. I think that is a better result to hand on than the one I started with, because every step
-of it can be checked, and because the reasons the bigger story fell apart are written down beside it.
+I set out to let a model find its own geometry, and κ turned out to be a switch between scoring rules.
+At this scale a single attention head that scores by direction instead of length, fixed in the first
+layer or started there, does about as much good as cosine attention on every head and more than the
+curvature the model learned for itself. The same head placed deeper does harm. Every number behind
+these results is recomputed from the saved runs, and Section 5 lists the earlier claims that the
+controls removed.
 
 ## Reproducibility
 
