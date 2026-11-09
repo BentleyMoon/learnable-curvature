@@ -9,9 +9,11 @@ cites from those saved runs.
 
 **What survived the controls.** κ is a per-head switch between three attention scoring rules:
 plain dot product, a dot product scaled up by the vectors' lengths (called "hyperbolic"), and cosine
-similarity (called "spherical"). At d_model 96 with 3 layers the switch beats plain dot-product
-attention by 2.41% perplexity on every one of 4 paired seeds. A random fixed assignment keeps all of
-that gain, and so does putting every head on the cosine rule from the first step with nothing
+similarity (called "spherical"). At d_model 96 with 3 layers, trained at one constant learning rate
+(3·10⁻⁴), the switch beats plain dot-product attention by 2.41% perplexity on every one of 4 paired
+seeds. With each arm at its own best of five learning rates, the gap between all cosine and the dot
+product is +0.04% (C27), so the gains in this paragraph are gains at that one rate. A random fixed
+assignment keeps all of the 2.41% gain, and so does putting every head on the cosine rule from the first step with nothing
 learned. Putting every head on the length-scaled rule keeps none of it. The gain therefore comes
 from having cosine scoring in the model, not from learning the curvature. The position of the cosine
 head matters. One fixed cosine head in the first layer keeps 81 to 95% of the gain, and at 6 layers

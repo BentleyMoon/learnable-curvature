@@ -1,7 +1,7 @@
 # Learnable Curvature in Attention Is a Per-Head Choice of Scoring Rule
 
 **Bentley Moon**, independent researcher
-Working draft, September 2026. Code, saved runs and every number: https://github.com/BentleyMoon/learnable-curvature
+Working draft, November 2026. Code, saved runs and every number: https://github.com/BentleyMoon/learnable-curvature
 
 ---
 
@@ -9,8 +9,11 @@ Working draft, September 2026. Code, saved runs and every number: https://github
 
 I gave each attention head in a small transformer one trainable number, κ, meant as the curvature of
 the space that head measures similarity in, so the model could choose its own geometry. On
-character-level WikiText-2 at width 96 with 3 layers, the model with κ beats plain dot-product
-attention by 2.41% perplexity on all 4 paired seeds. The controls then ruled out the geometric
+character-level WikiText-2 at width 96 with 3 layers, trained at one constant learning rate
+(3·10⁻⁴), the model with κ beats plain dot-product attention by 2.41% perplexity on all 4 paired
+seeds. With each arm given its own best of five learning rates, the gap between cosine on every head
+and the dot product is +0.04% (Section 4.1; C27 in CLAIMS.md), so every gain in this abstract is a
+gain at that one rate. The controls then ruled out the geometric
 reading. Read in the code, κ is a switch between three scoring rules: the dot product, a dot product
 scaled up by the vectors' lengths, and cosine similarity. A random fixed setting of that switch keeps
 112% of the learned gain, cosine on every head keeps 101%, and the length-scaled rule on every head
@@ -18,14 +21,11 @@ keeps 2%. The gain is cosine attention, which is already known. The smaller find
 about how little cosine scoring is needed. One fixed cosine head in the first layer keeps 81 to 95% of
 the gain at 3 layers, and at 6 layers it improves on plain attention on 4 of 4 seeds (+1.08 to
 +1.25%) where learned κ improves on nothing (mean +0.02%). Starting that head at cosine and letting κ
-learn does as well as fixing it, and at 12 layers the head still helps on both seeds tried. The same
-head placed in a later layer hurts. A trained model also compresses to one bit per head at no
+learn does as well as fixing it, and at 12 layers the head still helps on both seeds tried. At twice
+the width (192, 4 heads) the same head mostly loses its gain: −0.00% and +0.26% on 2 seeds (C26). The
+same head placed in a later layer hurts. A trained model also compresses to one bit per head at no
 measurable cost. I list the claims from my earlier drafts that the controls removed, each next to the
 control that removed it.
-
-*Added 2026-10-23:* every run in this draft used one learning rate, 3·10⁻⁴. With each arm given its own
-best of five learning rates, the cosine gain at width 96 is +0.04% (Section 4.1; C27 in CLAIMS.md), so
-the gains reported here are gains at that rate.
 
 *Added 2026-10-28:* I also put the cosine rule into two pretrained models of 1.5 and 1.7 billion parameters
 (Section 4.11). After healing, perplexity rose 0.29% and 1.73%, but recall from about 590 tokens back fell
@@ -290,6 +290,9 @@ output worth reusing.
 
 - Every language result except Section 4.11 is character-level WikiText-2. Section 4.11 uses subword
   WikiText-2 and synthetic recall and copying prompts; no other corpus or task is tested.
+- At width 192 (4 heads, 2 seeds) one fixed cosine head in the first layer improves on no curvature
+  by −0.00% and +0.26%, against +1.08 to +1.25% at width 96 with 6 layers, so the gain mostly fades at
+  that width (C26). Neither of the bars written down before the run was met.
 - The clear effects appear only at width 96, at 3 and 6 layers, and the largest model is under 0.9M
   parameters. I make no claim about training larger models with κ; Section 4.11 only puts a fixed cosine
   rule into pretrained ones.
@@ -313,9 +316,12 @@ output worth reusing.
 ## 8. Conclusion
 
 I set out to let a model find its own geometry, and κ turned out to be a switch between scoring rules.
-At this scale a single attention head that scores by direction instead of length, fixed in the first
-layer or started there, does about as much good as cosine attention on every head and more than the
-curvature the model learned for itself. The same head placed deeper does harm. Every number behind
+At width 96 and one learning rate (3·10⁻⁴), a single attention head that scores by direction instead
+of length, fixed in the first layer or started there, does about as much good as cosine attention on
+every head and more than the curvature the model learned for itself. The same head placed deeper does
+harm. With each arm tuned to its own best learning rate, the gap between cosine on every head and the
+dot product is +0.04%, and at width 192 the single head gives −0.00% and +0.26%, so these gains are
+gains at one rate and one width. Every number behind
 these results is recomputed from the saved runs, and Section 5 lists the earlier claims that the
 controls removed.
 
